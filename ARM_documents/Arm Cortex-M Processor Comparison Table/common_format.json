@@ -1,0 +1,624 @@
+{
+  "children": [
+    {
+      "html": "<h1>Arm Cortex-M Processor Comparison Table</h1><p>The Cortex-M processor family is optimized for cost and energy-efficient microcontrollers. These processors are found in a variety of applications, including IoT, industrial and everyday consumer devices.</p><p>The processor family is based on the M-Profile Architecture that provides low-latency and a highly deterministic operation, for deeply embedded systems.</p><table><thead><tr><th>Feature</th><th>Cortex-M0</th><th>Cortex-M0+</th><th>Cortex-M1</th><th>Cortex-M23</th><th>Cortex-M3</th><th>Cortex-M4</th><th>Cortex-M33</th><th>Cortex-M35P</th><th>Cortex-M52</th><th>Cortex-M55</th><th>Cortex-M7</th><th>Cortex-M85</th></tr></thead><tbody><tr><td>Instruction Set Architecture</td><td>Armv6-M</td><td>Armv6-M</td><td>Armv6-M</td><td>Armv8-M Baseline</td><td>Armv7-M</td><td>Armv7-M</td><td>Armv8-M Mainline</td><td>Armv8-M Mainline</td><td>Armv8.1-M Mainline</td><td>Armv8.1-M Mainline</td><td>Armv7-M</td><td>Armv8.1-M Mainline</td></tr><tr><td>TrustZone for Armv8-M</td><td>No</td><td>No</td><td>No</td><td>Yes (option)</td><td>No</td><td>No</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td><td>No</td><td>Yes</td></tr><tr><td>Helium (M-Profile Vector Extension)</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Single-beat (option)</td><td>Dual-beat (option)</td><td>No</td><td>Dual-beat (option)</td></tr><tr><td>PACBTI Extension</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes (option)</td><td>No</td><td>No</td><td>Yes (option)</td></tr><tr><td>Floating-Point Unit (FPU)</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>SP (option)</td><td>SP (option)</td><td>SP (option)</td><td>HP, SP, DP (option)</td><td>HP, SP, DP (option)</td><td>SP, DP (option)</td><td>HP, SP, DP (option)</td></tr><tr><td>Digital Signal Processing (DSP) Extension</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Hardware Divide</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Arm Custom Instructions</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes (option)</td><td>No</td><td>Yes (option)</td><td>Yes (option)</td><td>No</td><td>Yes (option)</td></tr><tr><td>Coprocessor Interface</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td><td>No</td><td>Yes (option)</td></tr><tr><td>DMIPS/MHz*</td><td>0.96</td><td>0.99</td><td>0.88</td><td>1.03</td><td>1.24</td><td>1.26</td><td>1.54</td><td>1.50</td><td>1.60</td><td>1.69</td><td>2.31</td><td>3.13</td></tr><tr><td>CoreMark@MHz*</td><td>2.33</td><td>2.46</td><td>1.83</td><td>2.64</td><td>3.45</td><td>3.54</td><td>4.10</td><td>4.10</td><td>4.30</td><td>4.40</td><td>5.29</td><td>6.28</td></tr><tr><td>Maximum # External Interrupts</td><td>32</td><td>32</td><td>32</td><td>240</td><td>240</td><td>240</td><td>480</td><td>480</td><td>480</td><td>480</td><td>240</td><td>480</td></tr><tr><td>Maximum MPU Regions</td><td>0</td><td>8</td><td>0</td><td>16</td><td>8</td><td>8</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td></tr><tr><td>Main Bus</td><td>AHB Lite (32-bit)</td><td>AHB Lite (32-bit)</td><td>AHB Lite (32-bit)</td><td>AHB (32-bit)</td><td>AHB Lite (32-bit)</td><td>AHB Lite (32-bit)</td><td>AHB (32-bit)</td><td>AHB (32-bit)</td><td>AXI (32-bit) or AHB (32-bit)</td><td>AXI (64-bit)</td><td>AXI (64-bit)</td><td>AXI (64-bit)</td></tr><tr><td>Instruction Cache</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>2-16kB</td><td>0-64kB</td><td>0-64kB</td><td>0-64kB</td><td>0-64kB</td></tr><tr><td>Data Cache</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>0-64kB</td><td>0-64kB</td><td>0-64kB</td><td>0-64kB</td></tr><tr><td>Instruction TCM</td><td>No</td><td>No</td><td>0-1MB</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>0-16MB</td><td>0-16MB</td><td>0-16MB</td><td>0-16MB</td></tr><tr><td>Data TCM</td><td>No</td><td>No</td><td>0-1MB</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>0-16MB</td><td>0-16MB</td><td>0-16MB</td><td>0-16MB</td></tr><tr><td>Dual Core Lock-Step (DCLS) Configuration</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1919.0,
+        1117.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1919.0,
+          0.0
+        ],
+        [
+          1919.0,
+          1117.0
+        ],
+        [
+          0.0,
+          1117.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/SectionHeader/0",
+          "block_type": "SectionHeader",
+          "html": "<h1>Arm Cortex-M Processor Comparison Table</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              34.0,
+              65.0
+            ],
+            [
+              604.0,
+              65.0
+            ],
+            [
+              604.0,
+              98.0
+            ],
+            [
+              34.0,
+              98.0
+            ]
+          ],
+          "bbox": [
+            34.0,
+            65.0,
+            604.0,
+            98.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/1",
+          "block_type": "Text",
+          "html": "<p>The Cortex-M processor family is optimized for cost and energy-efficient microcontrollers. These processors are found in a variety of applications, including IoT, industrial and everyday consumer devices.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              30.0,
+              178.0
+            ],
+            [
+              1458.0,
+              178.0
+            ],
+            [
+              1458.0,
+              198.0
+            ],
+            [
+              30.0,
+              198.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            178.0,
+            1458.0,
+            198.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/2",
+          "block_type": "Text",
+          "html": "<p>The processor family is based on the M-Profile Architecture that provides low-latency and a highly deterministic operation, for deeply embedded systems.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              30.0,
+              205.0
+            ],
+            [
+              1114.0,
+              205.0
+            ],
+            [
+              1114.0,
+              224.0
+            ],
+            [
+              30.0,
+              224.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            205.0,
+            1114.0,
+            224.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Table/3",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Feature</th><th>Cortex-M0</th><th>Cortex-M0+</th><th>Cortex-M1</th><th>Cortex-M23</th><th>Cortex-M3</th><th>Cortex-M4</th><th>Cortex-M33</th><th>Cortex-M35P</th><th>Cortex-M52</th><th>Cortex-M55</th><th>Cortex-M7</th><th>Cortex-M85</th></tr></thead><tbody><tr><td>Instruction Set Architecture</td><td>Armv6-M</td><td>Armv6-M</td><td>Armv6-M</td><td>Armv8-M Baseline</td><td>Armv7-M</td><td>Armv7-M</td><td>Armv8-M Mainline</td><td>Armv8-M Mainline</td><td>Armv8.1-M Mainline</td><td>Armv8.1-M Mainline</td><td>Armv7-M</td><td>Armv8.1-M Mainline</td></tr><tr><td>TrustZone for Armv8-M</td><td>No</td><td>No</td><td>No</td><td>Yes (option)</td><td>No</td><td>No</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td><td>No</td><td>Yes</td></tr><tr><td>Helium (M-Profile Vector Extension)</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Single-beat (option)</td><td>Dual-beat (option)</td><td>No</td><td>Dual-beat (option)</td></tr><tr><td>PACBTI Extension</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes (option)</td><td>No</td><td>No</td><td>Yes (option)</td></tr><tr><td>Floating-Point Unit (FPU)</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>SP (option)</td><td>SP (option)</td><td>SP (option)</td><td>HP, SP, DP (option)</td><td>HP, SP, DP (option)</td><td>SP, DP (option)</td><td>HP, SP, DP (option)</td></tr><tr><td>Digital Signal Processing (DSP) Extension</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Hardware Divide</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Arm Custom Instructions</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes (option)</td><td>No</td><td>Yes (option)</td><td>Yes (option)</td><td>No</td><td>Yes (option)</td></tr><tr><td>Coprocessor Interface</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td><td>No</td><td>Yes (option)</td></tr><tr><td>DMIPS/MHz*</td><td>0.96</td><td>0.99</td><td>0.88</td><td>1.03</td><td>1.24</td><td>1.26</td><td>1.54</td><td>1.50</td><td>1.60</td><td>1.69</td><td>2.31</td><td>3.13</td></tr><tr><td>CoreMark@MHz*</td><td>2.33</td><td>2.46</td><td>1.83</td><td>2.64</td><td>3.45</td><td>3.54</td><td>4.10</td><td>4.10</td><td>4.30</td><td>4.40</td><td>5.29</td><td>6.28</td></tr><tr><td>Maximum # External Interrupts</td><td>32</td><td>32</td><td>32</td><td>240</td><td>240</td><td>240</td><td>480</td><td>480</td><td>480</td><td>480</td><td>240</td><td>480</td></tr><tr><td>Maximum MPU Regions</td><td>0</td><td>8</td><td>0</td><td>16</td><td>8</td><td>8</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td></tr><tr><td>Main Bus</td><td>AHB Lite (32-bit)</td><td>AHB Lite (32-bit)</td><td>AHB Lite (32-bit)</td><td>AHB (32-bit)</td><td>AHB Lite (32-bit)</td><td>AHB Lite (32-bit)</td><td>AHB (32-bit)</td><td>AHB (32-bit)</td><td>AXI (32-bit) or AHB (32-bit)</td><td>AXI (64-bit)</td><td>AXI (64-bit)</td><td>AXI (64-bit)</td></tr><tr><td>Instruction Cache</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>2-16kB</td><td>0-64kB</td><td>0-64kB</td><td>0-64kB</td><td>0-64kB</td></tr><tr><td>Data Cache</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>0-64kB</td><td>0-64kB</td><td>0-64kB</td><td>0-64kB</td></tr><tr><td>Instruction TCM</td><td>No</td><td>No</td><td>0-1MB</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>0-16MB</td><td>0-16MB</td><td>0-16MB</td><td>0-16MB</td></tr><tr><td>Data TCM</td><td>No</td><td>No</td><td>0-1MB</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>0-16MB</td><td>0-16MB</td><td>0-16MB</td><td>0-16MB</td></tr><tr><td>Dual Core Lock-Step (DCLS) Configuration</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td><td>Yes (option)</td></tr></tbody></table>",
+          "page": 0,
+          "polygon": [
+            [
+              30.0,
+              271.0
+            ],
+            [
+              1878.0,
+              271.0
+            ],
+            [
+              1878.0,
+              1055.0
+            ],
+            [
+              30.0,
+              1055.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            271.0,
+            1878.0,
+            1055.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/4",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              1882.0,
+              1084.0
+            ],
+            [
+              1895.0,
+              1084.0
+            ],
+            [
+              1895.0,
+              1096.0
+            ],
+            [
+              1882.0,
+              1096.0
+            ]
+          ],
+          "bbox": [
+            1882.0,
+            1084.0,
+            1895.0,
+            1096.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    },
+    {
+      "html": "<table><thead><tr><th>Common Criteria Certification</th><th>No</th><th>No</th><th>No</th><th>No</th><th>No</th><th>No</th><th>Yes</th><th>Yes</th><th>No</th><th>No</th><th>No</th><th>No</th></tr></thead></table><p>*See individual Cortex-M product pages for further information.</p><p>SP = Single-Precision</p><p>DP = Double-Precision</p><p>HP = Half-Precision</p><p>For more information, contact your Arm account manager today or explore the processors in more detail here: <a href=\"https://developer.arm.com/ip-products/processors/cortex-m\">developer.arm.com/ip-products/processors/cortex-m</a></p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1919.0,
+        1117.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1919.0,
+          0.0
+        ],
+        [
+          1919.0,
+          1117.0
+        ],
+        [
+          0.0,
+          1117.0
+        ]
+      ],
+      "id": "/page/1/Page/1",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/1/Table/0",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Common Criteria Certification</th><th>No</th><th>No</th><th>No</th><th>No</th><th>No</th><th>No</th><th>Yes</th><th>Yes</th><th>No</th><th>No</th><th>No</th><th>No</th></tr></thead></table>",
+          "page": 1,
+          "polygon": [
+            [
+              32.0,
+              25.0
+            ],
+            [
+              1878.0,
+              25.0
+            ],
+            [
+              1878.0,
+              65.0
+            ],
+            [
+              32.0,
+              65.0
+            ]
+          ],
+          "bbox": [
+            32.0,
+            25.0,
+            1878.0,
+            65.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/1",
+          "block_type": "Text",
+          "html": "<p>*See individual Cortex-M product pages for further information.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              32.0,
+              98.0
+            ],
+            [
+              454.0,
+              98.0
+            ],
+            [
+              454.0,
+              117.0
+            ],
+            [
+              32.0,
+              117.0
+            ]
+          ],
+          "bbox": [
+            32.0,
+            98.0,
+            454.0,
+            117.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/2",
+          "block_type": "Text",
+          "html": "<p>SP = Single-Precision</p>",
+          "page": 1,
+          "polygon": [
+            [
+              32.0,
+              119.0
+            ],
+            [
+              180.0,
+              119.0
+            ],
+            [
+              180.0,
+              139.0
+            ],
+            [
+              32.0,
+              139.0
+            ]
+          ],
+          "bbox": [
+            32.0,
+            119.0,
+            180.0,
+            139.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/3",
+          "block_type": "Text",
+          "html": "<p>DP = Double-Precision</p>",
+          "page": 1,
+          "polygon": [
+            [
+              32.0,
+              142.0
+            ],
+            [
+              189.0,
+              142.0
+            ],
+            [
+              189.0,
+              163.0
+            ],
+            [
+              32.0,
+              163.0
+            ]
+          ],
+          "bbox": [
+            32.0,
+            142.0,
+            189.0,
+            163.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/4",
+          "block_type": "Text",
+          "html": "<p>HP = Half-Precision</p>",
+          "page": 1,
+          "polygon": [
+            [
+              32.0,
+              165.0
+            ],
+            [
+              168.0,
+              165.0
+            ],
+            [
+              168.0,
+              185.0
+            ],
+            [
+              32.0,
+              185.0
+            ]
+          ],
+          "bbox": [
+            32.0,
+            165.0,
+            168.0,
+            185.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/5",
+          "block_type": "Text",
+          "html": "<p>For more information, contact your Arm account manager today or explore the processors in more detail here: <a href=\"https://developer.arm.com/ip-products/processors/cortex-m\">developer.arm.com/ip-products/processors/cortex-m</a></p>",
+          "page": 1,
+          "polygon": [
+            [
+              32.0,
+              202.0
+            ],
+            [
+              1103.0,
+              202.0
+            ],
+            [
+              1103.0,
+              221.0
+            ],
+            [
+              32.0,
+              221.0
+            ]
+          ],
+          "bbox": [
+            32.0,
+            202.0,
+            1103.0,
+            221.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/6",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              26.0,
+              1012.0
+            ],
+            [
+              140.0,
+              1012.0
+            ],
+            [
+              140.0,
+              1049.0
+            ],
+            [
+              26.0,
+              1049.0
+            ]
+          ],
+          "bbox": [
+            26.0,
+            1012.0,
+            140.0,
+            1049.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/7",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              170.0,
+              1007.0
+            ],
+            [
+              1337.0,
+              1007.0
+            ],
+            [
+              1337.0,
+              1024.0
+            ],
+            [
+              170.0,
+              1024.0
+            ]
+          ],
+          "bbox": [
+            170.0,
+            1007.0,
+            1337.0,
+            1024.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/8",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              170.0,
+              1035.0
+            ],
+            [
+              389.0,
+              1035.0
+            ],
+            [
+              389.0,
+              1051.0
+            ],
+            [
+              170.0,
+              1051.0
+            ]
+          ],
+          "bbox": [
+            170.0,
+            1035.0,
+            389.0,
+            1051.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/9",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              1746.0,
+              1034.0
+            ],
+            [
+              1888.0,
+              1034.0
+            ],
+            [
+              1888.0,
+              1051.0
+            ],
+            [
+              1746.0,
+              1051.0
+            ]
+          ],
+          "bbox": [
+            1746.0,
+            1034.0,
+            1888.0,
+            1051.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/10",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              1880.0,
+              1084.0
+            ],
+            [
+              1905.0,
+              1084.0
+            ],
+            [
+              1905.0,
+              1100.0
+            ],
+            [
+              1880.0,
+              1100.0
+            ]
+          ],
+          "bbox": [
+            1880.0,
+            1084.0,
+            1905.0,
+            1100.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/0"
+      }
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 5
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 11
+      }
+    ]
+  }
+}

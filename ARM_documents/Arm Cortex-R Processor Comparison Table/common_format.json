@@ -1,0 +1,488 @@
+{
+  "children": [
+    {
+      "html": "<h1>Arm Cortex-R Processor Comparison Table</h1><p>The Cortex-R series of processors deliver fast and deterministic processing and high performance, while meeting challenging real-time constraints in a range of situations. They combine these features in a performance, power and area optimized package, making them the trusted choice in reliable systems demanding high error-resistance.</p><table><thead><tr><th>Feature</th><th>Cortex-R4</th><th>Cortex-R5</th><th>Cortex-R7<sup>1</sup></th><th>Cortex-R8</th><th>Cortex-R52</th><th>Cortex-R52+</th><th>Cortex-R82</th></tr></thead><tbody><tr><td>Architecture</td><td>Armv7-R</td><td>Armv7-R</td><td>Armv7-R</td><td>Armv7-R</td><td>Armv8-R<br/>AArch32</td><td>Armv8-R<br/>AArch32</td><td>Armv8-R<br/>AArch64</td></tr><tr><td>Instruction Set</td><td>Arm(32),<br/>Thumb(T32)</td><td>Arm(32),<br/>Thumb(T32)</td><td>Arm(32),<br/>Thumb(T32)</td><td>Arm(32),<br/>Thumb(T32)</td><td>Arm(32),<br/>Thumb(T32)</td><td>Arm(32),<br/>Thumb(T32)</td><td>A64</td></tr><tr><td>Pipeline Depth</td><td>8 stage<br/>in-order,<br/>dual issue</td><td>8 stage<br/>in-order,<br/>dual issue</td><td>11 stage<br/>out-of-order,<br/>superscalar</td><td>11 stage<br/>out-of-order,<br/>superscalar</td><td>8 stage<br/>in-order,<br/>superscalar</td><td>8 stage<br/>in-order,<br/>superscalar</td><td>8 stage<br/>in-order,<br/>triple issue</td></tr><tr><td>Address Bits</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td>40</td></tr><tr><td>Addressable Memory</td><td>4GB</td><td>4GB</td><td>4GB</td><td>4GB</td><td>4GB</td><td>4GB</td><td>1TB</td></tr><tr><td>ECC on Memories</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>MPU or MMU</td><td>MPU</td><td>MPU</td><td>MPU</td><td>MPU</td><td>MPU</td><td>MPU</td><td>Both</td></tr><tr><td>Maximum MPU Regions</td><td>12</td><td>16</td><td>16</td><td>24</td><td>24+24</td><td>24+24</td><td>32+32</td></tr><tr><td>Symmetric Multi-Processing (SMP) Support</td><td>1 core,<br/>No coherency</td><td>2 core,<br/>IO coherency</td><td>Up to MP2</td><td>Up to MP4</td><td>Up to UP4,<br/>No coherence</td><td>Up to UP4,<br/>No coherence</td><td>Up to MP8</td></tr><tr><td>Floating Point Unit (FPU)</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>SIMD (Neon)</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>DMIPS/MHz<sup>2</sup></td><td>1.67</td><td>1.67</td><td>2.5</td><td>2.5</td><td>2.09</td><td>2.09</td><td>3.71</td></tr><tr><td>CoreMark@/MHz<sup>2</sup></td><td>3.47</td><td>3.47</td><td>4.35</td><td>4.62</td><td>4.3</td><td>4.3</td><td>6.28</td></tr><tr><td>Maximum # External Interrupts</td><td>Up to 480</td><td>Up to 480</td><td>Up to 480</td><td>Up to 480</td><td>Up to 960</td><td>Up to 960</td><td>External,<br/>GICStream<br/>v3.1</td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        794.0,
+        1123.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          794.0,
+          0.0
+        ],
+        [
+          794.0,
+          1123.0
+        ],
+        [
+          0.0,
+          1123.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/SectionHeader/0",
+          "block_type": "SectionHeader",
+          "html": "<h1>Arm Cortex-R Processor Comparison Table</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              49.0,
+              44.0
+            ],
+            [
+              450.0,
+              44.0
+            ],
+            [
+              450.0,
+              69.0
+            ],
+            [
+              49.0,
+              69.0
+            ]
+          ],
+          "bbox": [
+            49.0,
+            44.0,
+            450.0,
+            69.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/1",
+          "block_type": "Text",
+          "html": "<p>The Cortex-R series of processors deliver fast and deterministic processing and high performance, while meeting challenging real-time constraints in a range of situations. They combine these features in a performance, power and area optimized package, making them the trusted choice in reliable systems demanding high error-resistance.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              46.0,
+              159.0
+            ],
+            [
+              744.0,
+              159.0
+            ],
+            [
+              744.0,
+              211.0
+            ],
+            [
+              46.0,
+              211.0
+            ]
+          ],
+          "bbox": [
+            46.0,
+            159.0,
+            744.0,
+            211.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Table/2",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Feature</th><th>Cortex-R4</th><th>Cortex-R5</th><th>Cortex-R7<sup>1</sup></th><th>Cortex-R8</th><th>Cortex-R52</th><th>Cortex-R52+</th><th>Cortex-R82</th></tr></thead><tbody><tr><td>Architecture</td><td>Armv7-R</td><td>Armv7-R</td><td>Armv7-R</td><td>Armv7-R</td><td>Armv8-R<br/>AArch32</td><td>Armv8-R<br/>AArch32</td><td>Armv8-R<br/>AArch64</td></tr><tr><td>Instruction Set</td><td>Arm(32),<br/>Thumb(T32)</td><td>Arm(32),<br/>Thumb(T32)</td><td>Arm(32),<br/>Thumb(T32)</td><td>Arm(32),<br/>Thumb(T32)</td><td>Arm(32),<br/>Thumb(T32)</td><td>Arm(32),<br/>Thumb(T32)</td><td>A64</td></tr><tr><td>Pipeline Depth</td><td>8 stage<br/>in-order,<br/>dual issue</td><td>8 stage<br/>in-order,<br/>dual issue</td><td>11 stage<br/>out-of-order,<br/>superscalar</td><td>11 stage<br/>out-of-order,<br/>superscalar</td><td>8 stage<br/>in-order,<br/>superscalar</td><td>8 stage<br/>in-order,<br/>superscalar</td><td>8 stage<br/>in-order,<br/>triple issue</td></tr><tr><td>Address Bits</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td>40</td></tr><tr><td>Addressable Memory</td><td>4GB</td><td>4GB</td><td>4GB</td><td>4GB</td><td>4GB</td><td>4GB</td><td>1TB</td></tr><tr><td>ECC on Memories</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>MPU or MMU</td><td>MPU</td><td>MPU</td><td>MPU</td><td>MPU</td><td>MPU</td><td>MPU</td><td>Both</td></tr><tr><td>Maximum MPU Regions</td><td>12</td><td>16</td><td>16</td><td>24</td><td>24+24</td><td>24+24</td><td>32+32</td></tr><tr><td>Symmetric Multi-Processing (SMP) Support</td><td>1 core,<br/>No coherency</td><td>2 core,<br/>IO coherency</td><td>Up to MP2</td><td>Up to MP4</td><td>Up to UP4,<br/>No coherence</td><td>Up to UP4,<br/>No coherence</td><td>Up to MP8</td></tr><tr><td>Floating Point Unit (FPU)</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>SIMD (Neon)</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>DMIPS/MHz<sup>2</sup></td><td>1.67</td><td>1.67</td><td>2.5</td><td>2.5</td><td>2.09</td><td>2.09</td><td>3.71</td></tr><tr><td>CoreMark@/MHz<sup>2</sup></td><td>3.47</td><td>3.47</td><td>4.35</td><td>4.62</td><td>4.3</td><td>4.3</td><td>6.28</td></tr><tr><td>Maximum # External Interrupts</td><td>Up to 480</td><td>Up to 480</td><td>Up to 480</td><td>Up to 480</td><td>Up to 960</td><td>Up to 960</td><td>External,<br/>GICStream<br/>v3.1</td></tr></tbody></table>",
+          "page": 0,
+          "polygon": [
+            [
+              46.0,
+              254.0
+            ],
+            [
+              744.0,
+              254.0
+            ],
+            [
+              744.0,
+              1070.0
+            ],
+            [
+              46.0,
+              1070.0
+            ]
+          ],
+          "bbox": [
+            46.0,
+            254.0,
+            744.0,
+            1070.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    },
+    {
+      "html": "<table><thead><tr><th>Feature</th><th>Cortex-R4</th><th>Cortex-R5</th><th>Cortex-R7\u2020</th><th>Cortex-R8</th><th>Cortex-R52</th><th>Cortex-R52+</th><th>Cortex-R82</th></tr></thead><tbody><tr><td>Bus Protocol</td><td>AXI3</td><td>AXI3</td><td>AXI3</td><td>AXI3</td><td>AXI4</td><td>AXI4</td><td>AXI5 and CHI-E</td></tr><tr><td>Instruction TCM</td><td>0-8MB</td><td>0-8MB</td><td>0-128KB</td><td>0-1MB</td><td>0-1MB</td><td>0-1MB</td><td>0,16KB-1MB</td></tr><tr><td>Data TCM</td><td>0-8MB</td><td>0-8MB</td><td>0-128KB</td><td>0-1MB</td><td>0-1MB</td><td>0-1MB</td><td>0,16KB-1MB</td></tr><tr><td>Instruction Cache</td><td>0,4KB-64KB</td><td>0,4KB-64KB</td><td>0,4KB-64KB</td><td>0KB-64KB</td><td>0KB-32KB</td><td>0KB-32KB</td><td>16KB-128KB</td></tr><tr><td>Data Cache</td><td>4KB-64KB</td><td>4KB-64KB</td><td>4KB-64KB</td><td>0KB-64KB</td><td>0KB-32KB</td><td>0KB-32KB</td><td>16KB-64KB</td></tr><tr><td>L2 Cache</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>0,128KB-4MB</td></tr><tr><td>Dual Core Lock-Step (DCLS)</td><td>No</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>No</td></tr><tr><td>Safety Package</td><td>No</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>No</td></tr><tr><td>Software Test Library</td><td>No</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>No</td></tr></tbody></table><p>\u2020 Arm products undergo continual development and improvement. The Cortex-R7 processor is no longer available to license and is included here for comparison purposes only.</p><p>Cortex-R series processors support compatibility, enabling software reuse and migration as functionality and/or additional processing power is required.</p><p>*See individual Cortex-R product pages for further information.</p><p>For more information, contact your Arm account manager today or explore the processors in more detail here:<br/><a href=\"http://developer.arm.com/ip-products/processors/cortex-r\">developer.arm.com/ip-products/processors/cortex-r</a></p>",
+      "bbox": [
+        0.0,
+        0.0,
+        794.0,
+        1123.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          794.0,
+          0.0
+        ],
+        [
+          794.0,
+          1123.0
+        ],
+        [
+          0.0,
+          1123.0
+        ]
+      ],
+      "id": "/page/1/Page/1",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/1/Table/0",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Feature</th><th>Cortex-R4</th><th>Cortex-R5</th><th>Cortex-R7\u2020</th><th>Cortex-R8</th><th>Cortex-R52</th><th>Cortex-R52+</th><th>Cortex-R82</th></tr></thead><tbody><tr><td>Bus Protocol</td><td>AXI3</td><td>AXI3</td><td>AXI3</td><td>AXI3</td><td>AXI4</td><td>AXI4</td><td>AXI5 and CHI-E</td></tr><tr><td>Instruction TCM</td><td>0-8MB</td><td>0-8MB</td><td>0-128KB</td><td>0-1MB</td><td>0-1MB</td><td>0-1MB</td><td>0,16KB-1MB</td></tr><tr><td>Data TCM</td><td>0-8MB</td><td>0-8MB</td><td>0-128KB</td><td>0-1MB</td><td>0-1MB</td><td>0-1MB</td><td>0,16KB-1MB</td></tr><tr><td>Instruction Cache</td><td>0,4KB-64KB</td><td>0,4KB-64KB</td><td>0,4KB-64KB</td><td>0KB-64KB</td><td>0KB-32KB</td><td>0KB-32KB</td><td>16KB-128KB</td></tr><tr><td>Data Cache</td><td>4KB-64KB</td><td>4KB-64KB</td><td>4KB-64KB</td><td>0KB-64KB</td><td>0KB-32KB</td><td>0KB-32KB</td><td>16KB-64KB</td></tr><tr><td>L2 Cache</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>0,128KB-4MB</td></tr><tr><td>Dual Core Lock-Step (DCLS)</td><td>No</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>No</td></tr><tr><td>Safety Package</td><td>No</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>No</td></tr><tr><td>Software Test Library</td><td>No</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>No</td></tr></tbody></table>",
+          "page": 1,
+          "polygon": [
+            [
+              45.0,
+              46.0
+            ],
+            [
+              744.0,
+              46.0
+            ],
+            [
+              744.0,
+              569.0
+            ],
+            [
+              45.0,
+              569.0
+            ]
+          ],
+          "bbox": [
+            45.0,
+            46.0,
+            744.0,
+            569.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/1",
+          "block_type": "Text",
+          "html": "<p>\u2020 Arm products undergo continual development and improvement. The Cortex-R7 processor is no longer available to license and is included here for comparison purposes only.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              45.0,
+              619.0
+            ],
+            [
+              694.0,
+              619.0
+            ],
+            [
+              694.0,
+              649.0
+            ],
+            [
+              45.0,
+              649.0
+            ]
+          ],
+          "bbox": [
+            45.0,
+            619.0,
+            694.0,
+            649.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/2",
+          "block_type": "Text",
+          "html": "<p>Cortex-R series processors support compatibility, enabling software reuse and migration as functionality and/or additional processing power is required.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              45.0,
+              671.0
+            ],
+            [
+              668.0,
+              671.0
+            ],
+            [
+              668.0,
+              701.0
+            ],
+            [
+              45.0,
+              701.0
+            ]
+          ],
+          "bbox": [
+            45.0,
+            671.0,
+            668.0,
+            701.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/3",
+          "block_type": "Text",
+          "html": "<p>*See individual Cortex-R product pages for further information.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              45.0,
+              724.0
+            ],
+            [
+              343.0,
+              724.0
+            ],
+            [
+              343.0,
+              736.0
+            ],
+            [
+              45.0,
+              736.0
+            ]
+          ],
+          "bbox": [
+            45.0,
+            724.0,
+            343.0,
+            736.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/4",
+          "block_type": "Text",
+          "html": "<p>For more information, contact your Arm account manager today or explore the processors in more detail here:<br/><a href=\"http://developer.arm.com/ip-products/processors/cortex-r\">developer.arm.com/ip-products/processors/cortex-r</a></p>",
+          "page": 1,
+          "polygon": [
+            [
+              45.0,
+              763.0
+            ],
+            [
+              559.0,
+              763.0
+            ],
+            [
+              559.0,
+              793.0
+            ],
+            [
+              45.0,
+              793.0
+            ]
+          ],
+          "bbox": [
+            45.0,
+            763.0,
+            559.0,
+            793.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/5",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              45.0,
+              1046.0
+            ],
+            [
+              123.0,
+              1046.0
+            ],
+            [
+              123.0,
+              1075.0
+            ],
+            [
+              45.0,
+              1075.0
+            ]
+          ],
+          "bbox": [
+            45.0,
+            1046.0,
+            123.0,
+            1075.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/6",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              146.0,
+              1030.0
+            ],
+            [
+              610.0,
+              1030.0
+            ],
+            [
+              610.0,
+              1055.0
+            ],
+            [
+              146.0,
+              1055.0
+            ]
+          ],
+          "bbox": [
+            146.0,
+            1030.0,
+            610.0,
+            1055.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/7",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              146.0,
+              1064.0
+            ],
+            [
+              303.0,
+              1064.0
+            ],
+            [
+              303.0,
+              1075.0
+            ],
+            [
+              146.0,
+              1075.0
+            ]
+          ],
+          "bbox": [
+            146.0,
+            1064.0,
+            303.0,
+            1075.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/8",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              651.0,
+              1064.0
+            ],
+            [
+              745.0,
+              1064.0
+            ],
+            [
+              745.0,
+              1075.0
+            ],
+            [
+              651.0,
+              1075.0
+            ]
+          ],
+          "bbox": [
+            651.0,
+            1064.0,
+            745.0,
+            1075.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/0"
+      }
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 3
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 9
+      }
+    ]
+  }
+}

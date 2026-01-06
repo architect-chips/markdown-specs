@@ -1,0 +1,982 @@
+{
+  "children": [
+    {
+      "html": "<h1>Open NVDLA Code of Conduct</h1><p>In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.</p><h2>Our standards</h2><p>Examples of behavior that contributes to creating a positive environment include:</p><ul><li>Using welcoming and inclusive language</li><li>Being respectful of differing viewpoints and experiences</li><li>Gracefully accepting constructive criticism</li><li>Focusing on what is best for the community</li><li>Showing empathy towards other community members</li></ul><p>Examples of unacceptable behavior by participants include:</p><ul><li>The use of sexualized language or imagery and unwelcome sexual attention or advances</li><li>Trolling, insulting/derogatory comments, and personal or political attacks</li><li>Public or private harassment</li><li>Publishing others' private information, such as a physical or electronic address, without explicit permission</li><li>Other conduct which could reasonably be considered inappropriate in a professional setting</li></ul><h2>Our responsibilities</h2><p>Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.</p><p>Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.</p><h2>Scope</h2><p>This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        816.0,
+        1056.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          816.0,
+          0.0
+        ],
+        [
+          816.0,
+          1056.0
+        ],
+        [
+          0.0,
+          1056.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              30.0,
+              19.0
+            ],
+            [
+              112.0,
+              19.0
+            ],
+            [
+              112.0,
+              30.0
+            ],
+            [
+              30.0,
+              30.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            19.0,
+            112.0,
+            30.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              334.0,
+              19.0
+            ],
+            [
+              597.0,
+              19.0
+            ],
+            [
+              597.0,
+              30.0
+            ],
+            [
+              334.0,
+              30.0
+            ]
+          ],
+          "bbox": [
+            334.0,
+            19.0,
+            597.0,
+            30.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h1>Open NVDLA Code of Conduct</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              63.0
+            ],
+            [
+              594.0,
+              63.0
+            ],
+            [
+              594.0,
+              103.0
+            ],
+            [
+              50.0,
+              103.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            63.0,
+            594.0,
+            103.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/3",
+          "block_type": "Text",
+          "html": "<p>In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              123.0
+            ],
+            [
+              750.0,
+              123.0
+            ],
+            [
+              750.0,
+              201.0
+            ],
+            [
+              50.0,
+              201.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            123.0,
+            750.0,
+            201.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/4",
+          "block_type": "SectionHeader",
+          "html": "<h2>Our standards</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              222.0
+            ],
+            [
+              266.0,
+              222.0
+            ],
+            [
+              266.0,
+              256.0
+            ],
+            [
+              50.0,
+              256.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            222.0,
+            266.0,
+            256.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/5",
+          "block_type": "Text",
+          "html": "<p>Examples of behavior that contributes to creating a positive environment include:</p>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              266.0
+            ],
+            [
+              617.0,
+              266.0
+            ],
+            [
+              617.0,
+              285.0
+            ],
+            [
+              50.0,
+              285.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            266.0,
+            617.0,
+            285.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/ListGroup/6",
+          "block_type": "ListGroup",
+          "html": "<ul><li>Using welcoming and inclusive language</li><li>Being respectful of differing viewpoints and experiences</li><li>Gracefully accepting constructive criticism</li><li>Focusing on what is best for the community</li><li>Showing empathy towards other community members</li></ul>",
+          "page": 0,
+          "polygon": [
+            [
+              73.0,
+              304.0
+            ],
+            [
+              479.0,
+              304.0
+            ],
+            [
+              479.0,
+              402.0
+            ],
+            [
+              73.0,
+              402.0
+            ]
+          ],
+          "bbox": [
+            73.0,
+            304.0,
+            479.0,
+            402.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/7",
+          "block_type": "Text",
+          "html": "<p>Examples of unacceptable behavior by participants include:</p>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              415.0
+            ],
+            [
+              464.0,
+              415.0
+            ],
+            [
+              464.0,
+              431.0
+            ],
+            [
+              50.0,
+              431.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            415.0,
+            464.0,
+            431.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/ListGroup/8",
+          "block_type": "ListGroup",
+          "html": "<ul><li>The use of sexualized language or imagery and unwelcome sexual attention or advances</li><li>Trolling, insulting/derogatory comments, and personal or political attacks</li><li>Public or private harassment</li><li>Publishing others' private information, such as a physical or electronic address, without explicit permission</li><li>Other conduct which could reasonably be considered inappropriate in a professional setting</li></ul>",
+          "page": 0,
+          "polygon": [
+            [
+              73.0,
+              453.0
+            ],
+            [
+              750.0,
+              453.0
+            ],
+            [
+              750.0,
+              570.0
+            ],
+            [
+              73.0,
+              570.0
+            ]
+          ],
+          "bbox": [
+            73.0,
+            453.0,
+            750.0,
+            570.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/9",
+          "block_type": "SectionHeader",
+          "html": "<h2>Our responsibilities</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              592.0
+            ],
+            [
+              339.0,
+              592.0
+            ],
+            [
+              339.0,
+              627.0
+            ],
+            [
+              50.0,
+              627.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            592.0,
+            339.0,
+            627.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/10",
+          "block_type": "Text",
+          "html": "<p>Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              636.0
+            ],
+            [
+              746.0,
+              636.0
+            ],
+            [
+              746.0,
+              692.0
+            ],
+            [
+              50.0,
+              692.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            636.0,
+            746.0,
+            692.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/11",
+          "block_type": "Text",
+          "html": "<p>Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              713.0
+            ],
+            [
+              744.0,
+              713.0
+            ],
+            [
+              744.0,
+              792.0
+            ],
+            [
+              50.0,
+              792.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            713.0,
+            744.0,
+            792.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/12",
+          "block_type": "SectionHeader",
+          "html": "<h2>Scope</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              814.0
+            ],
+            [
+              143.0,
+              814.0
+            ],
+            [
+              143.0,
+              847.0
+            ],
+            [
+              50.0,
+              847.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            814.0,
+            143.0,
+            847.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/13",
+          "block_type": "Text",
+          "html": "<p>This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              857.0
+            ],
+            [
+              747.0,
+              857.0
+            ],
+            [
+              747.0,
+              953.0
+            ],
+            [
+              50.0,
+              953.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            857.0,
+            747.0,
+            953.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/14",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              30.0,
+              1023.0
+            ],
+            [
+              159.0,
+              1023.0
+            ],
+            [
+              159.0,
+              1033.0
+            ],
+            [
+              30.0,
+              1033.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            1023.0,
+            159.0,
+            1033.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/15",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              767.0,
+              1023.0
+            ],
+            [
+              782.0,
+              1023.0
+            ],
+            [
+              782.0,
+              1033.0
+            ],
+            [
+              767.0,
+              1033.0
+            ]
+          ],
+          "bbox": [
+            767.0,
+            1023.0,
+            782.0,
+            1033.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/12"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    },
+    {
+      "html": "<h2>Reporting violations</h2><p>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the NVDLA core maintainership team at <a href=\"mailto:nvdl@nvidia.com\">nvdl@nvidia.com</a> (<a href=\"mailto:nvdl@nvidia.com\">mailto:nvdl@nvidia.com</a>). The NVDLA core maintainership team will determine whether the Code of Conduct was violated, and will issue an appropriate sanction, possibly including a written warning or expulsion from the project, project-affiliated spaces, or project discussion environments. We ask that you make a good-faith effort to resolve your conflict before submitting a report.</p><p>Violations of the Code of Conduct can occur in any setting, even those unrelated to the project. We will only consider complaints about conduct that has occurred within one year of the report.</p><p>If the NVDLA core maintainership team receives a report alleging a violation of the Code of Conduct, they will notify the accused of the report, and provide them an opportunity to discuss the report before a sanction is issued. The NVDLA team will do their utmost to keep the reporter anonymous. If the act is ongoing (such as someone engaging in harassment), or involves a threat to anyone's safety (e.g. threats of violence), the NVDLA team may issue sanctions without notice.</p><h2>Attribution</h2><p>This Code of Conduct is adapted from the Contributor Covenant, version 1.4 (<a href=\"https://www.contributor-covenant.org/version/1/4/code-of-conduct.html\">https://www.contributor-covenant.org/version/1/4/code-of-conduct.html</a>), and from the TensorFlow Code of Conduct (<a href=\"https://github.com/tensorflow/tensorflow/blob/master/CODE_OF_CONDUCT.md\">https://github.com/tensorflow/tensorflow/blob/master/CODE_OF_CONDUCT.md</a>).</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/1/Page/1",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/1/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              471.0,
+              26.0
+            ],
+            [
+              841.0,
+              26.0
+            ],
+            [
+              841.0,
+              43.0
+            ],
+            [
+              471.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            471.0,
+            26.0,
+            841.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h2>Reporting violations</h2>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              51.0
+            ],
+            [
+              494.0,
+              51.0
+            ],
+            [
+              494.0,
+              98.0
+            ],
+            [
+              71.0,
+              98.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            51.0,
+            494.0,
+            98.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/3",
+          "block_type": "Text",
+          "html": "<p>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the NVDLA core maintainership team at <a href=\"mailto:nvdl@nvidia.com\">nvdl@nvidia.com</a> (<a href=\"mailto:nvdl@nvidia.com\">mailto:nvdl@nvidia.com</a>). The NVDLA core maintainership team will determine whether the Code of Conduct was violated, and will issue an appropriate sanction, possibly including a written warning or expulsion from the project, project-affiliated spaces, or project discussion environments. We ask that you make a good-faith effort to resolve your conflict before submitting a report.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              68.0,
+              111.0
+            ],
+            [
+              1068.0,
+              111.0
+            ],
+            [
+              1068.0,
+              279.0
+            ],
+            [
+              68.0,
+              279.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            111.0,
+            1068.0,
+            279.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/4",
+          "block_type": "Text",
+          "html": "<p>Violations of the Code of Conduct can occur in any setting, even those unrelated to the project. We will only consider complaints about conduct that has occurred within one year of the report.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              68.0,
+              305.0
+            ],
+            [
+              1041.0,
+              305.0
+            ],
+            [
+              1041.0,
+              359.0
+            ],
+            [
+              68.0,
+              359.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            305.0,
+            1041.0,
+            359.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/5",
+          "block_type": "Text",
+          "html": "<p>If the NVDLA core maintainership team receives a report alleging a violation of the Code of Conduct, they will notify the accused of the report, and provide them an opportunity to discuss the report before a sanction is issued. The NVDLA team will do their utmost to keep the reporter anonymous. If the act is ongoing (such as someone engaging in harassment), or involves a threat to anyone's safety (e.g. threats of violence), the NVDLA team may issue sanctions without notice.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              68.0,
+              387.0
+            ],
+            [
+              1069.0,
+              387.0
+            ],
+            [
+              1069.0,
+              525.0
+            ],
+            [
+              68.0,
+              525.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            387.0,
+            1069.0,
+            525.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/6",
+          "block_type": "SectionHeader",
+          "html": "<h2>Attribution</h2>",
+          "page": 1,
+          "polygon": [
+            [
+              68.0,
+              556.0
+            ],
+            [
+              298.0,
+              556.0
+            ],
+            [
+              298.0,
+              599.0
+            ],
+            [
+              68.0,
+              599.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            556.0,
+            298.0,
+            599.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/7",
+          "block_type": "Text",
+          "html": "<p>This Code of Conduct is adapted from the Contributor Covenant, version 1.4 (<a href=\"https://www.contributor-covenant.org/version/1/4/code-of-conduct.html\">https://www.contributor-covenant.org/version/1/4/code-of-conduct.html</a>), and from the TensorFlow Code of Conduct (<a href=\"https://github.com/tensorflow/tensorflow/blob/master/CODE_OF_CONDUCT.md\">https://github.com/tensorflow/tensorflow/blob/master/CODE_OF_CONDUCT.md</a>).</p>",
+          "page": 1,
+          "polygon": [
+            [
+              68.0,
+              616.0
+            ],
+            [
+              1060.0,
+              616.0
+            ],
+            [
+              1060.0,
+              697.0
+            ],
+            [
+              68.0,
+              697.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            616.0,
+            1060.0,
+            697.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/8",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              39.0,
+              1435.0
+            ],
+            [
+              227.0,
+              1435.0
+            ],
+            [
+              227.0,
+              1455.0
+            ],
+            [
+              39.0,
+              1455.0
+            ]
+          ],
+          "bbox": [
+            39.0,
+            1435.0,
+            227.0,
+            1455.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/9",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              1077.0,
+              1435.0
+            ],
+            [
+              1105.0,
+              1435.0
+            ],
+            [
+              1105.0,
+              1453.0
+            ],
+            [
+              1077.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1077.0,
+            1435.0,
+            1105.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/0/SectionHeader/12"
+      }
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 16
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 10
+      }
+    ]
+  }
+}

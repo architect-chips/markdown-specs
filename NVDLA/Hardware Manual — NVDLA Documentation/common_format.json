@@ -1,0 +1,453 @@
+{
+  "children": [
+    {
+      "html": "<h1>Hardware Manual</h1><ul><li>Hardware Architectural Specification (v1/hwarch.html) \u2013 a design-level view of the NVDLA hardware architecture, including detail on each sub-component, and register-level documentation.</li></ul><h2>NVDLA v1</h2><p>This is the non-configurable \u201cfull-precision\u201d version of NVDLA. The design code is in nvdla v1 branch.</p><ul><li>In-memory data formats (format.html) \u2013 description of the in-memory format for weight and activation data.</li><li>Integrator\u2019s Manual (v1/integration_guide.html) \u2013 a guide for SoC integrators, including a walk-through of the NVDLA build infrastructure, NVDLA\u2019s testbenches, and synthesis scripts.</li><li>Precision Preservation (v1/ias/precision.html) \u2013 the technologies used to keep the precision when formats INT8/INT16/FP16 are used.</li><li>LUT programming (v1/ias/lut-programming.html) \u2013 the guide to programming lut tables</li><li>Unit Description (v1/ias/unit_description.html) \u2013 description of internal architecture of sub-units</li><li>Programming Guide (v1/ias/programming_guide.html) \u2013 programming guide of sub-units</li></ul><h2>NVDLA v2</h2><p>This version is scalable design of NVDLA. Currently, the config nv_small is verified. The architecture of sub-units is same as NVDLA v1.</p><ul><li>NVDLA Environment Setup Guide (v2/environment_setup_guide.html) \u2013 Please follow this document to setup tools and dependency libraries</li><li>Scalability parameters and ConfigROM (v2/scalability.html) \u2013 Scalability parameters and ConfigROM contents in nv_large and nv_small configurations</li><li>Integrator\u2019s Manual (v2/integration_guide.html) \u2013 a guide for SoC integrators, including NVDLA system inference introduction, synthesis scripts.</li><li>NVDLA Verification Suite User Guide (v2/verif_guide.html) \u2013 NVDLA Verification Suite User Guide</li></ul>",
+      "bbox": [
+        0.0,
+        0.0,
+        816.0,
+        1056.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          816.0,
+          0.0
+        ],
+        [
+          816.0,
+          1056.0
+        ],
+        [
+          0.0,
+          1056.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              30.0,
+              19.0
+            ],
+            [
+              112.0,
+              19.0
+            ],
+            [
+              112.0,
+              30.0
+            ],
+            [
+              30.0,
+              30.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            19.0,
+            112.0,
+            30.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              364.0,
+              19.0
+            ],
+            [
+              567.0,
+              19.0
+            ],
+            [
+              567.0,
+              30.0
+            ],
+            [
+              364.0,
+              30.0
+            ]
+          ],
+          "bbox": [
+            364.0,
+            19.0,
+            567.0,
+            30.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h1>Hardware Manual</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              63.0
+            ],
+            [
+              366.0,
+              63.0
+            ],
+            [
+              366.0,
+              101.0
+            ],
+            [
+              50.0,
+              101.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            63.0,
+            366.0,
+            101.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/ListGroup/3",
+          "block_type": "ListGroup",
+          "html": "<ul><li>Hardware Architectural Specification (v1/hwarch.html) \u2013 a design-level view of the NVDLA hardware architecture, including detail on each sub-component, and register-level documentation.</li></ul>",
+          "page": 0,
+          "polygon": [
+            [
+              73.0,
+              123.0
+            ],
+            [
+              718.0,
+              123.0
+            ],
+            [
+              718.0,
+              180.0
+            ],
+            [
+              73.0,
+              180.0
+            ]
+          ],
+          "bbox": [
+            73.0,
+            123.0,
+            718.0,
+            180.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/4",
+          "block_type": "SectionHeader",
+          "html": "<h2>NVDLA v1</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              202.0
+            ],
+            [
+              199.0,
+              202.0
+            ],
+            [
+              199.0,
+              236.0
+            ],
+            [
+              50.0,
+              236.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            202.0,
+            199.0,
+            236.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/5",
+          "block_type": "Text",
+          "html": "<p>This is the non-configurable \u201cfull-precision\u201d version of NVDLA. The design code is in nvdla v1 branch.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              247.0
+            ],
+            [
+              745.0,
+              247.0
+            ],
+            [
+              745.0,
+              264.0
+            ],
+            [
+              50.0,
+              264.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            247.0,
+            745.0,
+            264.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/ListGroup/6",
+          "block_type": "ListGroup",
+          "html": "<ul><li>In-memory data formats (format.html) \u2013 description of the in-memory format for weight and activation data.</li><li>Integrator\u2019s Manual (v1/integration_guide.html) \u2013 a guide for SoC integrators, including a walk-through of the NVDLA build infrastructure, NVDLA\u2019s testbenches, and synthesis scripts.</li><li>Precision Preservation (v1/ias/precision.html) \u2013 the technologies used to keep the precision when formats INT8/INT16/FP16 are used.</li><li>LUT programming (v1/ias/lut-programming.html) \u2013 the guide to programming lut tables</li><li>Unit Description (v1/ias/unit_description.html) \u2013 description of internal architecture of sub-units</li><li>Programming Guide (v1/ias/programming_guide.html) \u2013 programming guide of sub-units</li></ul>",
+          "page": 0,
+          "polygon": [
+            [
+              73.0,
+              285.0
+            ],
+            [
+              760.0,
+              285.0
+            ],
+            [
+              760.0,
+              462.0
+            ],
+            [
+              73.0,
+              462.0
+            ]
+          ],
+          "bbox": [
+            73.0,
+            285.0,
+            760.0,
+            462.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h2>NVDLA v2</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              484.0
+            ],
+            [
+              202.0,
+              484.0
+            ],
+            [
+              202.0,
+              517.0
+            ],
+            [
+              50.0,
+              517.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            484.0,
+            202.0,
+            517.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/8",
+          "block_type": "Text",
+          "html": "<p>This version is scalable design of NVDLA. Currently, the config nv_small is verified. The architecture of sub-units is same as NVDLA v1.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              50.0,
+              528.0
+            ],
+            [
+              762.0,
+              528.0
+            ],
+            [
+              762.0,
+              563.0
+            ],
+            [
+              50.0,
+              563.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            528.0,
+            762.0,
+            563.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/ListGroup/9",
+          "block_type": "ListGroup",
+          "html": "<ul><li>NVDLA Environment Setup Guide (v2/environment_setup_guide.html) \u2013 Please follow this document to setup tools and dependency libraries</li><li>Scalability parameters and ConfigROM (v2/scalability.html) \u2013 Scalability parameters and ConfigROM contents in nv_large and nv_small configurations</li><li>Integrator\u2019s Manual (v2/integration_guide.html) \u2013 a guide for SoC integrators, including NVDLA system inference introduction, synthesis scripts.</li><li>NVDLA Verification Suite User Guide (v2/verif_guide.html) \u2013 NVDLA Verification Suite User Guide</li></ul>",
+          "page": 0,
+          "polygon": [
+            [
+              73.0,
+              586.0
+            ],
+            [
+              754.0,
+              586.0
+            ],
+            [
+              754.0,
+              742.0
+            ],
+            [
+              73.0,
+              742.0
+            ]
+          ],
+          "bbox": [
+            73.0,
+            586.0,
+            754.0,
+            742.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/10",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              30.0,
+              1023.0
+            ],
+            [
+              177.0,
+              1023.0
+            ],
+            [
+              177.0,
+              1033.0
+            ],
+            [
+              30.0,
+              1033.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            1023.0,
+            177.0,
+            1033.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/11",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              768.0,
+              1023.0
+            ],
+            [
+              781.0,
+              1023.0
+            ],
+            [
+              781.0,
+              1033.0
+            ],
+            [
+              768.0,
+              1033.0
+            ]
+          ],
+          "bbox": [
+            768.0,
+            1023.0,
+            781.0,
+            1033.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 12
+      }
+    ]
+  }
+}

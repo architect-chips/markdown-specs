@@ -1,0 +1,1440 @@
+{
+  "children": [
+    {
+      "html": "<h1>ARM Floating-Point 2019: Latency, Area, Power</h1>David R. Lutz<br/>ARM Austin Design Center<br/>david.lutz@arm.com<h2>ABSTRACT</h2><p>We have had little or no speed increase from process in the past few years, but latency continues to decrease due to algorithmic improvements [1] and a decision to spend more area on CPU datapaths [2]. A binary64 floating-point (FP) add now takes two cycles when done as part of a 2+2-cycle FMA, and even one cycle when done as part of an in-order vector reduction. Smaller and more specialized FP operations (bfloat16) are even faster. Finally, the decision to spend more area on datapath logic took a new twist this year when we applied it to GPUs, cutting dynamic power there by a third.</p><h2>I. 2+2-CYCLE FMA</h2><p>According to the IEEE 754-2008 standard, the operation <math>FMA(s, a, x)</math> computes <math>s + a \\times x</math> \u201cas if with unbounded range and precision, rounding only once to the destination format\u201d. An FMA is usually implemented as a single pipeline, consisting of a multiply array followed by an add, a normalization shift, and rounding [3]. The augend <math>s</math> is shifted during the multiplier array reduction, so all three operands are needed at instruction issue time. Typical latency for an FMA is currently four cycles [4]. The traditional FMA pipeline is usually used for addition and multiplication as well as FMA, with adds computed as <math>s + (1 \\times x)</math> and multiplies computed as <math>0 + (a \\times x)</math>, meaning that multiplies and adds also take four cycles.</p><p>We do not use the traditional FMA microarchitecture. Instead, we perform our FMAs as separate 2-cycle unrounded multiplies and 2-cycle adds, a strategy that improves the latency of addition, multiplication, and sums-of-products. For binary64, this means the multiplier returns an unrounded result comprising sign, 11-bit exponent, and 105-bit fraction; one of the adder inputs also has this format, with the extra fraction bits zeroed for non-FMA adds. The augend in our scheme is not used during the multiplication cycles, so FMAs accumulating to a common augend can issue every two cycles rather than every four cycles.</p><p>Our FMA is fully 754-2008 compliant in hardware, performing both normal and subnormal arithmetic at full speed, avoiding subnormal penalties that can be over 100 cycles and the associated security vulnerabilities [4], [5]. The latency (including forwarding) for all of our operations is 4 cycles for FMA, 3 cycles for multiply (the third cycle is for rounding), and 2 cycles for add.</p><p>The most common use of FMAs is for sums of products. Given the usual implementation, an in-order sum of four products <math>s = ax + by + cz + dw</math> would take 16 cycles on a 4-cycle FMA, as shown in figure 1.</p><table><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th></tr></thead><tbody><tr><td>fmul s,a,x</td><td>M</td><td>M</td><td>M</td><td>M</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,b,y</td><td></td><td></td><td></td><td></td><td></td><td>F</td><td>F</td><td>F</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,c,z</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>F</td><td>F</td><td>F</td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,d,w</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>F</td><td>F</td><td>F</td><td></td></tr></tbody></table><p>Fig. 1. In-order sum-of-product latency for 4-cycle FMA</p><p>Given the same sum of 4 products, our 2+2-cycle FMA completes in only 9 cycles instead of 16, as shown in figure 2.</p><table><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th></tr></thead><tbody><tr><td>fmul s,a,x</td><td>M</td><td>M</td><td>M</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,b,y</td><td></td><td>M</td><td>M</td><td>A</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,c,z</td><td></td><td></td><td>M</td><td>M</td><td>A</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,d,w</td><td></td><td></td><td></td><td></td><td>M</td><td>M</td><td>A</td><td>A</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table><p>Fig. 2. In-order sum-of-product latency for 2+2-cycle FMA</p><p>An unpublished 2018 performance study performed at ARM found that the 2+2-cycle FMA improved SpecFP results by about 6% over a 4-cycle FMA [6]. This is more than the 3-4% published in [7], [8], suggesting that the advantage of our approach is increasing as overall FMA latency decreases.</p><table><thead><tr><th>Operation</th><th>4-cycle FMA</th><th>2+2-cycle FMA</th></tr></thead><tbody><tr><td>FMA</td><td>4</td><td>4</td></tr><tr><td>add</td><td>4</td><td>2</td></tr><tr><td>multiply</td><td>4</td><td>3</td></tr><tr><td>in-order FMA sum of n products</td><td><math>4n</math></td><td><math>2n + 1</math></td></tr></tbody></table>TABLE I<br/>LATENCY COMPARISON FOR TWO FMA IMPLEMENTATIONS<h2>II. SINGLE-CYCLE BINARY64 ADDER</h2><p>All of the latencies in the previous section include forwarding to important consumers: add, mul, FMA, and permute all forward to each other in \u201czero\u201d cycles. In fact, the forwarding takes the majority of a cycle, and that portion of the cycle has increased with newer processes and additional vector units. The 2-cycle adder now uses less than a third of the second cycle for logic. Since our 2-cycle adder handles 106-bit FMA significands, we wondered if we could add in less than two cycles if we restricted ourselves to non-FMA adds.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              329.0,
+              78.0
+            ],
+            [
+              813.0,
+              78.0
+            ],
+            [
+              813.0,
+              100.0
+            ],
+            [
+              329.0,
+              100.0
+            ]
+          ],
+          "bbox": [
+            329.0,
+            78.0,
+            813.0,
+            100.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/1",
+          "block_type": "SectionHeader",
+          "html": "<h1>ARM Floating-Point 2019: Latency, Area, Power</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              129.0,
+              139.0
+            ],
+            [
+              1009.0,
+              139.0
+            ],
+            [
+              1009.0,
+              182.0
+            ],
+            [
+              129.0,
+              182.0
+            ]
+          ],
+          "bbox": [
+            129.0,
+            139.0,
+            1009.0,
+            182.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/2",
+          "block_type": "Text",
+          "html": "David R. Lutz<br/>ARM Austin Design Center<br/>david.lutz@arm.com",
+          "page": 0,
+          "polygon": [
+            [
+              450.0,
+              212.0
+            ],
+            [
+              681.0,
+              212.0
+            ],
+            [
+              681.0,
+              280.0
+            ],
+            [
+              450.0,
+              280.0
+            ]
+          ],
+          "bbox": [
+            450.0,
+            212.0,
+            681.0,
+            280.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h2>ABSTRACT</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              288.0,
+              329.0
+            ],
+            [
+              375.0,
+              329.0
+            ],
+            [
+              375.0,
+              347.0
+            ],
+            [
+              288.0,
+              347.0
+            ]
+          ],
+          "bbox": [
+            288.0,
+            329.0,
+            375.0,
+            347.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/4",
+          "block_type": "Text",
+          "html": "<p>We have had little or no speed increase from process in the past few years, but latency continues to decrease due to algorithmic improvements [1] and a decision to spend more area on CPU datapaths [2]. A binary64 floating-point (FP) add now takes two cycles when done as part of a 2+2-cycle FMA, and even one cycle when done as part of an in-order vector reduction. Smaller and more specialized FP operations (bfloat16) are even faster. Finally, the decision to spend more area on datapath logic took a new twist this year when we applied it to GPUs, cutting dynamic power there by a third.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              102.0,
+              354.0
+            ],
+            [
+              561.0,
+              354.0
+            ],
+            [
+              561.0,
+              570.0
+            ],
+            [
+              102.0,
+              570.0
+            ]
+          ],
+          "bbox": [
+            102.0,
+            354.0,
+            561.0,
+            570.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h2>I. 2+2-CYCLE FMA</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              251.0,
+              580.0
+            ],
+            [
+              412.0,
+              580.0
+            ],
+            [
+              412.0,
+              599.0
+            ],
+            [
+              251.0,
+              599.0
+            ]
+          ],
+          "bbox": [
+            251.0,
+            580.0,
+            412.0,
+            599.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/6",
+          "block_type": "Text",
+          "html": "<p>According to the IEEE 754-2008 standard, the operation <math>FMA(s, a, x)</math> computes <math>s + a \\times x</math> \u201cas if with unbounded range and precision, rounding only once to the destination format\u201d. An FMA is usually implemented as a single pipeline, consisting of a multiply array followed by an add, a normalization shift, and rounding [3]. The augend <math>s</math> is shifted during the multiplier array reduction, so all three operands are needed at instruction issue time. Typical latency for an FMA is currently four cycles [4]. The traditional FMA pipeline is usually used for addition and multiplication as well as FMA, with adds computed as <math>s + (1 \\times x)</math> and multiplies computed as <math>0 + (a \\times x)</math>, meaning that multiplies and adds also take four cycles.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              102.0,
+              607.0
+            ],
+            [
+              561.0,
+              607.0
+            ],
+            [
+              561.0,
+              865.0
+            ],
+            [
+              102.0,
+              865.0
+            ]
+          ],
+          "bbox": [
+            102.0,
+            607.0,
+            561.0,
+            865.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/7",
+          "block_type": "Text",
+          "html": "<p>We do not use the traditional FMA microarchitecture. Instead, we perform our FMAs as separate 2-cycle unrounded multiplies and 2-cycle adds, a strategy that improves the latency of addition, multiplication, and sums-of-products. For binary64, this means the multiplier returns an unrounded result comprising sign, 11-bit exponent, and 105-bit fraction; one of the adder inputs also has this format, with the extra fraction bits zeroed for non-FMA adds. The augend in our scheme is not used during the multiplication cycles, so FMAs accumulating to a common augend can issue every two cycles rather than every four cycles.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              102.0,
+              865.0
+            ],
+            [
+              561.0,
+              865.0
+            ],
+            [
+              561.0,
+              1101.0
+            ],
+            [
+              102.0,
+              1101.0
+            ]
+          ],
+          "bbox": [
+            102.0,
+            865.0,
+            561.0,
+            1101.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/8",
+          "block_type": "Text",
+          "html": "<p>Our FMA is fully 754-2008 compliant in hardware, performing both normal and subnormal arithmetic at full speed, avoiding subnormal penalties that can be over 100 cycles and the associated security vulnerabilities [4], [5]. The latency (including forwarding) for all of our operations is 4 cycles for FMA, 3 cycles for multiply (the third cycle is for rounding), and 2 cycles for add.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              102.0,
+              1101.0
+            ],
+            [
+              561.0,
+              1101.0
+            ],
+            [
+              561.0,
+              1253.0
+            ],
+            [
+              102.0,
+              1253.0
+            ]
+          ],
+          "bbox": [
+            102.0,
+            1101.0,
+            561.0,
+            1253.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/9",
+          "block_type": "Text",
+          "html": "<p>The most common use of FMAs is for sums of products. Given the usual implementation, an in-order sum of four products <math>s = ax + by + cz + dw</math> would take 16 cycles on a 4-cycle FMA, as shown in figure 1.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              102.0,
+              1253.0
+            ],
+            [
+              561.0,
+              1253.0
+            ],
+            [
+              561.0,
+              1337.0
+            ],
+            [
+              102.0,
+              1337.0
+            ]
+          ],
+          "bbox": [
+            102.0,
+            1253.0,
+            561.0,
+            1337.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Table/10",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th></tr></thead><tbody><tr><td>fmul s,a,x</td><td>M</td><td>M</td><td>M</td><td>M</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,b,y</td><td></td><td></td><td></td><td></td><td></td><td>F</td><td>F</td><td>F</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,c,z</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>F</td><td>F</td><td>F</td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,d,w</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>F</td><td>F</td><td>F</td><td></td></tr></tbody></table>",
+          "page": 0,
+          "polygon": [
+            [
+              578.0,
+              329.0
+            ],
+            [
+              1028.0,
+              329.0
+            ],
+            [
+              1028.0,
+              473.0
+            ],
+            [
+              578.0,
+              473.0
+            ]
+          ],
+          "bbox": [
+            578.0,
+            329.0,
+            1028.0,
+            473.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Caption/11",
+          "block_type": "Caption",
+          "html": "<p>Fig. 1. In-order sum-of-product latency for 4-cycle FMA</p>",
+          "page": 0,
+          "polygon": [
+            [
+              632.0,
+              494.0
+            ],
+            [
+              980.0,
+              494.0
+            ],
+            [
+              980.0,
+              515.0
+            ],
+            [
+              632.0,
+              515.0
+            ]
+          ],
+          "bbox": [
+            632.0,
+            494.0,
+            980.0,
+            515.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/12",
+          "block_type": "Text",
+          "html": "<p>Given the same sum of 4 products, our 2+2-cycle FMA completes in only 9 cycles instead of 16, as shown in figure 2.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              576.0,
+              549.0
+            ],
+            [
+              1035.0,
+              549.0
+            ],
+            [
+              1035.0,
+              592.0
+            ],
+            [
+              576.0,
+              592.0
+            ]
+          ],
+          "bbox": [
+            576.0,
+            549.0,
+            1035.0,
+            592.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Table/13",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th></tr></thead><tbody><tr><td>fmul s,a,x</td><td>M</td><td>M</td><td>M</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,b,y</td><td></td><td>M</td><td>M</td><td>A</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,c,z</td><td></td><td></td><td>M</td><td>M</td><td>A</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>fma s,d,w</td><td></td><td></td><td></td><td></td><td>M</td><td>M</td><td>A</td><td>A</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+          "page": 0,
+          "polygon": [
+            [
+              578.0,
+              617.0
+            ],
+            [
+              1028.0,
+              617.0
+            ],
+            [
+              1028.0,
+              763.0
+            ],
+            [
+              578.0,
+              763.0
+            ]
+          ],
+          "bbox": [
+            578.0,
+            617.0,
+            1028.0,
+            763.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Caption/14",
+          "block_type": "Caption",
+          "html": "<p>Fig. 2. In-order sum-of-product latency for 2+2-cycle FMA</p>",
+          "page": 0,
+          "polygon": [
+            [
+              624.0,
+              784.0
+            ],
+            [
+              986.0,
+              784.0
+            ],
+            [
+              986.0,
+              803.0
+            ],
+            [
+              624.0,
+              803.0
+            ]
+          ],
+          "bbox": [
+            624.0,
+            784.0,
+            986.0,
+            803.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/15",
+          "block_type": "Text",
+          "html": "<p>An unpublished 2018 performance study performed at ARM found that the 2+2-cycle FMA improved SpecFP results by about 6% over a 4-cycle FMA [6]. This is more than the 3-4% published in [7], [8], suggesting that the advantage of our approach is increasing as overall FMA latency decreases.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              576.0,
+              821.0
+            ],
+            [
+              1035.0,
+              821.0
+            ],
+            [
+              1035.0,
+              928.0
+            ],
+            [
+              576.0,
+              928.0
+            ]
+          ],
+          "bbox": [
+            576.0,
+            821.0,
+            1035.0,
+            928.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Table/16",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Operation</th><th>4-cycle FMA</th><th>2+2-cycle FMA</th></tr></thead><tbody><tr><td>FMA</td><td>4</td><td>4</td></tr><tr><td>add</td><td>4</td><td>2</td></tr><tr><td>multiply</td><td>4</td><td>3</td></tr><tr><td>in-order FMA sum of n products</td><td><math>4n</math></td><td><math>2n + 1</math></td></tr></tbody></table>",
+          "page": 0,
+          "polygon": [
+            [
+              592.0,
+              941.0
+            ],
+            [
+              1021.0,
+              941.0
+            ],
+            [
+              1021.0,
+              1026.0
+            ],
+            [
+              592.0,
+              1026.0
+            ]
+          ],
+          "bbox": [
+            592.0,
+            941.0,
+            1021.0,
+            1026.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Caption/17",
+          "block_type": "Caption",
+          "html": "TABLE I<br/>LATENCY COMPARISON FOR TWO FMA IMPLEMENTATIONS",
+          "page": 0,
+          "polygon": [
+            [
+              623.0,
+              1038.0
+            ],
+            [
+              988.0,
+              1038.0
+            ],
+            [
+              988.0,
+              1072.0
+            ],
+            [
+              623.0,
+              1072.0
+            ]
+          ],
+          "bbox": [
+            623.0,
+            1038.0,
+            988.0,
+            1072.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/18",
+          "block_type": "SectionHeader",
+          "html": "<h2>II. SINGLE-CYCLE BINARY64 ADDER</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              655.0,
+              1118.0
+            ],
+            [
+              956.0,
+              1118.0
+            ],
+            [
+              956.0,
+              1138.0
+            ],
+            [
+              655.0,
+              1138.0
+            ]
+          ],
+          "bbox": [
+            655.0,
+            1118.0,
+            956.0,
+            1138.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/19",
+          "block_type": "Text",
+          "html": "<p>All of the latencies in the previous section include forwarding to important consumers: add, mul, FMA, and permute all forward to each other in \u201czero\u201d cycles. In fact, the forwarding takes the majority of a cycle, and that portion of the cycle has increased with newer processes and additional vector units. The 2-cycle adder now uses less than a third of the second cycle for logic. Since our 2-cycle adder handles 106-bit FMA significands, we wondered if we could add in less than two cycles if we restricted ourselves to non-FMA adds.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              576.0,
+              1144.0
+            ],
+            [
+              1035.0,
+              1144.0
+            ],
+            [
+              1035.0,
+              1337.0
+            ],
+            [
+              576.0,
+              1337.0
+            ]
+          ],
+          "bbox": [
+            576.0,
+            1144.0,
+            1035.0,
+            1337.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/20",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              89.0,
+              1386.0
+            ],
+            [
+              359.0,
+              1386.0
+            ],
+            [
+              359.0,
+              1419.0
+            ],
+            [
+              89.0,
+              1419.0
+            ]
+          ],
+          "bbox": [
+            89.0,
+            1386.0,
+            359.0,
+            1419.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/21",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              561.0,
+              1386.0
+            ],
+            [
+              582.0,
+              1386.0
+            ],
+            [
+              582.0,
+              1403.0
+            ],
+            [
+              561.0,
+              1403.0
+            ]
+          ],
+          "bbox": [
+            561.0,
+            1386.0,
+            582.0,
+            1403.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/22",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              924.0,
+              1384.0
+            ],
+            [
+              1044.0,
+              1384.0
+            ],
+            [
+              1044.0,
+              1428.0
+            ],
+            [
+              924.0,
+              1428.0
+            ]
+          ],
+          "bbox": [
+            924.0,
+            1384.0,
+            1044.0,
+            1428.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/18"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    },
+    {
+      "html": "<p>We remade the near path with better LZAs and much better masking logic [1], also spending area to compute all 4 possible near-path differences: <math>a-b</math>, <math>a-(\\text{rshift}1)b</math>, <math>b-a</math>, <math>b-(\\text{rshift}1)a</math>. Far path shifting is started speculatively on both operands, and while the shifting of the smaller operand completes the larger operand is speculatively incremented (+1 and +2) for rounding. Three far path adders compute all of the possible rounded results. The floating-point adder includes two 54-bit incrementers and seven 54-bit adders in all, and the logic completely fills our cycle with no time left for forwarding. It is single-cycle, but not usable for the usual additions in one cycle.</p><h2>III. IN-ORDER VECTOR REDUCTION</h2><p>ARM now has a scalable vector extension (SVE) option that does arithmetic on vectors that are multiples of 128-bits in length (e.g. 256 or 384 bits, with a maximum length of 2048). SVE includes an FADDA instruction that adds all of the elements of a vector to a scalar in order. The single-cycle adder in section II can be put to good use for this purpose.</p><p>We spend an initial cycle to analyze the first two inputs to the adder, in particular the signs (effective addition or subtraction) and exponents (normal/subnormal/least significant bit difference). We then begin cycle 2 with enough information to set up key muxes for the significant logic. Significands are not needed until a few inverter delays later. The exponent that is the result of the cycle 2 addition is computed slightly before the significant, and there is time to do the same analysis that we did in cycle 1 for sign and exponents (now using the result and the third input). Continuing in this manner we are able to add <math>n</math> vector elements in order in only <math>n+2</math> cycles: 1 setup cycle, <math>n</math> iterative cycles, 1 forwarding cycle. Interestingly the exponent to exponent logic takes only one cycle, the significant to significant logic takes only one cycle, but the exponent plus significant logic for any given iteration is slightly longer than a cycle. We have long been used to clock skewing for multiple-cycle operations, but this is skewing within a single-cycle loop.</p><h2>IV. BFLOAT16</h2><p>Bfloat16 is a non-standard format consisting of a sign bit, 8 exponent bits and 7 fraction bits; basically the top half of a binary32 number. The new format is important for machine learning, and very high bandwidth is desirable for matrix multiplications using it. The fundamental 128-bit operations for ARM are BFDOT: each 32-bit lane adds two bfloat16 products to a binary32 accumulator; and BFMMLA: <math>2 \\times 4</math> times <math>4 \\times 2</math> bfloat16 matrix multiply, added to a <math>2 \\times 2</math> binary32 matrix. BFMMLA is computed as two BFDOT operations, and it does a total of 16 bfloat16 multiplications per 128-bits of datapath per cycle.</p><p>Fortunately the matrix multiplications are tiny and always exact. They can be computed in about 1/2 cycle. The binary32 additions are not exact, but are much simpler than standard addition because subnormal inputs and results are treated as zeros. If we use the remainder of the multiplication cycle to</p><p>swap smaller and larger magnitude adder inputs, we can also compute the binary32 addition in about 1/2 cycle, meaning that we have time in that cycle to swap larger and smaller operands for the next binary32 addition. The net effect is that we have much less speculative work to do for each addition, and the seven significant adders and two incrementers from section II can be replaced by two significant adders, saving considerable area.</p><h2>V. GPU AREA VS. POWER</h2><p>ARM usually combines functional units to save area on both GPUs and CPUs. For example, a binary32 multiplier can also perform one or two binary16 multiplies on the same multiplier array. Such an approach saves area, but not necessarily power. A binary32 multiplier array uses power proportional to <math>24 \\times 24 = 576</math>, while a binary16 multiplier array uses power proportional to <math>11 \\times 11 = 121</math>. If there are numerous binary16 multiplications, we can save power by building separate binary16 arrays and clock gating so that only the required functional units are used. We also save a bit of power even for binary32 multiplications because the binary32 array control logic is simplified.</p><p>GPUs also tend to use some variant of the classic FMA architecture (4-cycle FMA from section I). This design burns extra power if we are doing additions or multiplications rather than just FMAs. Replacing this design with a variant of our 2+2-cycle FMA (with separate multipliers and adders) allows us much finer control over where power is used. For example, the multiplier is not used at all if we are just doing an addition.</p><p>Combining these two ideas gives us 6 separate units (binary32 mul, binary32 add, 2x binary16 mul, 2x binary16 add) rather than one multifunctional unit (combined binary32 and 2x binary16 FMA). Using this strategy along with separate clock-gated flops for each unit saved about 33% of dynamic power compared to the original design.</p><p>GPUs are somewhat different from CPUs in that much more of their power is used by the datapath, but this result makes me wonder if we should reconsider our CPU designs using the same principal. Have we been too focused on area minimization?</p><h2>REFERENCES</h2><ol><li>D. R. Lutz, \"Optimized leading zero anticipators for faster fused multiply-adds,\" in <i>2017 Asilomar Conference on Signals, Systems, and Computers</i>, pp. 741\u2013744, Oct. 2017.</li><li>D. R. Lutz. <a href=\"http://arit22.gforge.inria.fr/slides/s1-lutz.pdf\">http://arit22.gforge.inria.fr/slides/s1-lutz.pdf</a>, June 2015.</li><li>J.-M. Muller, N. Brisebarre, F. de Dinechin, C.-P. Jeannerod, V. Lef\u00e8vre, G. Melquiond, N. Revol, D. Stehl\u00e9, and S. Torres, <i>Handbook of Floating-Point Arithmetic</i>. Birkh\u00e4user Boston, 2010.</li><li>A. Fog. <a href=\"http://www.agner.org/optimize/microarchitecture.pdf\">http://www.agner.org/optimize/microarchitecture.pdf</a>, Sept. 2018.</li><li>M. Andryscio, D. Kohlbrenner, K. Mowery, R. Jhala, S. Lemer, and H. Shacham, \"On subnormal floating point and abnormal timing,\" in <i>2015 IEEE Symposium on Security and Privacy</i>, pp. 623\u2013639, May 2015.</li><li>M. Kennedy, email, 2018.</li><li>D. R. Lutz, \"Fused multiply-add microarchitecture comprising separate early-normalizing multiply and add pipelines,\" in <i>20th IEEE Symposium on Computer Arithmetic</i>, pp. 123\u2013128, July 2011.</li><li>S. Galal and M. Horowitz, \"Latency sensitive fma design,\" in <i>20th IEEE Symposium on Computer Arithmetic</i>, pp. 129\u2013138, July 2011.</li></ol>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/1/Page/1",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/1/Text/0",
+          "block_type": "Text",
+          "html": "<p>We remade the near path with better LZAs and much better masking logic [1], also spending area to compute all 4 possible near-path differences: <math>a-b</math>, <math>a-(\\text{rshift}1)b</math>, <math>b-a</math>, <math>b-(\\text{rshift}1)a</math>. Far path shifting is started speculatively on both operands, and while the shifting of the smaller operand completes the larger operand is speculatively incremented (+1 and +2) for rounding. Three far path adders compute all of the possible rounded results. The floating-point adder includes two 54-bit incrementers and seven 54-bit adders in all, and the logic completely fills our cycle with no time left for forwarding. It is single-cycle, but not usable for the usual additions in one cycle.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              107.0,
+              139.0
+            ],
+            [
+              567.0,
+              139.0
+            ],
+            [
+              567.0,
+              395.0
+            ],
+            [
+              107.0,
+              395.0
+            ]
+          ],
+          "bbox": [
+            107.0,
+            139.0,
+            567.0,
+            395.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/1",
+          "block_type": "SectionHeader",
+          "html": "<h2>III. IN-ORDER VECTOR REDUCTION</h2>",
+          "page": 1,
+          "polygon": [
+            [
+              194.0,
+              409.0
+            ],
+            [
+              482.0,
+              409.0
+            ],
+            [
+              482.0,
+              427.0
+            ],
+            [
+              194.0,
+              427.0
+            ]
+          ],
+          "bbox": [
+            194.0,
+            409.0,
+            482.0,
+            427.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/0/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/2",
+          "block_type": "Text",
+          "html": "<p>ARM now has a scalable vector extension (SVE) option that does arithmetic on vectors that are multiples of 128-bits in length (e.g. 256 or 384 bits, with a maximum length of 2048). SVE includes an FADDA instruction that adds all of the elements of a vector to a scalar in order. The single-cycle adder in section II can be put to good use for this purpose.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              107.0,
+              438.0
+            ],
+            [
+              567.0,
+              438.0
+            ],
+            [
+              567.0,
+              564.0
+            ],
+            [
+              107.0,
+              564.0
+            ]
+          ],
+          "bbox": [
+            107.0,
+            438.0,
+            567.0,
+            564.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/1"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/3",
+          "block_type": "Text",
+          "html": "<p>We spend an initial cycle to analyze the first two inputs to the adder, in particular the signs (effective addition or subtraction) and exponents (normal/subnormal/least significant bit difference). We then begin cycle 2 with enough information to set up key muxes for the significant logic. Significands are not needed until a few inverter delays later. The exponent that is the result of the cycle 2 addition is computed slightly before the significant, and there is time to do the same analysis that we did in cycle 1 for sign and exponents (now using the result and the third input). Continuing in this manner we are able to add <math>n</math> vector elements in order in only <math>n+2</math> cycles: 1 setup cycle, <math>n</math> iterative cycles, 1 forwarding cycle. Interestingly the exponent to exponent logic takes only one cycle, the significant to significant logic takes only one cycle, but the exponent plus significant logic for any given iteration is slightly longer than a cycle. We have long been used to clock skewing for multiple-cycle operations, but this is skewing within a single-cycle loop.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              107.0,
+              565.0
+            ],
+            [
+              567.0,
+              565.0
+            ],
+            [
+              567.0,
+              953.0
+            ],
+            [
+              107.0,
+              953.0
+            ]
+          ],
+          "bbox": [
+            107.0,
+            565.0,
+            567.0,
+            953.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/1"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/4",
+          "block_type": "SectionHeader",
+          "html": "<h2>IV. BFLOAT16</h2>",
+          "page": 1,
+          "polygon": [
+            [
+              277.0,
+              968.0
+            ],
+            [
+              397.0,
+              968.0
+            ],
+            [
+              397.0,
+              987.0
+            ],
+            [
+              277.0,
+              987.0
+            ]
+          ],
+          "bbox": [
+            277.0,
+            968.0,
+            397.0,
+            987.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/1"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/5",
+          "block_type": "Text",
+          "html": "<p>Bfloat16 is a non-standard format consisting of a sign bit, 8 exponent bits and 7 fraction bits; basically the top half of a binary32 number. The new format is important for machine learning, and very high bandwidth is desirable for matrix multiplications using it. The fundamental 128-bit operations for ARM are BFDOT: each 32-bit lane adds two bfloat16 products to a binary32 accumulator; and BFMMLA: <math>2 \\times 4</math> times <math>4 \\times 2</math> bfloat16 matrix multiply, added to a <math>2 \\times 2</math> binary32 matrix. BFMMLA is computed as two BFDOT operations, and it does a total of 16 bfloat16 multiplications per 128-bits of datapath per cycle.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              107.0,
+              997.0
+            ],
+            [
+              567.0,
+              997.0
+            ],
+            [
+              567.0,
+              1232.0
+            ],
+            [
+              107.0,
+              1232.0
+            ]
+          ],
+          "bbox": [
+            107.0,
+            997.0,
+            567.0,
+            1232.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/6",
+          "block_type": "Text",
+          "html": "<p>Fortunately the matrix multiplications are tiny and always exact. They can be computed in about 1/2 cycle. The binary32 additions are not exact, but are much simpler than standard addition because subnormal inputs and results are treated as zeros. If we use the remainder of the multiplication cycle to</p>",
+          "page": 1,
+          "polygon": [
+            [
+              107.0,
+              1234.0
+            ],
+            [
+              567.0,
+              1234.0
+            ],
+            [
+              567.0,
+              1340.0
+            ],
+            [
+              107.0,
+              1340.0
+            ]
+          ],
+          "bbox": [
+            107.0,
+            1234.0,
+            567.0,
+            1340.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/7",
+          "block_type": "Text",
+          "html": "<p>swap smaller and larger magnitude adder inputs, we can also compute the binary32 addition in about 1/2 cycle, meaning that we have time in that cycle to swap larger and smaller operands for the next binary32 addition. The net effect is that we have much less speculative work to do for each addition, and the seven significant adders and two incrementers from section II can be replaced by two significant adders, saving considerable area.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              582.0,
+              139.0
+            ],
+            [
+              1041.0,
+              139.0
+            ],
+            [
+              1041.0,
+              305.0
+            ],
+            [
+              582.0,
+              305.0
+            ]
+          ],
+          "bbox": [
+            582.0,
+            139.0,
+            1041.0,
+            305.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/8",
+          "block_type": "SectionHeader",
+          "html": "<h2>V. GPU AREA VS. POWER</h2>",
+          "page": 1,
+          "polygon": [
+            [
+              704.0,
+              322.0
+            ],
+            [
+              914.0,
+              322.0
+            ],
+            [
+              914.0,
+              340.0
+            ],
+            [
+              704.0,
+              340.0
+            ]
+          ],
+          "bbox": [
+            704.0,
+            322.0,
+            914.0,
+            340.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/9",
+          "block_type": "Text",
+          "html": "<p>ARM usually combines functional units to save area on both GPUs and CPUs. For example, a binary32 multiplier can also perform one or two binary16 multiplies on the same multiplier array. Such an approach saves area, but not necessarily power. A binary32 multiplier array uses power proportional to <math>24 \\times 24 = 576</math>, while a binary16 multiplier array uses power proportional to <math>11 \\times 11 = 121</math>. If there are numerous binary16 multiplications, we can save power by building separate binary16 arrays and clock gating so that only the required functional units are used. We also save a bit of power even for binary32 multiplications because the binary32 array control logic is simplified.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              582.0,
+              348.0
+            ],
+            [
+              1041.0,
+              348.0
+            ],
+            [
+              1041.0,
+              604.0
+            ],
+            [
+              582.0,
+              604.0
+            ]
+          ],
+          "bbox": [
+            582.0,
+            348.0,
+            1041.0,
+            604.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/10",
+          "block_type": "Text",
+          "html": "<p>GPUs also tend to use some variant of the classic FMA architecture (4-cycle FMA from section I). This design burns extra power if we are doing additions or multiplications rather than just FMAs. Replacing this design with a variant of our 2+2-cycle FMA (with separate multipliers and adders) allows us much finer control over where power is used. For example, the multiplier is not used at all if we are just doing an addition.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              582.0,
+              605.0
+            ],
+            [
+              1041.0,
+              605.0
+            ],
+            [
+              1041.0,
+              755.0
+            ],
+            [
+              582.0,
+              755.0
+            ]
+          ],
+          "bbox": [
+            582.0,
+            605.0,
+            1041.0,
+            755.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/11",
+          "block_type": "Text",
+          "html": "<p>Combining these two ideas gives us 6 separate units (binary32 mul, binary32 add, 2x binary16 mul, 2x binary16 add) rather than one multifunctional unit (combined binary32 and 2x binary16 FMA). Using this strategy along with separate clock-gated flops for each unit saved about 33% of dynamic power compared to the original design.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              582.0,
+              757.0
+            ],
+            [
+              1041.0,
+              757.0
+            ],
+            [
+              1041.0,
+              885.0
+            ],
+            [
+              582.0,
+              885.0
+            ]
+          ],
+          "bbox": [
+            582.0,
+            757.0,
+            1041.0,
+            885.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/12",
+          "block_type": "Text",
+          "html": "<p>GPUs are somewhat different from CPUs in that much more of their power is used by the datapath, but this result makes me wonder if we should reconsider our CPU designs using the same principal. Have we been too focused on area minimization?</p>",
+          "page": 1,
+          "polygon": [
+            [
+              582.0,
+              886.0
+            ],
+            [
+              1041.0,
+              886.0
+            ],
+            [
+              1041.0,
+              990.0
+            ],
+            [
+              582.0,
+              990.0
+            ]
+          ],
+          "bbox": [
+            582.0,
+            886.0,
+            1041.0,
+            990.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/13",
+          "block_type": "SectionHeader",
+          "html": "<h2>REFERENCES</h2>",
+          "page": 1,
+          "polygon": [
+            [
+              754.0,
+              1006.0
+            ],
+            [
+              864.0,
+              1006.0
+            ],
+            [
+              864.0,
+              1024.0
+            ],
+            [
+              754.0,
+              1024.0
+            ]
+          ],
+          "bbox": [
+            754.0,
+            1006.0,
+            864.0,
+            1024.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/ListGroup/14",
+          "block_type": "ListGroup",
+          "html": "<ol><li>D. R. Lutz, \"Optimized leading zero anticipators for faster fused multiply-adds,\" in <i>2017 Asilomar Conference on Signals, Systems, and Computers</i>, pp. 741\u2013744, Oct. 2017.</li><li>D. R. Lutz. <a href=\"http://arit22.gforge.inria.fr/slides/s1-lutz.pdf\">http://arit22.gforge.inria.fr/slides/s1-lutz.pdf</a>, June 2015.</li><li>J.-M. Muller, N. Brisebarre, F. de Dinechin, C.-P. Jeannerod, V. Lef\u00e8vre, G. Melquiond, N. Revol, D. Stehl\u00e9, and S. Torres, <i>Handbook of Floating-Point Arithmetic</i>. Birkh\u00e4user Boston, 2010.</li><li>A. Fog. <a href=\"http://www.agner.org/optimize/microarchitecture.pdf\">http://www.agner.org/optimize/microarchitecture.pdf</a>, Sept. 2018.</li><li>M. Andryscio, D. Kohlbrenner, K. Mowery, R. Jhala, S. Lemer, and H. Shacham, \"On subnormal floating point and abnormal timing,\" in <i>2015 IEEE Symposium on Security and Privacy</i>, pp. 623\u2013639, May 2015.</li><li>M. Kennedy, email, 2018.</li><li>D. R. Lutz, \"Fused multiply-add microarchitecture comprising separate early-normalizing multiply and add pipelines,\" in <i>20th IEEE Symposium on Computer Arithmetic</i>, pp. 123\u2013128, July 2011.</li><li>S. Galal and M. Horowitz, \"Latency sensitive fma design,\" in <i>20th IEEE Symposium on Computer Arithmetic</i>, pp. 129\u2013138, July 2011.</li></ol>",
+          "page": 1,
+          "polygon": [
+            [
+              582.0,
+              1035.0
+            ],
+            [
+              1041.0,
+              1035.0
+            ],
+            [
+              1041.0,
+              1311.0
+            ],
+            [
+              582.0,
+              1311.0
+            ]
+          ],
+          "bbox": [
+            582.0,
+            1035.0,
+            1041.0,
+            1311.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/13"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/15",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              561.0,
+              1385.0
+            ],
+            [
+              582.0,
+              1385.0
+            ],
+            [
+              582.0,
+              1403.0
+            ],
+            [
+              561.0,
+              1403.0
+            ]
+          ],
+          "bbox": [
+            561.0,
+            1385.0,
+            582.0,
+            1403.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/1",
+            "2": "/page/1/SectionHeader/13"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/1",
+        "2": "/page/0/SectionHeader/18"
+      }
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 23
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 16
+      }
+    ]
+  }
+}

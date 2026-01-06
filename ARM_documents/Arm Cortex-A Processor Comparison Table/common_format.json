@@ -1,0 +1,814 @@
+{
+  "children": [
+    {
+      "html": "<h1>Arm Cortex-A Processor Comparison Table</h1><p>The Cortex-A series of applications processors provide a range of solutions for devices undertaking complex compute tasks, such as hosting a rich operating system (OS) platform, and supporting multiple software applications.</p><table><thead><tr><th>Feature</th><th>Cortex-A5</th><th>Cortex-A7</th><th>Cortex-A9<sup>1</sup></th><th>Cortex-A15<sup>1</sup></th><th>Cortex-A17<sup>1</sup></th></tr></thead><tbody><tr><td>Architecture</td><td>Armv7-A</td><td>Armv7-A</td><td>Armv7-A</td><td>Armv7-A</td><td>Armv7-A</td></tr><tr><td>Main Extensions</td><td></td><td>LPAE Virtualization</td><td></td><td>LPAE Virtualization</td><td>LPAE Virtualization</td></tr><tr><td>Pipeline</td><td>In order</td><td>In order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td></tr><tr><td>Superscalar</td><td>No</td><td>Partial</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Physical Addressing (PA)</td><td>32-bit</td><td>40-bit</td><td>32-bit</td><td>40-bit</td><td>40-bit</td></tr><tr><td>TrustZone for Cortex-A</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Neon and Floating Point Unit</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Included</td></tr><tr><td>Floating Point Unit only</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Included</td></tr><tr><td>Interrupt Controller</td><td>Optional Integrated GIC v1 (MP only)<br/>Integrated GIC v1 (MP only)</td><td>Optional Integrated GIC v2</td><td>Internal Integrated GIC v1 (MP only)</td><td>Optional Integrated GIC v2</td><td>Optional Integrated GIC v2</td></tr><tr><td>Bus Protocol</td><td>AXI</td><td>ACE</td><td>AXI</td><td>ACE or CHI</td><td>ACE</td></tr><tr><td>L1 I-Cache/D-Cache</td><td>4-64kB</td><td>8-64kB</td><td>16-64kB</td><td>32kB/<br/>32kB</td><td>32-64kB/<br/>32kB</td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1919.0,
+        1117.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1919.0,
+          0.0
+        ],
+        [
+          1919.0,
+          1117.0
+        ],
+        [
+          0.0,
+          1117.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/SectionHeader/0",
+          "block_type": "SectionHeader",
+          "html": "<h1>Arm Cortex-A Processor Comparison Table</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              34.0,
+              70.0
+            ],
+            [
+              610.0,
+              70.0
+            ],
+            [
+              610.0,
+              102.0
+            ],
+            [
+              34.0,
+              102.0
+            ]
+          ],
+          "bbox": [
+            34.0,
+            70.0,
+            610.0,
+            102.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/1",
+          "block_type": "Text",
+          "html": "<p>The Cortex-A series of applications processors provide a range of solutions for devices undertaking complex compute tasks, such as hosting a rich operating system (OS) platform, and supporting multiple software applications.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              30.0,
+              206.0
+            ],
+            [
+              1723.0,
+              206.0
+            ],
+            [
+              1723.0,
+              226.0
+            ],
+            [
+              30.0,
+              226.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            206.0,
+            1723.0,
+            226.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Table/2",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Feature</th><th>Cortex-A5</th><th>Cortex-A7</th><th>Cortex-A9<sup>1</sup></th><th>Cortex-A15<sup>1</sup></th><th>Cortex-A17<sup>1</sup></th></tr></thead><tbody><tr><td>Architecture</td><td>Armv7-A</td><td>Armv7-A</td><td>Armv7-A</td><td>Armv7-A</td><td>Armv7-A</td></tr><tr><td>Main Extensions</td><td></td><td>LPAE Virtualization</td><td></td><td>LPAE Virtualization</td><td>LPAE Virtualization</td></tr><tr><td>Pipeline</td><td>In order</td><td>In order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td></tr><tr><td>Superscalar</td><td>No</td><td>Partial</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Physical Addressing (PA)</td><td>32-bit</td><td>40-bit</td><td>32-bit</td><td>40-bit</td><td>40-bit</td></tr><tr><td>TrustZone for Cortex-A</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Neon and Floating Point Unit</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Included</td></tr><tr><td>Floating Point Unit only</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Included</td></tr><tr><td>Interrupt Controller</td><td>Optional Integrated GIC v1 (MP only)<br/>Integrated GIC v1 (MP only)</td><td>Optional Integrated GIC v2</td><td>Internal Integrated GIC v1 (MP only)</td><td>Optional Integrated GIC v2</td><td>Optional Integrated GIC v2</td></tr><tr><td>Bus Protocol</td><td>AXI</td><td>ACE</td><td>AXI</td><td>ACE or CHI</td><td>ACE</td></tr><tr><td>L1 I-Cache/D-Cache</td><td>4-64kB</td><td>8-64kB</td><td>16-64kB</td><td>32kB/<br/>32kB</td><td>32-64kB/<br/>32kB</td></tr></tbody></table>",
+          "page": 0,
+          "polygon": [
+            [
+              30.0,
+              310.0
+            ],
+            [
+              1878.0,
+              310.0
+            ],
+            [
+              1878.0,
+              1047.0
+            ],
+            [
+              30.0,
+              1047.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            310.0,
+            1878.0,
+            1047.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    },
+    {
+      "html": "<table><thead><tr><th>Feature</th><th>Cortex-A5</th><th>Cortex-A7</th><th>Cortex-A9+</th><th>Cortex-A15+</th><th>Cortex-A17+</th></tr></thead><tbody><tr><td>L2 Cache</td><td>External L2C-310</td><td>Up to 1MB</td><td>External L2C-310</td><td>512kB-4MB</td><td>256kB-8MB</td></tr><tr><td>L3 Cache</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr><tr><td>Dual Core Lock-Step (DCLS)</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Functional Safety Support</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Cryptography Unit</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Error Code Correction (ECC)/Parity</td><td>No</td><td>No</td><td>Optional</td><td>Optional</td><td>Yes</td></tr><tr><td>Accelerator Coherency Port (ACP)</td><td>Optional</td><td>No</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Peripheral Port</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Generic Timer</td><td>No</td><td>Yes</td><td>Yes</td><td>Armv8-A</td><td>Armv8-A</td></tr><tr><td>Non-intrusive debug (trace)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1365.0,
+        794.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1365.0,
+          0.0
+        ],
+        [
+          1365.0,
+          794.0
+        ],
+        [
+          0.0,
+          794.0
+        ]
+      ],
+      "id": "/page/1/Page/1",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/1/Table/0",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Feature</th><th>Cortex-A5</th><th>Cortex-A7</th><th>Cortex-A9+</th><th>Cortex-A15+</th><th>Cortex-A17+</th></tr></thead><tbody><tr><td>L2 Cache</td><td>External L2C-310</td><td>Up to 1MB</td><td>External L2C-310</td><td>512kB-4MB</td><td>256kB-8MB</td></tr><tr><td>L3 Cache</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr><tr><td>Dual Core Lock-Step (DCLS)</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Functional Safety Support</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Cryptography Unit</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Error Code Correction (ECC)/Parity</td><td>No</td><td>No</td><td>Optional</td><td>Optional</td><td>Yes</td></tr><tr><td>Accelerator Coherency Port (ACP)</td><td>Optional</td><td>No</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Peripheral Port</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Generic Timer</td><td>No</td><td>Yes</td><td>Yes</td><td>Armv8-A</td><td>Armv8-A</td></tr><tr><td>Non-intrusive debug (trace)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td></tr></tbody></table>",
+          "page": 1,
+          "polygon": [
+            [
+              23.0,
+              20.0
+            ],
+            [
+              1337.0,
+              20.0
+            ],
+            [
+              1337.0,
+              504.0
+            ],
+            [
+              23.0,
+              504.0
+            ]
+          ],
+          "bbox": [
+            23.0,
+            20.0,
+            1337.0,
+            504.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/0"
+      }
+    },
+    {
+      "html": "<table><thead><tr><th>Feature</th><th>Cortex-A32</th><th>Cortex-A34</th><th>Cortex-A35</th><th>Cortex-A53</th><th>Cortex-A55</th><th>Cortex-A57<sup>\u2021</sup></th><th>Cortex-A65</th><th>Cortex-A65AE</th><th>Cortex-A72</th><th>Cortex-A73</th><th>Cortex-A75</th><th>Cortex-A76</th><th>Cortex-A76AE</th><th>Cortex-A77</th><th>Cortex-A78</th><th>Cortex-A78AE</th></tr></thead><tbody><tr><th>Architecture</th><td>Armv8-A (AArch32 only)</td><td>Armv8-A (AArch64 only)</td><td>Armv8-A</td><td>Armv8-A</td><td>Armv8.2-A</td><td>Armv8-A</td><td>Armv8.2-A (AArch64 only)</td><td>Armv8.2-A (AArch64 only)</td><td>Armv8-A</td><td>Armv8-A</td><td>Armv8.2-A</td><td>Armv8.2-A (AArch32 at ELO only)</td><td>Armv8.2-A (AArch32 at ELO only)</td><td>Armv8.2-A (AArch32 at ELO only)</td><td>Armv8.2-A (AArch32 at ELO only)</td><td>Armv8.2-A (AArch32 at ELO only)</td></tr><tr><th>Main Extensions</th><td></td><td></td><td></td><td></td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td></td><td></td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td></tr><tr><th>Pipeline</th><td>In order</td><td>In order</td><td>In order</td><td>In order</td><td>In order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td></tr><tr><th>Superscalar</th><td>Partial</td><td>Partial</td><td>Partial</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><th>Physical Addressing (PA)</th><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>44-bit</td><td>44-bit</td><td>44-bit</td><td>40-bit</td><td>44-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>48-bit</td></tr><tr><th>TrustZone for Cortex-A</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><th>Neon and Floating Point Unit</th><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable) with Dot Product, and IEEE FP16</td><td>Included</td><td>Included with Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included</td><td>Included</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td></tr><tr><th>Floating Point Unit only</th><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Optional</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><th>Interrupt Controller</th><td>External GICv3</td><td>External GICv3</td><td>External GICv3</td><td>External GICv3</td><td>External GICv4</td><td>External GICv3</td><td>External GICv4</td><td>External GICv4</td><td>External GICv3</td><td>External GICv3</td><td>External GICv3</td><td>External GICv4</td><td>External GICv4</td><td>External GICv4</td><td>External GICv4</td><td>External GICv4</td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1919.0,
+        1117.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1919.0,
+          0.0
+        ],
+        [
+          1919.0,
+          1117.0
+        ],
+        [
+          0.0,
+          1117.0
+        ]
+      ],
+      "id": "/page/2/Page/2",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/2/Table/0",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Feature</th><th>Cortex-A32</th><th>Cortex-A34</th><th>Cortex-A35</th><th>Cortex-A53</th><th>Cortex-A55</th><th>Cortex-A57<sup>\u2021</sup></th><th>Cortex-A65</th><th>Cortex-A65AE</th><th>Cortex-A72</th><th>Cortex-A73</th><th>Cortex-A75</th><th>Cortex-A76</th><th>Cortex-A76AE</th><th>Cortex-A77</th><th>Cortex-A78</th><th>Cortex-A78AE</th></tr></thead><tbody><tr><th>Architecture</th><td>Armv8-A (AArch32 only)</td><td>Armv8-A (AArch64 only)</td><td>Armv8-A</td><td>Armv8-A</td><td>Armv8.2-A</td><td>Armv8-A</td><td>Armv8.2-A (AArch64 only)</td><td>Armv8.2-A (AArch64 only)</td><td>Armv8-A</td><td>Armv8-A</td><td>Armv8.2-A</td><td>Armv8.2-A (AArch32 at ELO only)</td><td>Armv8.2-A (AArch32 at ELO only)</td><td>Armv8.2-A (AArch32 at ELO only)</td><td>Armv8.2-A (AArch32 at ELO only)</td><td>Armv8.2-A (AArch32 at ELO only)</td></tr><tr><th>Main Extensions</th><td></td><td></td><td></td><td></td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td></td><td></td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td><td>Armv8.1 extensions<br/>Armv8.2 extensions<br/>Armv8.3 (LDAPR instructions only)<br/>Armv8.4 Dot Product<br/>Cryptography extensions<br/>RAS extensions</td></tr><tr><th>Pipeline</th><td>In order</td><td>In order</td><td>In order</td><td>In order</td><td>In order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td><td>Out of order</td></tr><tr><th>Superscalar</th><td>Partial</td><td>Partial</td><td>Partial</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><th>Physical Addressing (PA)</th><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>44-bit</td><td>44-bit</td><td>44-bit</td><td>40-bit</td><td>44-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>48-bit</td></tr><tr><th>TrustZone for Cortex-A</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><th>Neon and Floating Point Unit</th><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable)</td><td>Supported (separately licensable) with Dot Product, and IEEE FP16</td><td>Included</td><td>Included with Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included</td><td>Included</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td><td>Included with INT8 Dot Product and IEEE FP16</td></tr><tr><th>Floating Point Unit only</th><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Optional</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><th>Interrupt Controller</th><td>External GICv3</td><td>External GICv3</td><td>External GICv3</td><td>External GICv3</td><td>External GICv4</td><td>External GICv3</td><td>External GICv4</td><td>External GICv4</td><td>External GICv3</td><td>External GICv3</td><td>External GICv3</td><td>External GICv4</td><td>External GICv4</td><td>External GICv4</td><td>External GICv4</td><td>External GICv4</td></tr></tbody></table>",
+          "page": 2,
+          "polygon": [
+            [
+              34.0,
+              27.0
+            ],
+            [
+              1878.0,
+              27.0
+            ],
+            [
+              1878.0,
+              1052.0
+            ],
+            [
+              34.0,
+              1052.0
+            ]
+          ],
+          "bbox": [
+            34.0,
+            27.0,
+            1878.0,
+            1052.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/0"
+      }
+    },
+    {
+      "html": "<table><tbody><tr><th>Feature</th><th>Cortex-A32</th><th>Cortex-A34</th><th>Cortex-A35</th><th>Cortex-A53</th><th>Cortex-A55</th><th>Cortex-A57 \u2020</th><th>Cortex-A65</th><th>Cortex-<br/>A65AE</th><th>Cortex-A72</th><th>Cortex-A73</th><th>Cortex-A75</th><th>Cortex-A76</th><th>Cortex-<br/>A76AE</th><th>Cortex-A77</th><th>Cortex-A78</th><th>Cortex-<br/>A78AE</th></tr><tr><th>Bus Protocol</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th></tr><tr><th>L1 I-Cache/D-<br/>Cache</th><th>8-64kB</th><th>8-64kB</th><th>8-64kB</th><th>8-64kB</th><th>8-64kB</th><th>48kB/<br/>32kB</th><th>16-64kB</th><th>16-64kB</th><th>48kB/32-64kB</th><th>32kB/32-64kB</th><th>64kB</th><th>64kB</th><th>64kB</th><th>64kB</th><th>64kB</th><th>64kB</th></tr><tr><th>L2 Cache</th><th>128kB-1MB</th><th>128kB-1MB</th><th>128kB-1MB</th><th>128kB-2MB</th><th>64-256kB</th><th>512kB-2MB</th><th>64-256kB</th><th>64-256kB</th><th>512kB-4MB</th><th>256kB-8MB</th><th>256-512kB</th><th>128-512KB</th><th>128-512KB</th><th>256-512kB</th><th>256-512kB</th><th>256-512kB</th></tr><tr><th>L3 Cache</th><th>N/A</th><th>N/A</th><th>N/A</th><th>N/A</th><th>Optional<br/>256kB-4MB</th><th>N/A</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th><th>N/A</th><th>N/A</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th></tr><tr><th>Dual Core<br/>Lock-Step<br/>(DCLS)</th><th>No</th><th>No</th><th>No</th><th>No</th><th>No</th><th>No</th><th>No</th><th>Yes (in Lock-<br/>mode)</th><th>No</th><th>No</th><th>No</th><th>No</th><th>Yes (in Lock-<br/>mode)</th><th>No</th><th>No</th><th>Yes</th></tr><tr><th>Functional<br/>Safety<br/>Support</th><th>Yes</th><th>Yes</th><th>Yes</th><th>Yes</th><th>ASIL D\nSystematic<sup>1</sup></th><th>Yes</th><th>ASIL D<br/>Systematic1</th><th>ASIL D\nSystematic<sup>1</sup>\nand ASIL D\nDiagnostic<sup>2</sup></th><th>Yes</th><th>No</th><th>ASIL D<br/>Systematic<sup>1</sup></th><th>ASIL D<br/>Systematic<sup>1</sup></th><th>ASIL D\nSystematic<sup>1</sup>\nand ASIL D\nDiagnostic<sup>2</sup></th><th>No</th><th>ASIL D<br/>Systematic<sup>1</sup></th><th>ASIL D\nSystematic<sup>1</sup>\n& ASIL D\nDiagnostic<sup>2</sup></th></tr><tr><th>Cryptography<br/>Unit</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th></tr><tr><th>Error Code<br/>Correction<br/>(ECC)/Parity</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Yes</th><th>Optional</th><th>Yes</th><th>Optional</th><th>Optional</th><th>Yes</th><th>Optional</th><th>Optional</th><th>Yes</th></tr><tr><th>Accelerator<br/>Coherency<br/>Port (ACP)</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Yes</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Yes</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th></tr><tr><th>Peripheral<br/>Port</th><th>No</th><th>No</th><th>No</th><th>No</th><th>Optional</th><th>No</th><th>Optional</th><th>Optional</th><th>No</th><th>No</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th></tr><tr><th>Generic<br/>Timer</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th></tr><tr><th>Non-intrusive debug (trace)</th><th>Supported<br/>(separately<br/>licensable)</th><th>Supported<br/>(separately<br/>licensable)</th><th>Supported<br/>(separately<br/>licensable)</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1919.0,
+        1117.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1919.0,
+          0.0
+        ],
+        [
+          1919.0,
+          1117.0
+        ],
+        [
+          0.0,
+          1117.0
+        ]
+      ],
+      "id": "/page/3/Page/3",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/3/Table/0",
+          "block_type": "Table",
+          "html": "<table><tbody><tr><th>Feature</th><th>Cortex-A32</th><th>Cortex-A34</th><th>Cortex-A35</th><th>Cortex-A53</th><th>Cortex-A55</th><th>Cortex-A57 \u2020</th><th>Cortex-A65</th><th>Cortex-<br/>A65AE</th><th>Cortex-A72</th><th>Cortex-A73</th><th>Cortex-A75</th><th>Cortex-A76</th><th>Cortex-<br/>A76AE</th><th>Cortex-A77</th><th>Cortex-A78</th><th>Cortex-<br/>A78AE</th></tr><tr><th>Bus Protocol</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th><th>ACE or CHI</th></tr><tr><th>L1 I-Cache/D-<br/>Cache</th><th>8-64kB</th><th>8-64kB</th><th>8-64kB</th><th>8-64kB</th><th>8-64kB</th><th>48kB/<br/>32kB</th><th>16-64kB</th><th>16-64kB</th><th>48kB/32-64kB</th><th>32kB/32-64kB</th><th>64kB</th><th>64kB</th><th>64kB</th><th>64kB</th><th>64kB</th><th>64kB</th></tr><tr><th>L2 Cache</th><th>128kB-1MB</th><th>128kB-1MB</th><th>128kB-1MB</th><th>128kB-2MB</th><th>64-256kB</th><th>512kB-2MB</th><th>64-256kB</th><th>64-256kB</th><th>512kB-4MB</th><th>256kB-8MB</th><th>256-512kB</th><th>128-512KB</th><th>128-512KB</th><th>256-512kB</th><th>256-512kB</th><th>256-512kB</th></tr><tr><th>L3 Cache</th><th>N/A</th><th>N/A</th><th>N/A</th><th>N/A</th><th>Optional<br/>256kB-4MB</th><th>N/A</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th><th>N/A</th><th>N/A</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th><th>Optional<br/>512kB-4MB</th></tr><tr><th>Dual Core<br/>Lock-Step<br/>(DCLS)</th><th>No</th><th>No</th><th>No</th><th>No</th><th>No</th><th>No</th><th>No</th><th>Yes (in Lock-<br/>mode)</th><th>No</th><th>No</th><th>No</th><th>No</th><th>Yes (in Lock-<br/>mode)</th><th>No</th><th>No</th><th>Yes</th></tr><tr><th>Functional<br/>Safety<br/>Support</th><th>Yes</th><th>Yes</th><th>Yes</th><th>Yes</th><th>ASIL D\nSystematic<sup>1</sup></th><th>Yes</th><th>ASIL D<br/>Systematic1</th><th>ASIL D\nSystematic<sup>1</sup>\nand ASIL D\nDiagnostic<sup>2</sup></th><th>Yes</th><th>No</th><th>ASIL D<br/>Systematic<sup>1</sup></th><th>ASIL D<br/>Systematic<sup>1</sup></th><th>ASIL D\nSystematic<sup>1</sup>\nand ASIL D\nDiagnostic<sup>2</sup></th><th>No</th><th>ASIL D<br/>Systematic<sup>1</sup></th><th>ASIL D\nSystematic<sup>1</sup>\n& ASIL D\nDiagnostic<sup>2</sup></th></tr><tr><th>Cryptography<br/>Unit</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th><th>Supported<br/>(with<br/>cryptography<br/>extensions)</th></tr><tr><th>Error Code<br/>Correction<br/>(ECC)/Parity</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Yes</th><th>Optional</th><th>Yes</th><th>Optional</th><th>Optional</th><th>Yes</th><th>Optional</th><th>Optional</th><th>Yes</th></tr><tr><th>Accelerator<br/>Coherency<br/>Port (ACP)</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Yes</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Yes</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th></tr><tr><th>Peripheral<br/>Port</th><th>No</th><th>No</th><th>No</th><th>No</th><th>Optional</th><th>No</th><th>Optional</th><th>Optional</th><th>No</th><th>No</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th><th>Optional</th></tr><tr><th>Generic<br/>Timer</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th><th>Armv8-A</th></tr><tr><th>Non-intrusive debug (trace)</th><th>Supported<br/>(separately<br/>licensable)</th><th>Supported<br/>(separately<br/>licensable)</th><th>Supported<br/>(separately<br/>licensable)</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th><th>Included</th></tr></tbody></table>",
+          "page": 3,
+          "polygon": [
+            [
+              7.646015625,
+              22.776328125
+            ],
+            [
+              1903.857890625,
+              22.776328125
+            ],
+            [
+              1903.857890625,
+              1037.501015625
+            ],
+            [
+              7.646015625,
+              1037.501015625
+            ]
+          ],
+          "bbox": [
+            7.646015625,
+            22.776328125,
+            1903.857890625,
+            1037.501015625
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/0"
+      }
+    },
+    {
+      "html": "<table><thead><tr><th>Feature</th><th>Cortex-A510</th><th>Cortex-A710</th><th>Cortex-A715</th></tr></thead><tbody><tr><td>Architecture</td><td>Armv9.0-A</td><td>Armv9.0-A</td><td>Armv9.0-A</td></tr><tr><td>Main Extensions</td><td>Up to Armv8.5 extensions<br/>SVE2 extension<br/>Memory Tagging Extension<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.5 extensions<br/>SVE2 extension<br/>Memory Tagging Extension<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.5 extensions<br/>SVE2 extension<br/>Memory Tagging Extension<br/>Cryptography extensions<br/>RAS extensions</td></tr><tr><td>Pipeline</td><td>In order</td><td>Out-of-order</td><td>Out-of-order</td></tr><tr><td>Superscalar</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Physical Addressing (PA)</td><td>40-bit</td><td>40-bit</td><td>40-bit</td></tr><tr><td>Security</td><td>TrustZone, Secure-EL2</td><td>TrustZone, Secure-EL2</td><td>TrustZone, Secure-EL2</td></tr><tr><td>Neon, Floating Point Unit and SVE</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Floating Point Unit only</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Interrupt Controller</td><td>GIC interface, GICv4.1</td><td>GIC interface, GICv4.1</td><td>GIC interface, GICv4.1</td></tr><tr><td>Bus Protocol</td><td>AMBA AXI5 or CHLE</td><td>AMBA AXI5 or CHLE</td><td>AMBA AXI5 or CHLE</td></tr><tr><td>L1 Cache/D-Cache</td><td>32KB or 64KB</td><td>32KB or 64KB</td><td>32KB or 64KB</td></tr><tr><td>L2 Cache</td><td>Optional, 128KB, 192KB, 256KB, 384KB, 512KB</td><td>256KB or 512KB</td><td>256KB or 512KB</td></tr><tr><td>L3 Cache</td><td>Optional, 256KB to 16MB</td><td>Optional, 256KB to 16MB</td><td>Optional, 256KB to 16MB</td></tr><tr><td>Dual Core Lock-Step (DCLS)</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Functional Safety Support</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Cryptography Unit</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Error Code Correction (ECC)/Parity</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Accelerator Coherency Port (ACP)</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Peripheral Port</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Generic Timer</td><td>Armv9.0-A</td><td>Armv9.0-A</td><td>Armv9.0-A</td></tr><tr><td>Non-intrusive debug (trace)</td><td>Included</td><td>Included</td><td>Included</td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1365.0,
+        794.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1365.0,
+          0.0
+        ],
+        [
+          1365.0,
+          794.0
+        ],
+        [
+          0.0,
+          794.0
+        ]
+      ],
+      "id": "/page/4/Page/4",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/4/Table/0",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Feature</th><th>Cortex-A510</th><th>Cortex-A710</th><th>Cortex-A715</th></tr></thead><tbody><tr><td>Architecture</td><td>Armv9.0-A</td><td>Armv9.0-A</td><td>Armv9.0-A</td></tr><tr><td>Main Extensions</td><td>Up to Armv8.5 extensions<br/>SVE2 extension<br/>Memory Tagging Extension<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.5 extensions<br/>SVE2 extension<br/>Memory Tagging Extension<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.5 extensions<br/>SVE2 extension<br/>Memory Tagging Extension<br/>Cryptography extensions<br/>RAS extensions</td></tr><tr><td>Pipeline</td><td>In order</td><td>Out-of-order</td><td>Out-of-order</td></tr><tr><td>Superscalar</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Physical Addressing (PA)</td><td>40-bit</td><td>40-bit</td><td>40-bit</td></tr><tr><td>Security</td><td>TrustZone, Secure-EL2</td><td>TrustZone, Secure-EL2</td><td>TrustZone, Secure-EL2</td></tr><tr><td>Neon, Floating Point Unit and SVE</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Floating Point Unit only</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Interrupt Controller</td><td>GIC interface, GICv4.1</td><td>GIC interface, GICv4.1</td><td>GIC interface, GICv4.1</td></tr><tr><td>Bus Protocol</td><td>AMBA AXI5 or CHLE</td><td>AMBA AXI5 or CHLE</td><td>AMBA AXI5 or CHLE</td></tr><tr><td>L1 Cache/D-Cache</td><td>32KB or 64KB</td><td>32KB or 64KB</td><td>32KB or 64KB</td></tr><tr><td>L2 Cache</td><td>Optional, 128KB, 192KB, 256KB, 384KB, 512KB</td><td>256KB or 512KB</td><td>256KB or 512KB</td></tr><tr><td>L3 Cache</td><td>Optional, 256KB to 16MB</td><td>Optional, 256KB to 16MB</td><td>Optional, 256KB to 16MB</td></tr><tr><td>Dual Core Lock-Step (DCLS)</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Functional Safety Support</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Cryptography Unit</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Error Code Correction (ECC)/Parity</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Accelerator Coherency Port (ACP)</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Peripheral Port</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Generic Timer</td><td>Armv9.0-A</td><td>Armv9.0-A</td><td>Armv9.0-A</td></tr><tr><td>Non-intrusive debug (trace)</td><td>Included</td><td>Included</td><td>Included</td></tr></tbody></table>",
+          "page": 4,
+          "polygon": [
+            [
+              23.0,
+              18.0
+            ],
+            [
+              1336.0,
+              18.0
+            ],
+            [
+              1336.0,
+              735.0
+            ],
+            [
+              23.0,
+              735.0
+            ]
+          ],
+          "bbox": [
+            23.0,
+            18.0,
+            1336.0,
+            735.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/0"
+      }
+    },
+    {
+      "html": "<table><thead><tr><th>Feature</th><th>Cortex-A320</th><th>Cortex-A520</th><th>Cortex-A720</th><th>Cortex-A725</th><th>Cortex-A520AE</th><th>Cortex-A720AE</th></tr></thead><tbody><tr><td>Architecture</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td></tr><tr><td>Main Extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td></tr><tr><td>Pipeline</td><td>In order</td><td>In order</td><td>Out of order</td><td>Out of order</td><td>In order</td><td>Out of order</td></tr><tr><td>Superscalar</td><td>Partial</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Physical Addressing (PA)</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>48-bit</td><td>48-bit</td></tr><tr><td>Security</td><td>TrustZone, Secure-EL2 Included</td><td>TrustZone, Secure-EL2 Included</td><td>TrustZone, Secure-EL2 Included</td><td>TrustZone, Secure-EL2 Included</td><td>TrustZone, Secure-EL2 Included</td><td>TrustZone, Secure-EL2 Included</td></tr><tr><td>Neon, Floating Point Unit and SVE</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Floating Point Unit only</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Interrupt Controller</td><td>External GICv4.1</td><td>External GICv4.1</td><td>External GICv4.1</td><td>External GICv4.1</td><td>External GICv4.1</td><td>External GICv4.1</td></tr><tr><td>Bus Protocol</td><td>AMBA AXI5</td><td>AMBA AXI5 or CHI.E</td><td>AMBA AXI5 or CHI.E</td><td>AMBA AXI5 or CHI.E</td><td>AMBA AXI5 or CHI.E</td><td>AMBA AXI5 or CHI.E</td></tr><tr><td>L1 I-Cache/D-Cache</td><td>32KB or 64KB</td><td>32KB or 64KB</td><td>32KB or 64KB</td><td>32KB or 64KB</td><td>32KB or 64KB</td><td>32KB or 64KB</td></tr><tr><td>L2 Cache</td><td>Optional, 128KB, 192KB, 256KB, 384KB, 512KB</td><td>Optional, 128KB, 192KB, 256KB, 384KB, 512KB</td><td>128KB, 256KB, 512KB</td><td>128KB, 256KB, 512KB, 1MB</td><td>Optional, 128KB, 192KB, 256KB, 384KB, 512KB</td><td>128KB, 256KB, 512KB</td></tr><tr><td>L3 Cache</td><td>No</td><td>Optional, 256KB to 32MB</td><td>Optional, 256KB to 32MB</td><td>Optional, 256KB to 32MB</td><td>Optional, 256KB to 32MB</td><td>Optional, 256KB to 32MB</td></tr><tr><td>Dual Core Lock-Step (DCLS)</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr><tr><td>Functional Safety Support</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr><tr><td>Cryptography Unit</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Error Code Correction (ECC)/Parity</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Accelerator Coherency Port (ACP)</td><td>No</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Peripheral Port</td><td>No</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Generic Timer</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td></tr><tr><td>Non-intrusive debug (trace)</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1919.0,
+        1117.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1919.0,
+          0.0
+        ],
+        [
+          1919.0,
+          1117.0
+        ],
+        [
+          0.0,
+          1117.0
+        ]
+      ],
+      "id": "/page/5/Page/5",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/5/Table/0",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Feature</th><th>Cortex-A320</th><th>Cortex-A520</th><th>Cortex-A720</th><th>Cortex-A725</th><th>Cortex-A520AE</th><th>Cortex-A720AE</th></tr></thead><tbody><tr><td>Architecture</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td></tr><tr><td>Main Extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td><td>Up to Armv8.7 extensions<br/>QARMA3 extensions<br/>SVE2 extensions<br/>Memory Tagging Extensions (MTE)<br/>(Including Asymmetric MTE)<br/>Cryptography extensions<br/>RAS extensions</td></tr><tr><td>Pipeline</td><td>In order</td><td>In order</td><td>Out of order</td><td>Out of order</td><td>In order</td><td>Out of order</td></tr><tr><td>Superscalar</td><td>Partial</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Physical Addressing (PA)</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>40-bit</td><td>48-bit</td><td>48-bit</td></tr><tr><td>Security</td><td>TrustZone, Secure-EL2 Included</td><td>TrustZone, Secure-EL2 Included</td><td>TrustZone, Secure-EL2 Included</td><td>TrustZone, Secure-EL2 Included</td><td>TrustZone, Secure-EL2 Included</td><td>TrustZone, Secure-EL2 Included</td></tr><tr><td>Neon, Floating Point Unit and SVE</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Floating Point Unit only</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Interrupt Controller</td><td>External GICv4.1</td><td>External GICv4.1</td><td>External GICv4.1</td><td>External GICv4.1</td><td>External GICv4.1</td><td>External GICv4.1</td></tr><tr><td>Bus Protocol</td><td>AMBA AXI5</td><td>AMBA AXI5 or CHI.E</td><td>AMBA AXI5 or CHI.E</td><td>AMBA AXI5 or CHI.E</td><td>AMBA AXI5 or CHI.E</td><td>AMBA AXI5 or CHI.E</td></tr><tr><td>L1 I-Cache/D-Cache</td><td>32KB or 64KB</td><td>32KB or 64KB</td><td>32KB or 64KB</td><td>32KB or 64KB</td><td>32KB or 64KB</td><td>32KB or 64KB</td></tr><tr><td>L2 Cache</td><td>Optional, 128KB, 192KB, 256KB, 384KB, 512KB</td><td>Optional, 128KB, 192KB, 256KB, 384KB, 512KB</td><td>128KB, 256KB, 512KB</td><td>128KB, 256KB, 512KB, 1MB</td><td>Optional, 128KB, 192KB, 256KB, 384KB, 512KB</td><td>128KB, 256KB, 512KB</td></tr><tr><td>L3 Cache</td><td>No</td><td>Optional, 256KB to 32MB</td><td>Optional, 256KB to 32MB</td><td>Optional, 256KB to 32MB</td><td>Optional, 256KB to 32MB</td><td>Optional, 256KB to 32MB</td></tr><tr><td>Dual Core Lock-Step (DCLS)</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr><tr><td>Functional Safety Support</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr><tr><td>Cryptography Unit</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Error Code Correction (ECC)/Parity</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Accelerator Coherency Port (ACP)</td><td>No</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Peripheral Port</td><td>No</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td><td>Optional</td></tr><tr><td>Generic Timer</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td><td>Armv9.2-A</td></tr><tr><td>Non-intrusive debug (trace)</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr></tbody></table>",
+          "page": 5,
+          "polygon": [
+            [
+              34.0,
+              27.0
+            ],
+            [
+              1878.0,
+              27.0
+            ],
+            [
+              1878.0,
+              1032.0
+            ],
+            [
+              34.0,
+              1032.0
+            ]
+          ],
+          "bbox": [
+            34.0,
+            27.0,
+            1878.0,
+            1032.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/0"
+      }
+    },
+    {
+      "html": "<p><sup>1</sup> Arm products undergo continual development and improvement. These Cortex-A processors are no longer available to license and are included here for comparison purposes only.</p><p><sup>1</sup>Suitable for up to ASIL D systematic development</p><p><sup>2</sup>Contributes towards up to ASIL D hardware diagnostic metrics</p><p>For more information, contact your Arm account manager today or explore the processors in more detail here: <a href=\"https://developer.arm.com/ip-products/processors/cortex-a\">developer.arm.com/ip-products/processors/cortex-a</a></p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1919.0,
+        1117.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1919.0,
+          0.0
+        ],
+        [
+          1919.0,
+          1117.0
+        ],
+        [
+          0.0,
+          1117.0
+        ]
+      ],
+      "id": "/page/6/Page/6",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/6/Text/0",
+          "block_type": "Text",
+          "html": "<p><sup>1</sup> Arm products undergo continual development and improvement. These Cortex-A processors are no longer available to license and are included here for comparison purposes only.</p>",
+          "page": 6,
+          "polygon": [
+            [
+              30.0,
+              29.0
+            ],
+            [
+              1172.0,
+              29.0
+            ],
+            [
+              1172.0,
+              48.0
+            ],
+            [
+              30.0,
+              48.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            29.0,
+            1172.0,
+            48.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/Text/1",
+          "block_type": "Text",
+          "html": "<p><sup>1</sup>Suitable for up to ASIL D systematic development</p>",
+          "page": 6,
+          "polygon": [
+            [
+              30.0,
+              51.0
+            ],
+            [
+              356.0,
+              51.0
+            ],
+            [
+              356.0,
+              70.0
+            ],
+            [
+              30.0,
+              70.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            51.0,
+            356.0,
+            70.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/Text/2",
+          "block_type": "Text",
+          "html": "<p><sup>2</sup>Contributes towards up to ASIL D hardware diagnostic metrics</p>",
+          "page": 6,
+          "polygon": [
+            [
+              30.0,
+              72.0
+            ],
+            [
+              437.0,
+              72.0
+            ],
+            [
+              437.0,
+              92.0
+            ],
+            [
+              30.0,
+              92.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            72.0,
+            437.0,
+            92.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/Text/3",
+          "block_type": "Text",
+          "html": "<p>For more information, contact your Arm account manager today or explore the processors in more detail here: <a href=\"https://developer.arm.com/ip-products/processors/cortex-a\">developer.arm.com/ip-products/processors/cortex-a</a></p>",
+          "page": 6,
+          "polygon": [
+            [
+              30.0,
+              214.0
+            ],
+            [
+              1063.0,
+              214.0
+            ],
+            [
+              1063.0,
+              235.0
+            ],
+            [
+              30.0,
+              235.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            214.0,
+            1063.0,
+            235.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/PageFooter/4",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 6,
+          "polygon": [
+            [
+              24.0,
+              1026.0
+            ],
+            [
+              138.0,
+              1026.0
+            ],
+            [
+              138.0,
+              1064.0
+            ],
+            [
+              24.0,
+              1064.0
+            ]
+          ],
+          "bbox": [
+            24.0,
+            1026.0,
+            138.0,
+            1064.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/PageFooter/5",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 6,
+          "polygon": [
+            [
+              166.0,
+              1024.0
+            ],
+            [
+              1370.0,
+              1024.0
+            ],
+            [
+              1370.0,
+              1042.0
+            ],
+            [
+              166.0,
+              1042.0
+            ]
+          ],
+          "bbox": [
+            166.0,
+            1024.0,
+            1370.0,
+            1042.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/PageFooter/6",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 6,
+          "polygon": [
+            [
+              166.0,
+              1049.0
+            ],
+            [
+              397.0,
+              1049.0
+            ],
+            [
+              397.0,
+              1067.0
+            ],
+            [
+              166.0,
+              1067.0
+            ]
+          ],
+          "bbox": [
+            166.0,
+            1049.0,
+            397.0,
+            1067.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/PageFooter/7",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 6,
+          "polygon": [
+            [
+              1753.0,
+              1037.0
+            ],
+            [
+              1890.0,
+              1037.0
+            ],
+            [
+              1890.0,
+              1053.0
+            ],
+            [
+              1753.0,
+              1053.0
+            ]
+          ],
+          "bbox": [
+            1753.0,
+            1037.0,
+            1890.0,
+            1053.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/0"
+      }
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 3
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 1
+      },
+      {
+        "page_id": 2,
+        "num_blocks": 1
+      },
+      {
+        "page_id": 3,
+        "num_blocks": 1
+      },
+      {
+        "page_id": 4,
+        "num_blocks": 1
+      },
+      {
+        "page_id": 5,
+        "num_blocks": 1
+      },
+      {
+        "page_id": 6,
+        "num_blocks": 8
+      }
+    ]
+  }
+}

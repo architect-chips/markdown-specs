@@ -1,0 +1,1998 @@
+{
+  "children": [
+    {
+      "html": "<h1>Glossary And Acronyms</h1><h2>NVDLA</h2><p>NVIDIA Deep Learning Accelerator. Hardware logic implementing different function engines.</p><h2>DLA</h2><p>Deep Learning Accelerator</p><h2>UMD</h2><p>User Mode Driver, software running in user space. It provides interfaces to user application</p><h2>KMD</h2><p>Kernel Mode Driver, software running in kernel space. It implement low level functions such as hardware programming and provides interfaces to UMD</p><h2>NVDLA Loadable</h2><p>Format used to store compiled neural network.</p><h2>hw-layer</h2><p>One complete hardware block processing. It starts with a set of register configuration with an enable field. When it is done, it triggers ONE interrupt.</p><h2>SDP</h2><p>Single data processor, a functional sub unit in NVDLA engine</p><h2>PDP</h2><p>Planar data processor, a functional sub unit in NVDLA engine</p><h2>CDP</h2><p>Channel data processor, a functional sub unit in NVDLA engine</p><h2>Rubik</h2><p>Data operation processor. A functional sub unit in NVDLA engine to support data layout transformation</p><h2>BDMA</h2><p>Bridge DMA. BDMA transform data from CVSRAM to MC and vice versa</p><h2>CDMA</h2><p>Convolution DMA, responsible for load image/weight/feature data to convolution core</p><h2>RDMA</h2><p>Read DMA, instanced in SDP/CDP/PDP/Rubik engines which responsible for load input data from external memory (either MC or CVSRAM)</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              493.0,
+              26.0
+            ],
+            [
+              818.0,
+              26.0
+            ],
+            [
+              818.0,
+              43.0
+            ],
+            [
+              493.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            493.0,
+            26.0,
+            818.0,
+            43.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h1>Glossary And Acronyms</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              92.0
+            ],
+            [
+              676.0,
+              92.0
+            ],
+            [
+              676.0,
+              144.0
+            ],
+            [
+              71.0,
+              144.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            92.0,
+            676.0,
+            144.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h2>NVDLA</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              176.0
+            ],
+            [
+              159.0,
+              176.0
+            ],
+            [
+              159.0,
+              200.0
+            ],
+            [
+              71.0,
+              200.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            176.0,
+            159.0,
+            200.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/4",
+          "block_type": "Text",
+          "html": "<p>NVIDIA Deep Learning Accelerator. Hardware logic implementing different function engines.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              212.0
+            ],
+            [
+              968.0,
+              212.0
+            ],
+            [
+              968.0,
+              233.0
+            ],
+            [
+              71.0,
+              233.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            212.0,
+            968.0,
+            233.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h2>DLA</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              267.0
+            ],
+            [
+              123.0,
+              267.0
+            ],
+            [
+              123.0,
+              288.0
+            ],
+            [
+              71.0,
+              288.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            267.0,
+            123.0,
+            288.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/6",
+          "block_type": "Text",
+          "html": "<p>Deep Learning Accelerator</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              298.0
+            ],
+            [
+              332.0,
+              298.0
+            ],
+            [
+              332.0,
+              322.0
+            ],
+            [
+              71.0,
+              322.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            298.0,
+            332.0,
+            322.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h2>UMD</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              353.0
+            ],
+            [
+              130.0,
+              353.0
+            ],
+            [
+              130.0,
+              375.0
+            ],
+            [
+              71.0,
+              375.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            353.0,
+            130.0,
+            375.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/8",
+          "block_type": "Text",
+          "html": "<p>User Mode Driver, software running in user space. It provides interfaces to user application</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              389.0
+            ],
+            [
+              962.0,
+              389.0
+            ],
+            [
+              962.0,
+              409.0
+            ],
+            [
+              71.0,
+              409.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            389.0,
+            962.0,
+            409.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/9",
+          "block_type": "SectionHeader",
+          "html": "<h2>KMD</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              442.0
+            ],
+            [
+              130.0,
+              442.0
+            ],
+            [
+              130.0,
+              463.0
+            ],
+            [
+              71.0,
+              463.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            442.0,
+            130.0,
+            463.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/10",
+          "block_type": "Text",
+          "html": "<p>Kernel Mode Driver, software running in kernel space. It implement low level functions such as hardware programming and provides interfaces to UMD</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              475.0
+            ],
+            [
+              996.0,
+              475.0
+            ],
+            [
+              996.0,
+              525.0
+            ],
+            [
+              71.0,
+              525.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            475.0,
+            996.0,
+            525.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/11",
+          "block_type": "SectionHeader",
+          "html": "<h2>NVDLA Loadable</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              558.0
+            ],
+            [
+              273.0,
+              558.0
+            ],
+            [
+              273.0,
+              582.0
+            ],
+            [
+              71.0,
+              582.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            558.0,
+            273.0,
+            582.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/12",
+          "block_type": "Text",
+          "html": "<p>Format used to store compiled neural network.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              592.0
+            ],
+            [
+              532.0,
+              592.0
+            ],
+            [
+              532.0,
+              614.0
+            ],
+            [
+              71.0,
+              614.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            592.0,
+            532.0,
+            614.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/13",
+          "block_type": "SectionHeader",
+          "html": "<h2>hw-layer</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              650.0
+            ],
+            [
+              183.0,
+              650.0
+            ],
+            [
+              183.0,
+              672.0
+            ],
+            [
+              71.0,
+              672.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            650.0,
+            183.0,
+            672.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/14",
+          "block_type": "Text",
+          "html": "<p>One complete hardware block processing. It starts with a set of register configuration with an enable field. When it is done, it triggers ONE interrupt.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              683.0
+            ],
+            [
+              1059.0,
+              683.0
+            ],
+            [
+              1059.0,
+              732.0
+            ],
+            [
+              71.0,
+              732.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            683.0,
+            1059.0,
+            732.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/13"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/15",
+          "block_type": "SectionHeader",
+          "html": "<h2>SDP</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              767.0
+            ],
+            [
+              123.0,
+              767.0
+            ],
+            [
+              123.0,
+              788.0
+            ],
+            [
+              71.0,
+              788.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            767.0,
+            123.0,
+            788.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/13"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/16",
+          "block_type": "Text",
+          "html": "<p>Single data processor, a functional sub unit in NVDLA engine</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              800.0
+            ],
+            [
+              664.0,
+              800.0
+            ],
+            [
+              664.0,
+              822.0
+            ],
+            [
+              71.0,
+              822.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            800.0,
+            664.0,
+            822.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/15"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/17",
+          "block_type": "SectionHeader",
+          "html": "<h2>PDP</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              853.0
+            ],
+            [
+              123.0,
+              853.0
+            ],
+            [
+              123.0,
+              876.0
+            ],
+            [
+              71.0,
+              876.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            853.0,
+            123.0,
+            876.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/15"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/18",
+          "block_type": "Text",
+          "html": "<p>Planar data processor, a functional sub unit in NVDLA engine</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              888.0
+            ],
+            [
+              665.0,
+              888.0
+            ],
+            [
+              665.0,
+              908.0
+            ],
+            [
+              71.0,
+              908.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            888.0,
+            665.0,
+            908.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/17"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/19",
+          "block_type": "SectionHeader",
+          "html": "<h2>CDP</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              942.0
+            ],
+            [
+              123.0,
+              942.0
+            ],
+            [
+              123.0,
+              963.0
+            ],
+            [
+              71.0,
+              963.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            942.0,
+            123.0,
+            963.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/17"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/20",
+          "block_type": "Text",
+          "html": "<p>Channel data processor, a functional sub unit in NVDLA engine</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              975.0
+            ],
+            [
+              684.0,
+              975.0
+            ],
+            [
+              684.0,
+              999.0
+            ],
+            [
+              71.0,
+              999.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            975.0,
+            684.0,
+            999.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/19"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/21",
+          "block_type": "SectionHeader",
+          "html": "<h2>Rubik</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1030.0
+            ],
+            [
+              145.0,
+              1030.0
+            ],
+            [
+              145.0,
+              1052.0
+            ],
+            [
+              71.0,
+              1052.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1030.0,
+            145.0,
+            1052.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/19"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/22",
+          "block_type": "Text",
+          "html": "<p>Data operation processor. A functional sub unit in NVDLA engine to support data layout transformation</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1064.0
+            ],
+            [
+              1074.0,
+              1064.0
+            ],
+            [
+              1074.0,
+              1087.0
+            ],
+            [
+              71.0,
+              1087.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1064.0,
+            1074.0,
+            1087.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/21"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/23",
+          "block_type": "SectionHeader",
+          "html": "<h2>BDMA</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1119.0
+            ],
+            [
+              148.0,
+              1119.0
+            ],
+            [
+              148.0,
+              1143.0
+            ],
+            [
+              71.0,
+              1143.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1119.0,
+            148.0,
+            1143.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/21"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/24",
+          "block_type": "Text",
+          "html": "<p>Bridge DMA. BDMA transform data from CVSRAM to MC and vice versa</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1153.0
+            ],
+            [
+              765.0,
+              1153.0
+            ],
+            [
+              765.0,
+              1176.0
+            ],
+            [
+              71.0,
+              1176.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1153.0,
+            765.0,
+            1176.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/23"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/25",
+          "block_type": "SectionHeader",
+          "html": "<h2>CDMA</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1208.0
+            ],
+            [
+              146.0,
+              1208.0
+            ],
+            [
+              146.0,
+              1232.0
+            ],
+            [
+              71.0,
+              1232.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1208.0,
+            146.0,
+            1232.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/23"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/26",
+          "block_type": "Text",
+          "html": "<p>Convolution DMA, responsible for load image/weight/feature data to convolution core</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1242.0
+            ],
+            [
+              906.0,
+              1242.0
+            ],
+            [
+              906.0,
+              1266.0
+            ],
+            [
+              71.0,
+              1266.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1242.0,
+            906.0,
+            1266.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/25"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/27",
+          "block_type": "SectionHeader",
+          "html": "<h2>RDMA</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1299.0
+            ],
+            [
+              148.0,
+              1299.0
+            ],
+            [
+              148.0,
+              1321.0
+            ],
+            [
+              71.0,
+              1321.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1299.0,
+            148.0,
+            1321.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/25"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/28",
+          "block_type": "Text",
+          "html": "<p>Read DMA, instanced in SDP/CDP/PDP/Rubik engines which responsible for load input data from external memory (either MC or CVSRAM)</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1330.0
+            ],
+            [
+              1013.0,
+              1330.0
+            ],
+            [
+              1013.0,
+              1384.0
+            ],
+            [
+              71.0,
+              1384.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1330.0,
+            1013.0,
+            1384.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/27"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/29",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              41.0,
+              1435.0
+            ],
+            [
+              229.0,
+              1435.0
+            ],
+            [
+              229.0,
+              1453.0
+            ],
+            [
+              41.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            1435.0,
+            229.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/27"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/30",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              1077.0,
+              1435.0
+            ],
+            [
+              1104.0,
+              1435.0
+            ],
+            [
+              1104.0,
+              1453.0
+            ],
+            [
+              1077.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1077.0,
+            1435.0,
+            1104.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/27"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    },
+    {
+      "html": "<h2><b>WDMA</b></h2><p>Write DMA, instanced in SDP/CDP/PDP/Rubik engines and responsible for write output data to external memory (either MC or CVSRAM)</p><h2><b>CBB</b></h2><p>Control backbone. System control data path that connected to NVDLA</p><h2><b>DBB</b></h2><p>Data backbone. The path that NVDLA uses to perform DMA to system memory, such as the DRAM interface.</p><h2><b>AMBA</b></h2><p>ARM Advanced Microcontroller Bus Architecture. A set of ARM defined bus standards.</p><h2><b>AXI</b></h2><p>Advanced eXtensible Interface. The third generation of AMBA interface defined in the AMBA 3 specification.</p><h2><b>CNN</b></h2><p>Convolutional Neural Network. A class of artificial neural networks.</p><h2><b>CSB</b></h2><p>Configuration Space Bus. (See External Interfaces (hw/v1/hwarch.html#external-interfaces).)</p><h2><b>DBBIF</b></h2><p>The NVDLA interface to the DBB. (See External Interfaces (hw/v1/hwarch.html#external-interfaces).)</p><h2><b>IRQ</b></h2><p>Interrupt request. (See External Interfaces (hw/v1/hwarch.html#external-interfaces).)</p><h2><b>SRAMIF</b></h2><p>The NVDLA interface to an optional high-performance SRAM subsystem.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/1/Page/1",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/1/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/27"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              494.0,
+              26.0
+            ],
+            [
+              819.0,
+              26.0
+            ],
+            [
+              819.0,
+              43.0
+            ],
+            [
+              494.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            494.0,
+            26.0,
+            819.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/27"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h2><b>WDMA</b></h2>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              53.0
+            ],
+            [
+              157.0,
+              53.0
+            ],
+            [
+              157.0,
+              77.0
+            ],
+            [
+              70.0,
+              77.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            53.0,
+            157.0,
+            77.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/27"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/3",
+          "block_type": "Text",
+          "html": "<p>Write DMA, instanced in SDP/CDP/PDP/Rubik engines and responsible for write output data to external memory (either MC or CVSRAM)</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              87.0
+            ],
+            [
+              990.0,
+              87.0
+            ],
+            [
+              990.0,
+              139.0
+            ],
+            [
+              70.0,
+              139.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            87.0,
+            990.0,
+            139.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/4",
+          "block_type": "SectionHeader",
+          "html": "<h2><b>CBB</b></h2>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              170.0
+            ],
+            [
+              123.0,
+              170.0
+            ],
+            [
+              123.0,
+              194.0
+            ],
+            [
+              70.0,
+              194.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            170.0,
+            123.0,
+            194.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/5",
+          "block_type": "Text",
+          "html": "<p>Control backbone. System control data path that connected to NVDLA</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              204.0
+            ],
+            [
+              757.0,
+              204.0
+            ],
+            [
+              757.0,
+              227.0
+            ],
+            [
+              70.0,
+              227.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            204.0,
+            757.0,
+            227.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/6",
+          "block_type": "SectionHeader",
+          "html": "<h2><b>DBB</b></h2>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              259.0
+            ],
+            [
+              125.0,
+              259.0
+            ],
+            [
+              125.0,
+              282.0
+            ],
+            [
+              70.0,
+              282.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            259.0,
+            125.0,
+            282.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/7",
+          "block_type": "Text",
+          "html": "<p>Data backbone. The path that NVDLA uses to perform DMA to system memory, such as the DRAM interface.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              292.0
+            ],
+            [
+              1030.0,
+              292.0
+            ],
+            [
+              1030.0,
+              343.0
+            ],
+            [
+              70.0,
+              343.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            292.0,
+            1030.0,
+            343.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/8",
+          "block_type": "SectionHeader",
+          "html": "<h2><b>AMBA</b></h2>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              377.0
+            ],
+            [
+              146.0,
+              377.0
+            ],
+            [
+              146.0,
+              400.0
+            ],
+            [
+              70.0,
+              400.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            377.0,
+            146.0,
+            400.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/9",
+          "block_type": "Text",
+          "html": "<p>ARM Advanced Microcontroller Bus Architecture. A set of ARM defined bus standards.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              409.0
+            ],
+            [
+              903.0,
+              409.0
+            ],
+            [
+              903.0,
+              433.0
+            ],
+            [
+              70.0,
+              433.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            409.0,
+            903.0,
+            433.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/10",
+          "block_type": "SectionHeader",
+          "html": "<h2><b>AXI</b></h2>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              464.0
+            ],
+            [
+              120.0,
+              464.0
+            ],
+            [
+              120.0,
+              488.0
+            ],
+            [
+              70.0,
+              488.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            464.0,
+            120.0,
+            488.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/11",
+          "block_type": "Text",
+          "html": "<p>Advanced eXtensible Interface. The third generation of AMBA interface defined in the AMBA 3 specification.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              498.0
+            ],
+            [
+              986.0,
+              498.0
+            ],
+            [
+              986.0,
+              550.0
+            ],
+            [
+              70.0,
+              550.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            498.0,
+            986.0,
+            550.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/12",
+          "block_type": "SectionHeader",
+          "html": "<h2><b>CNN</b></h2>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              583.0
+            ],
+            [
+              127.0,
+              583.0
+            ],
+            [
+              127.0,
+              605.0
+            ],
+            [
+              70.0,
+              605.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            583.0,
+            127.0,
+            605.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/13",
+          "block_type": "Text",
+          "html": "<p>Convolutional Neural Network. A class of artificial neural networks.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              616.0
+            ],
+            [
+              723.0,
+              616.0
+            ],
+            [
+              723.0,
+              640.0
+            ],
+            [
+              70.0,
+              640.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            616.0,
+            723.0,
+            640.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/14",
+          "block_type": "SectionHeader",
+          "html": "<h2><b>CSB</b></h2>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              671.0
+            ],
+            [
+              122.0,
+              671.0
+            ],
+            [
+              122.0,
+              694.0
+            ],
+            [
+              70.0,
+              694.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            671.0,
+            122.0,
+            694.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/15",
+          "block_type": "Text",
+          "html": "<p>Configuration Space Bus. (See External Interfaces (hw/v1/hwarch.html#external-interfaces).)</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              705.0
+            ],
+            [
+              994.0,
+              705.0
+            ],
+            [
+              994.0,
+              727.0
+            ],
+            [
+              70.0,
+              727.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            705.0,
+            994.0,
+            727.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/16",
+          "block_type": "SectionHeader",
+          "html": "<h2><b>DBBIF</b></h2>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              760.0
+            ],
+            [
+              152.0,
+              760.0
+            ],
+            [
+              152.0,
+              782.0
+            ],
+            [
+              70.0,
+              782.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            760.0,
+            152.0,
+            782.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/17",
+          "block_type": "Text",
+          "html": "<p>The NVDLA interface to the DBB. (See External Interfaces (hw/v1/hwarch.html#external-interfaces).)</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              792.0
+            ],
+            [
+              1068.0,
+              792.0
+            ],
+            [
+              1068.0,
+              816.0
+            ],
+            [
+              70.0,
+              816.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            792.0,
+            1068.0,
+            816.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/18",
+          "block_type": "SectionHeader",
+          "html": "<h2><b>IRQ</b></h2>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              849.0
+            ],
+            [
+              122.0,
+              849.0
+            ],
+            [
+              122.0,
+              874.0
+            ],
+            [
+              70.0,
+              874.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            849.0,
+            122.0,
+            874.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/19",
+          "block_type": "Text",
+          "html": "<p>Interrupt request. (See External Interfaces (hw/v1/hwarch.html#external-interfaces).)</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              883.0
+            ],
+            [
+              922.0,
+              883.0
+            ],
+            [
+              922.0,
+              905.0
+            ],
+            [
+              70.0,
+              905.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            883.0,
+            922.0,
+            905.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/20",
+          "block_type": "SectionHeader",
+          "html": "<h2><b>SRAMIF</b></h2>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              938.0
+            ],
+            [
+              169.0,
+              938.0
+            ],
+            [
+              169.0,
+              960.0
+            ],
+            [
+              70.0,
+              960.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            938.0,
+            169.0,
+            960.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/21",
+          "block_type": "Text",
+          "html": "<p>The NVDLA interface to an optional high-performance SRAM subsystem.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              971.0
+            ],
+            [
+              779.0,
+              971.0
+            ],
+            [
+              779.0,
+              994.0
+            ],
+            [
+              70.0,
+              994.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            971.0,
+            779.0,
+            994.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/20"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/22",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              39.0,
+              1435.0
+            ],
+            [
+              229.0,
+              1435.0
+            ],
+            [
+              229.0,
+              1455.0
+            ],
+            [
+              39.0,
+              1455.0
+            ]
+          ],
+          "bbox": [
+            39.0,
+            1435.0,
+            229.0,
+            1455.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/20"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/23",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              1076.0,
+              1435.0
+            ],
+            [
+              1105.0,
+              1435.0
+            ],
+            [
+              1105.0,
+              1453.0
+            ],
+            [
+              1076.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1076.0,
+            1435.0,
+            1105.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/20"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/0/SectionHeader/27"
+      }
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 31
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 24
+      }
+    ]
+  }
+}

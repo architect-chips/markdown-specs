@@ -1,0 +1,6533 @@
+{
+  "children": [
+    {
+      "html": "<h1>NVDLA Verification Suite User Guide</h1><h2>Contents</h2><ul><li>NVDLA Verification Suite User Guide<ul><li>Preparation<ul><li>Acronym</li><li>Setup tree.make and Build tree</li></ul></li><li>Quick Start<ul><li>Running single test</li><li>Running a list of tests</li></ul></li><li>Verification Suite<ul><li>Test Bench Architecture</li><li>Test Plan</li><li>Test Suite</li></ul></li><li>Regression Tool Set<ul><li>Running a Single Test</li><li>Running a Test Plan</li><li>Generating Reporting Metrics</li></ul></li></ul></li></ul><h2>Preparation</h2><h3>Acronym</h3><p>Following acronyms will be frequently used in this document, if there are abbreviations you don't know their meanings, please check this chapter.</p><table><thead><tr><th>Acronym</th><th>Description</th></tr></thead><tbody><tr><td>tree</td><td>Repository hosting NVDLA source code</td></tr><tr><td>TOT</td><td>Top of Tree, refer to the root of NVDLA HW repository nvdla/hw</td></tr><tr><td>OUTDIR</td><td>Generated code under TOT/ourdir</td></tr><tr><td>Sub-unit</td><td>A module which has a dedicated register block. For example, CDMA/CSC/CMAC/CACC/SDP/SDP_RDMA are all sub-units.</td></tr><tr><td>Resource</td><td>Hardware operation resources. One resource may contain one or more sub-units.<br/>For example, a combination of CSC/CMAC/CACC is one resource. SDP_RDMA and SDP are two independent resources.</td></tr><tr><td>Hardware pipeline</td><td>A combination of resources for a specified operation.<br/>A hardware pipeline starts with one or more read DMA(s) and ends with one write DMA.</td></tr><tr><td>Scenario</td><td>A description of hardware pipelines.<br/>One complete hardware processing within a hardware pipeline.</td></tr><tr><td>HWL/HW layer</td><td>A hardware layer starts with a set of register configuration with an enable field. When it's done, it triggers ONE interrupt.<br/>A hardware layer requires a hardware pipeline.<br/>The input data of convolution HW layer.</td></tr><tr><td>Image data</td><td>In convolution, image data is the station operand.</td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              42.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              42.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            42.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              453.0,
+              26.0
+            ],
+            [
+              860.0,
+              26.0
+            ],
+            [
+              860.0,
+              43.0
+            ],
+            [
+              453.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            453.0,
+            26.0,
+            860.0,
+            43.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h1>NVDLA Verification Suite User Guide</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              67.0,
+              81.0
+            ],
+            [
+              804.0,
+              81.0
+            ],
+            [
+              804.0,
+              123.0
+            ],
+            [
+              67.0,
+              123.0
+            ]
+          ],
+          "bbox": [
+            67.0,
+            81.0,
+            804.0,
+            123.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h2>Contents</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              75.0,
+              170.0
+            ],
+            [
+              167.0,
+              170.0
+            ],
+            [
+              167.0,
+              191.0
+            ],
+            [
+              75.0,
+              191.0
+            ]
+          ],
+          "bbox": [
+            75.0,
+            170.0,
+            167.0,
+            191.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/ListGroup/4",
+          "block_type": "ListGroup",
+          "html": "<ul><li>NVDLA Verification Suite User Guide<ul><li>Preparation<ul><li>Acronym</li><li>Setup tree.make and Build tree</li></ul></li><li>Quick Start<ul><li>Running single test</li><li>Running a list of tests</li></ul></li><li>Verification Suite<ul><li>Test Bench Architecture</li><li>Test Plan</li><li>Test Suite</li></ul></li><li>Regression Tool Set<ul><li>Running a Single Test</li><li>Running a Test Plan</li><li>Generating Reporting Metrics</li></ul></li></ul></li></ul>",
+          "page": 0,
+          "polygon": [
+            [
+              102.0,
+              216.0
+            ],
+            [
+              461.0,
+              216.0
+            ],
+            [
+              461.0,
+              552.0
+            ],
+            [
+              102.0,
+              552.0
+            ]
+          ],
+          "bbox": [
+            102.0,
+            216.0,
+            461.0,
+            552.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h2>Preparation</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              67.0,
+              588.0
+            ],
+            [
+              264.0,
+              588.0
+            ],
+            [
+              264.0,
+              626.0
+            ],
+            [
+              67.0,
+              626.0
+            ]
+          ],
+          "bbox": [
+            67.0,
+            588.0,
+            264.0,
+            626.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/6",
+          "block_type": "SectionHeader",
+          "html": "<h3>Acronym</h3>",
+          "page": 0,
+          "polygon": [
+            [
+              67.0,
+              647.0
+            ],
+            [
+              190.0,
+              647.0
+            ],
+            [
+              190.0,
+              677.0
+            ],
+            [
+              67.0,
+              677.0
+            ]
+          ],
+          "bbox": [
+            67.0,
+            647.0,
+            190.0,
+            677.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/7",
+          "block_type": "Text",
+          "html": "<p>Following acronyms will be frequently used in this document, if there are abbreviations you don't know their meanings, please check this chapter.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              67.0,
+              689.0
+            ],
+            [
+              1059.0,
+              689.0
+            ],
+            [
+              1059.0,
+              729.0
+            ],
+            [
+              67.0,
+              729.0
+            ]
+          ],
+          "bbox": [
+            67.0,
+            689.0,
+            1059.0,
+            729.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Table/8",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Acronym</th><th>Description</th></tr></thead><tbody><tr><td>tree</td><td>Repository hosting NVDLA source code</td></tr><tr><td>TOT</td><td>Top of Tree, refer to the root of NVDLA HW repository nvdla/hw</td></tr><tr><td>OUTDIR</td><td>Generated code under TOT/ourdir</td></tr><tr><td>Sub-unit</td><td>A module which has a dedicated register block. For example, CDMA/CSC/CMAC/CACC/SDP/SDP_RDMA are all sub-units.</td></tr><tr><td>Resource</td><td>Hardware operation resources. One resource may contain one or more sub-units.<br/>For example, a combination of CSC/CMAC/CACC is one resource. SDP_RDMA and SDP are two independent resources.</td></tr><tr><td>Hardware pipeline</td><td>A combination of resources for a specified operation.<br/>A hardware pipeline starts with one or more read DMA(s) and ends with one write DMA.</td></tr><tr><td>Scenario</td><td>A description of hardware pipelines.<br/>One complete hardware processing within a hardware pipeline.</td></tr><tr><td>HWL/HW layer</td><td>A hardware layer starts with a set of register configuration with an enable field. When it's done, it triggers ONE interrupt.<br/>A hardware layer requires a hardware pipeline.<br/>The input data of convolution HW layer.</td></tr><tr><td>Image data</td><td>In convolution, image data is the station operand.</td></tr></tbody></table>",
+          "page": 0,
+          "polygon": [
+            [
+              67.0,
+              752.0
+            ],
+            [
+              1073.0,
+              752.0
+            ],
+            [
+              1073.0,
+              1406.0
+            ],
+            [
+              67.0,
+              1406.0
+            ]
+          ],
+          "bbox": [
+            67.0,
+            752.0,
+            1073.0,
+            1406.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/9",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              42.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1453.0
+            ],
+            [
+              42.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            42.0,
+            1435.0,
+            290.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/10",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              1071.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1071.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1071.0,
+            1435.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/6"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    },
+    {
+      "html": "<table><thead><tr><th>Acronym</th><th>Description</th></tr></thead><tbody><tr><td></td><td>The input/output data of HW-layer.</td></tr><tr><td>Feature data</td><td>Feature data is generated from one HW-layer and can be used as input data for next HW-layer.</td></tr><tr><td>Weight data</td><td>In convolution, feature data is the station operand.<br/>The moving operand of convolution operation.</td></tr></tbody></table><h3>Setup tree.make and Build tree</h3><p>Please follow instructions in NVDLA Environment Setup Guide (<a href=\"#\">environment_setup_guide.html</a>), section <i>Tools and Dependency Libraries Setup</i> to setup environment and section <i>Build Test Bench</i> to build test bench before advancing to next section.</p><h2>Quick Start</h2><p>After tree was built, we can run a test and a regression to validate NVDLA environment is in good health.</p><p>Let's create a directory named health_exam.</p><pre>TOT&gt; mkdir health_exam</pre><pre>TOT&gt; cd health_exam</pre><h3>Running single test</h3><p>Let run a convolution tests</p><pre>TOT/health_exam&gt; TOT/verif/tools/run_test.py -P nv_small dc_24x33x55_5x5x55x25_int8_0 -outdir<br/>dc_24x33x55_5x5x55x25_int8_output -wave -v nvdlu_utb</pre><p>Argument explanations:</p><table><thead><tr><th>Argument</th><th>Description</th></tr></thead><tbody><tr><td>-P nv_small</td><td>Running test on project NV_SMALL</td></tr><tr><td>dc_24x33x55_5x5x55x25_int8_0</td><td>Select test source named dc_24x33x55_5x5x55x25_int8_0</td></tr><tr><td>-outdir dc_24x33x55_5x5x55x25_int8_output</td><td>Simulation will be run in directory<br/>dc_24x33x55_5x5x55x25_int8_output will be</td></tr><tr><td>-wave</td><td>Enable waveform dumping</td></tr><tr><td>-v nvdlu_utb</td><td>Specify target testbench</td></tr></tbody></table><p>Wait for a while, when simulation is finished, following message will be shown in the end of log:</p><pre>*********************<br/>** TEST PASS **<br/>*********************<br/><br/>PPPP A SSSSS SSSSS<br/>P P A A S S<br/>PPPP AAAA SSSSS SSSSS<br/>P A A S S<br/>P A A SSSSS SSSSS</pre><p>There are several files were generated under</p><pre>TOT/health_exam/dc_24x33x55_5x5x55x25_int8_output</pre><ol><li><code>run_verdi.sh</code>: which is used to kick-off Verdi to view simulation waveform</li><li><code>testout</code>: which contains output logs</li></ol>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/1/Page/1",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/1/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              452.0,
+              26.0
+            ],
+            [
+              860.0,
+              26.0
+            ],
+            [
+              860.0,
+              43.0
+            ],
+            [
+              452.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            452.0,
+            26.0,
+            860.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Table/2",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Acronym</th><th>Description</th></tr></thead><tbody><tr><td></td><td>The input/output data of HW-layer.</td></tr><tr><td>Feature data</td><td>Feature data is generated from one HW-layer and can be used as input data for next HW-layer.</td></tr><tr><td>Weight data</td><td>In convolution, feature data is the station operand.<br/>The moving operand of convolution operation.</td></tr></tbody></table>",
+          "page": 1,
+          "polygon": [
+            [
+              63.0,
+              51.0
+            ],
+            [
+              1072.0,
+              51.0
+            ],
+            [
+              1072.0,
+              236.0
+            ],
+            [
+              63.0,
+              236.0
+            ]
+          ],
+          "bbox": [
+            63.0,
+            51.0,
+            1072.0,
+            236.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h3>Setup tree.make and Build tree</h3>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              259.0
+            ],
+            [
+              495.0,
+              259.0
+            ],
+            [
+              495.0,
+              291.0
+            ],
+            [
+              65.0,
+              291.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            259.0,
+            495.0,
+            291.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/4",
+          "block_type": "Text",
+          "html": "<p>Please follow instructions in NVDLA Environment Setup Guide (<a href=\"#\">environment_setup_guide.html</a>), section <i>Tools and Dependency Libraries Setup</i> to setup environment and section <i>Build Test Bench</i> to build test bench before advancing to next section.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              301.0
+            ],
+            [
+              1064.0,
+              301.0
+            ],
+            [
+              1064.0,
+              343.0
+            ],
+            [
+              65.0,
+              343.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            301.0,
+            1064.0,
+            343.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/1/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h2>Quick Start</h2>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              368.0
+            ],
+            [
+              262.0,
+              368.0
+            ],
+            [
+              262.0,
+              406.0
+            ],
+            [
+              65.0,
+              406.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            368.0,
+            262.0,
+            406.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/1/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/6",
+          "block_type": "Text",
+          "html": "<p>After tree was built, we can run a test and a regression to validate NVDLA environment is in good health.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              417.0
+            ],
+            [
+              891.0,
+              417.0
+            ],
+            [
+              891.0,
+              438.0
+            ],
+            [
+              65.0,
+              438.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            417.0,
+            891.0,
+            438.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/7",
+          "block_type": "Text",
+          "html": "<p>Let's create a directory named health_exam.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              461.0
+            ],
+            [
+              420.0,
+              461.0
+            ],
+            [
+              420.0,
+              481.0
+            ],
+            [
+              65.0,
+              481.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            461.0,
+            420.0,
+            481.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/8",
+          "block_type": "Text",
+          "html": "<pre>TOT&gt; mkdir health_exam</pre>",
+          "page": 1,
+          "polygon": [
+            [
+              68.0,
+              504.0
+            ],
+            [
+              267.0,
+              504.0
+            ],
+            [
+              267.0,
+              524.0
+            ],
+            [
+              68.0,
+              524.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            504.0,
+            267.0,
+            524.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/9",
+          "block_type": "Text",
+          "html": "<pre>TOT&gt; cd health_exam</pre>",
+          "page": 1,
+          "polygon": [
+            [
+              68.0,
+              546.0
+            ],
+            [
+              241.0,
+              546.0
+            ],
+            [
+              241.0,
+              565.0
+            ],
+            [
+              68.0,
+              565.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            546.0,
+            241.0,
+            565.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/10",
+          "block_type": "SectionHeader",
+          "html": "<h3>Running single test</h3>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              588.0
+            ],
+            [
+              329.0,
+              588.0
+            ],
+            [
+              329.0,
+              620.0
+            ],
+            [
+              65.0,
+              620.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            588.0,
+            329.0,
+            620.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/11",
+          "block_type": "Text",
+          "html": "<p>Let run a convolution tests</p>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              632.0
+            ],
+            [
+              278.0,
+              632.0
+            ],
+            [
+              278.0,
+              651.0
+            ],
+            [
+              65.0,
+              651.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            632.0,
+            278.0,
+            651.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/12",
+          "block_type": "Text",
+          "html": "<pre>TOT/health_exam&gt; TOT/verif/tools/run_test.py -P nv_small dc_24x33x55_5x5x55x25_int8_0 -outdir<br/>dc_24x33x55_5x5x55x25_int8_output -wave -v nvdlu_utb</pre>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              675.0
+            ],
+            [
+              885.0,
+              675.0
+            ],
+            [
+              885.0,
+              718.0
+            ],
+            [
+              65.0,
+              718.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            675.0,
+            885.0,
+            718.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/13",
+          "block_type": "Text",
+          "html": "<p>Argument explanations:</p>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              742.0
+            ],
+            [
+              258.0,
+              742.0
+            ],
+            [
+              258.0,
+              763.0
+            ],
+            [
+              65.0,
+              763.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            742.0,
+            258.0,
+            763.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Table/14",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Argument</th><th>Description</th></tr></thead><tbody><tr><td>-P nv_small</td><td>Running test on project NV_SMALL</td></tr><tr><td>dc_24x33x55_5x5x55x25_int8_0</td><td>Select test source named dc_24x33x55_5x5x55x25_int8_0</td></tr><tr><td>-outdir dc_24x33x55_5x5x55x25_int8_output</td><td>Simulation will be run in directory<br/>dc_24x33x55_5x5x55x25_int8_output will be</td></tr><tr><td>-wave</td><td>Enable waveform dumping</td></tr><tr><td>-v nvdlu_utb</td><td>Specify target testbench</td></tr></tbody></table>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              784.0
+            ],
+            [
+              1072.0,
+              784.0
+            ],
+            [
+              1072.0,
+              959.0
+            ],
+            [
+              65.0,
+              959.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            784.0,
+            1072.0,
+            959.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/15",
+          "block_type": "Text",
+          "html": "<p>Wait for a while, when simulation is finished, following message will be shown in the end of log:</p>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              974.0
+            ],
+            [
+              818.0,
+              974.0
+            ],
+            [
+              818.0,
+              994.0
+            ],
+            [
+              65.0,
+              994.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            974.0,
+            818.0,
+            994.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/16",
+          "block_type": "Text",
+          "html": "<pre>*********************<br/>** TEST PASS **<br/>*********************<br/><br/>PPPP A SSSSS SSSSS<br/>P P A A S S<br/>PPPP AAAA SSSSS SSSSS<br/>P A A S S<br/>P A A SSSSS SSSSS</pre>",
+          "page": 1,
+          "polygon": [
+            [
+              75.0,
+              1029.0
+            ],
+            [
+              362.0,
+              1029.0
+            ],
+            [
+              362.0,
+              1234.0
+            ],
+            [
+              75.0,
+              1234.0
+            ]
+          ],
+          "bbox": [
+            75.0,
+            1029.0,
+            362.0,
+            1234.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/17",
+          "block_type": "Text",
+          "html": "<p>There are several files were generated under</p>",
+          "page": 1,
+          "polygon": [
+            [
+              65.0,
+              1268.0
+            ],
+            [
+              421.0,
+              1268.0
+            ],
+            [
+              421.0,
+              1287.0
+            ],
+            [
+              65.0,
+              1287.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1268.0,
+            421.0,
+            1287.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/18",
+          "block_type": "Text",
+          "html": "<pre>TOT/health_exam/dc_24x33x55_5x5x55x25_int8_output</pre>",
+          "page": 1,
+          "polygon": [
+            [
+              68.0,
+              1309.0
+            ],
+            [
+              502.0,
+              1309.0
+            ],
+            [
+              502.0,
+              1330.0
+            ],
+            [
+              68.0,
+              1330.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            1309.0,
+            502.0,
+            1330.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/ListGroup/19",
+          "block_type": "ListGroup",
+          "html": "<ol><li><code>run_verdi.sh</code>: which is used to kick-off Verdi to view simulation waveform</li><li><code>testout</code>: which contains output logs</li></ol>",
+          "page": 1,
+          "polygon": [
+            [
+              89.0,
+              1351.0
+            ],
+            [
+              691.0,
+              1351.0
+            ],
+            [
+              691.0,
+              1394.0
+            ],
+            [
+              89.0,
+              1394.0
+            ]
+          ],
+          "bbox": [
+            89.0,
+            1351.0,
+            691.0,
+            1394.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/20",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              39.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1453.0
+            ],
+            [
+              39.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            39.0,
+            1435.0,
+            290.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/21",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              1069.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1069.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1069.0,
+            1435.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/0/SectionHeader/5",
+        "3": "/page/0/SectionHeader/6"
+      }
+    },
+    {
+      "html": "<h3>Running a list of tests</h3><p>We can run a list of tests for wider health status check</p><pre>TOT/health_exam&gt;TOT/verif/tools/run_plan.py -P nv_small -tp nv_small -atag protection -no_lsf -run_dir protection_tests -monitor</pre><p>Argument explanations:</p><table><thead><tr><th>Argument</th><th>Description</th></tr></thead><tbody><tr><td>-P nv_small</td><td>Running test on project NV_SMALL</td></tr><tr><td>-tp nv_small</td><td>Running tests in test plan nv_small</td></tr><tr><td>-atag protection</td><td>Select tests which have been tagged with \"protection\"</td></tr><tr><td>-no_lsf</td><td>Use local CPU to run tests</td></tr><tr><td>-run_dir protection_tests</td><td>Output file will be run in directory protection_tests</td></tr><tr><td>-monitor</td><td>Continuously monitoring test running status, until all simulations are done or reach maximum runtime</td></tr></tbody></table><p>*detail meanings of arguments could be found in both script self-contained help argument and later section Regression Tool Set</p><p>Terminal will update tests status in a certain interval:</p><pre>[INFO] Dir = TOT/health_exam/protection_tests\n\nTest          TB          Status      Errinfo\n------------------------------------------------------------------------\npdp_8x8x32_1x1_int8_1    nvdl_a_uttb  PASS\npdp_7x9x10_3x3_int8      nvdl_a_uttb  PASS\nsdp_8x8x32_bypass_int8_1 nvdl_a_uttb  PASS\nsdp_8x8x32_bypass_int8_0 nvdl_a_uttb  PASS\nsdp_4x22x42_bypass_int8  nvdl_a_uttb  RUNNING\ncdp_8x8x32_lrn3_int8_1   nvdl_a_uttb  RUNNING\ncdp_8x8x64_lrn9_int8     nvdl_a_uttb  RUNNING\ndc_24x33x55_5x5x55x25_int8_0 nvdl_a_uttb  RUNNING\n------------------------------------------------------------------------\n</pre><p>Wait for several minutes, all tests will be passed, and the final output will be</p><pre>[INFO] Dir = TOT/health_exam/protection_tests\n\nTest          TB          Status      Errinfo\n------------------------------------------------------------------------\npdp_8x8x32_1x1_int8_1    nvdl_a_uttb  PASS\npdp_7x9x10_3x3_int8      nvdl_a_uttb  PASS\nsdp_8x8x32_bypass_int8_1 nvdl_a_uttb  PASS\nsdp_8x8x32_bypass_int8_0 nvdl_a_uttb  PASS\nsdp_4x22x42_bypass_int8  nvdl_a_uttb  PASS\ncdp_8x8x32_lrn3_int8_1   nvdl_a_uttb  PASS\ncdp_8x8x64_lrn9_int8     nvdl_a_uttb  PASS\ndc_24x33x55_5x5x55x25_int8_0 nvdl_a_uttb  PASS\n------------------------------------------------------------------------\nTOTAL      PASS      FAILED    RUNNING    PENDING    Passing Rate\n8           8           0           0           0           100.00%\n</pre><p>Simulation log and result could be found under TOT/health_exam/protection_tests/nvdl_a_uttb :</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/2/Page/2",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/2/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              452.0,
+              26.0
+            ],
+            [
+              860.0,
+              26.0
+            ],
+            [
+              860.0,
+              43.0
+            ],
+            [
+              452.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            452.0,
+            26.0,
+            860.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h3>Running a list of tests</h3>",
+          "page": 2,
+          "polygon": [
+            [
+              65.0,
+              49.0
+            ],
+            [
+              365.0,
+              49.0
+            ],
+            [
+              365.0,
+              81.0
+            ],
+            [
+              65.0,
+              81.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            49.0,
+            365.0,
+            81.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/3",
+          "block_type": "Text",
+          "html": "<p>We can run a list of tests for wider health status check</p>",
+          "page": 2,
+          "polygon": [
+            [
+              65.0,
+              92.0
+            ],
+            [
+              498.0,
+              92.0
+            ],
+            [
+              498.0,
+              111.0
+            ],
+            [
+              65.0,
+              111.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            92.0,
+            498.0,
+            111.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/4",
+          "block_type": "Text",
+          "html": "<pre>TOT/health_exam&gt;TOT/verif/tools/run_plan.py -P nv_small -tp nv_small -atag protection -no_lsf -run_dir protection_tests -monitor</pre>",
+          "page": 2,
+          "polygon": [
+            [
+              65.0,
+              136.0
+            ],
+            [
+              973.0,
+              136.0
+            ],
+            [
+              973.0,
+              176.0
+            ],
+            [
+              65.0,
+              176.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            136.0,
+            973.0,
+            176.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/5",
+          "block_type": "Text",
+          "html": "<p>Argument explanations:</p>",
+          "page": 2,
+          "polygon": [
+            [
+              65.0,
+              201.0
+            ],
+            [
+              258.0,
+              201.0
+            ],
+            [
+              258.0,
+              221.0
+            ],
+            [
+              65.0,
+              221.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            201.0,
+            258.0,
+            221.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Table/6",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Argument</th><th>Description</th></tr></thead><tbody><tr><td>-P nv_small</td><td>Running test on project NV_SMALL</td></tr><tr><td>-tp nv_small</td><td>Running tests in test plan nv_small</td></tr><tr><td>-atag protection</td><td>Select tests which have been tagged with \"protection\"</td></tr><tr><td>-no_lsf</td><td>Use local CPU to run tests</td></tr><tr><td>-run_dir protection_tests</td><td>Output file will be run in directory protection_tests</td></tr><tr><td>-monitor</td><td>Continuously monitoring test running status, until all simulations are done or reach maximum runtime</td></tr></tbody></table>",
+          "page": 2,
+          "polygon": [
+            [
+              65.0,
+              242.0
+            ],
+            [
+              1072.0,
+              242.0
+            ],
+            [
+              1072.0,
+              446.0
+            ],
+            [
+              65.0,
+              446.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            242.0,
+            1072.0,
+            446.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/7",
+          "block_type": "Text",
+          "html": "<p>*detail meanings of arguments could be found in both script self-contained help argument and later section Regression Tool Set</p>",
+          "page": 2,
+          "polygon": [
+            [
+              65.0,
+              458.0
+            ],
+            [
+              1072.0,
+              458.0
+            ],
+            [
+              1072.0,
+              478.0
+            ],
+            [
+              65.0,
+              478.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            458.0,
+            1072.0,
+            478.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/8",
+          "block_type": "Text",
+          "html": "<p>Terminal will update tests status in a certain interval:</p>",
+          "page": 2,
+          "polygon": [
+            [
+              65.0,
+              500.0
+            ],
+            [
+              485.0,
+              500.0
+            ],
+            [
+              485.0,
+              521.0
+            ],
+            [
+              65.0,
+              521.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            500.0,
+            485.0,
+            521.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Table/9",
+          "block_type": "Table",
+          "html": "<pre>[INFO] Dir = TOT/health_exam/protection_tests\n\nTest          TB          Status      Errinfo\n------------------------------------------------------------------------\npdp_8x8x32_1x1_int8_1    nvdl_a_uttb  PASS\npdp_7x9x10_3x3_int8      nvdl_a_uttb  PASS\nsdp_8x8x32_bypass_int8_1 nvdl_a_uttb  PASS\nsdp_8x8x32_bypass_int8_0 nvdl_a_uttb  PASS\nsdp_4x22x42_bypass_int8  nvdl_a_uttb  RUNNING\ncdp_8x8x32_lrn3_int8_1   nvdl_a_uttb  RUNNING\ncdp_8x8x64_lrn9_int8     nvdl_a_uttb  RUNNING\ndc_24x33x55_5x5x55x25_int8_0 nvdl_a_uttb  RUNNING\n------------------------------------------------------------------------\n</pre>",
+          "page": 2,
+          "polygon": [
+            [
+              78.0,
+              555.0
+            ],
+            [
+              980.0,
+              555.0
+            ],
+            [
+              980.0,
+              819.0
+            ],
+            [
+              78.0,
+              819.0
+            ]
+          ],
+          "bbox": [
+            78.0,
+            555.0,
+            980.0,
+            819.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/10",
+          "block_type": "Text",
+          "html": "<p>Wait for several minutes, all tests will be passed, and the final output will be</p>",
+          "page": 2,
+          "polygon": [
+            [
+              65.0,
+              856.0
+            ],
+            [
+              666.0,
+              856.0
+            ],
+            [
+              666.0,
+              877.0
+            ],
+            [
+              65.0,
+              877.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            856.0,
+            666.0,
+            877.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Table/11",
+          "block_type": "Table",
+          "html": "<pre>[INFO] Dir = TOT/health_exam/protection_tests\n\nTest          TB          Status      Errinfo\n------------------------------------------------------------------------\npdp_8x8x32_1x1_int8_1    nvdl_a_uttb  PASS\npdp_7x9x10_3x3_int8      nvdl_a_uttb  PASS\nsdp_8x8x32_bypass_int8_1 nvdl_a_uttb  PASS\nsdp_8x8x32_bypass_int8_0 nvdl_a_uttb  PASS\nsdp_4x22x42_bypass_int8  nvdl_a_uttb  PASS\ncdp_8x8x32_lrn3_int8_1   nvdl_a_uttb  PASS\ncdp_8x8x64_lrn9_int8     nvdl_a_uttb  PASS\ndc_24x33x55_5x5x55x25_int8_0 nvdl_a_uttb  PASS\n------------------------------------------------------------------------\nTOTAL      PASS      FAILED    RUNNING    PENDING    Passing Rate\n8           8           0           0           0           100.00%\n</pre>",
+          "page": 2,
+          "polygon": [
+            [
+              78.0,
+              908.0
+            ],
+            [
+              980.0,
+              908.0
+            ],
+            [
+              980.0,
+              1222.0
+            ],
+            [
+              78.0,
+              1222.0
+            ]
+          ],
+          "bbox": [
+            78.0,
+            908.0,
+            980.0,
+            1222.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/12",
+          "block_type": "Text",
+          "html": "<p>Simulation log and result could be found under TOT/health_exam/protection_tests/nvdl_a_uttb :</p>",
+          "page": 2,
+          "polygon": [
+            [
+              65.0,
+              1253.0
+            ],
+            [
+              824.0,
+              1253.0
+            ],
+            [
+              824.0,
+              1272.0
+            ],
+            [
+              65.0,
+              1272.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1253.0,
+            824.0,
+            1272.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageFooter/13",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              39.0,
+              1434.0
+            ],
+            [
+              290.0,
+              1434.0
+            ],
+            [
+              290.0,
+              1453.0
+            ],
+            [
+              39.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            39.0,
+            1434.0,
+            290.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageFooter/14",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              1068.0,
+              1434.0
+            ],
+            [
+              1102.0,
+              1434.0
+            ],
+            [
+              1102.0,
+              1453.0
+            ],
+            [
+              1068.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1068.0,
+            1434.0,
+            1102.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/1/SectionHeader/5",
+        "3": "/page/1/SectionHeader/10"
+      }
+    },
+    {
+      "html": "<pre>protection_tests\n`-- nvdla_uttb\n|--- cdp_8x8x32_lrn3_int8_1\n|--- cdp_8x8x64_lrn9_int8\n|--- dc_24x33x55_5x5x55x25_int8_0\n|--- pdp_7x9x10_3x3_int8\n|--- pdp_8x8x32_1x1_int8_1\n|--- sdp_4x22x42_bypass_int8\n|--- sdp_8x8x32_bypass_int8_0\n`-- sdp_8x8x32_bypass_int8_1</pre><h2>Verification Suite</h2><p>NVDLA verification suite contains test bench, test plan and test suites.</p><p>Verification related files could be found under T0T/verif :</p><pre>verif\n|-- regression\n|--- testplans\n|-- testbench\n|--- trace_generator\n|--- trace_player\n|--&lt;some other directories&gt;\n`-- tests\n|--- trace_tests\n`-- uvm_tests</pre><h2>Test Bench Architecture</h2><p>NVDLA verification adopts coverage driven methodology which relies on constrained random stimulus.</p><p>Test bench also need to support direct tests for other considerations which require fixed invariant stimulus:</p><ol><li>Protection tests for code commit quality check.</li><li>Sanity tests for fast flushing plain and simple bugs.</li><li>Tests from real application (real network).</li></ol><p>Simulation flow is divided into two phases: stimulus recording (trace generation) and stimulus playing (trace playing). There are independent executables for different phases.</p><ol><li>Trace generation: a trace generator response for generating traces from constrained random tests. It contains with random constraints and random test suite.</li><li>Trace playing: a trace player response for driving trace to DUT, checking DUT correct behavior, and collecting coverages. It contains with agents for interacting with DUT, reference mode for correct behavior checking and coverage model for verification completeness measurement.</li></ol><h3>Trace generator</h3><h4>To be done</h4><h3>Trace player</h3><h4>To be done</h4><h2>Test Plan</h2><p>Test plan record tests and corresponding configurations for regression. There is one test plan for one configuration project. Test plan file location is: T0T/verif/regression/testplans .</p><p>Currently, this only one valid test plan: NV_SMALL .</p><h2>Test Levels</h2>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/3/Page/3",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/3/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              452.0,
+              26.0
+            ],
+            [
+              860.0,
+              26.0
+            ],
+            [
+              860.0,
+              43.0
+            ],
+            [
+              452.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            452.0,
+            26.0,
+            860.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/2",
+          "block_type": "Text",
+          "html": "<pre>protection_tests\n`-- nvdla_uttb\n|--- cdp_8x8x32_lrn3_int8_1\n|--- cdp_8x8x64_lrn9_int8\n|--- dc_24x33x55_5x5x55x25_int8_0\n|--- pdp_7x9x10_3x3_int8\n|--- pdp_8x8x32_1x1_int8_1\n|--- sdp_4x22x42_bypass_int8\n|--- sdp_8x8x32_bypass_int8_0\n`-- sdp_8x8x32_bypass_int8_1</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              76.0,
+              63.0
+            ],
+            [
+              408.0,
+              63.0
+            ],
+            [
+              408.0,
+              270.0
+            ],
+            [
+              76.0,
+              270.0
+            ]
+          ],
+          "bbox": [
+            76.0,
+            63.0,
+            408.0,
+            270.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h2>Verification Suite</h2>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              307.0
+            ],
+            [
+              357.0,
+              307.0
+            ],
+            [
+              357.0,
+              343.0
+            ],
+            [
+              65.0,
+              343.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            307.0,
+            357.0,
+            343.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/5",
+            "3": "/page/2/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/4",
+          "block_type": "Text",
+          "html": "<p>NVDLA verification suite contains test bench, test plan and test suites.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              354.0
+            ],
+            [
+              619.0,
+              354.0
+            ],
+            [
+              619.0,
+              375.0
+            ],
+            [
+              65.0,
+              375.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            354.0,
+            619.0,
+            375.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/5",
+          "block_type": "Text",
+          "html": "<p>Verification related files could be found under T0T/verif :</p>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              399.0
+            ],
+            [
+              524.0,
+              399.0
+            ],
+            [
+              524.0,
+              417.0
+            ],
+            [
+              65.0,
+              417.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            399.0,
+            524.0,
+            417.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/6",
+          "block_type": "Text",
+          "html": "<pre>verif\n|-- regression\n|--- testplans\n|-- testbench\n|--- trace_generator\n|--- trace_player\n|--&lt;some other directories&gt;\n`-- tests\n|--- trace_tests\n`-- uvm_tests</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              76.0,
+              454.0
+            ],
+            [
+              328.0,
+              454.0
+            ],
+            [
+              328.0,
+              657.0
+            ],
+            [
+              76.0,
+              657.0
+            ]
+          ],
+          "bbox": [
+            76.0,
+            454.0,
+            328.0,
+            657.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h2>Test Bench Architecture</h2>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              697.0
+            ],
+            [
+              390.0,
+              697.0
+            ],
+            [
+              390.0,
+              726.0
+            ],
+            [
+              65.0,
+              726.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            697.0,
+            390.0,
+            726.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/8",
+          "block_type": "Text",
+          "html": "<p>NVDLA verification adopts coverage driven methodology which relies on constrained random stimulus.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              738.0
+            ],
+            [
+              869.0,
+              738.0
+            ],
+            [
+              869.0,
+              758.0
+            ],
+            [
+              65.0,
+              758.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            738.0,
+            869.0,
+            758.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/9",
+          "block_type": "Text",
+          "html": "<p>Test bench also need to support direct tests for other considerations which require fixed invariant stimulus:</p>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              781.0
+            ],
+            [
+              906.0,
+              781.0
+            ],
+            [
+              906.0,
+              801.0
+            ],
+            [
+              65.0,
+              801.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            781.0,
+            906.0,
+            801.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/ListGroup/10",
+          "block_type": "ListGroup",
+          "html": "<ol><li>Protection tests for code commit quality check.</li><li>Sanity tests for fast flushing plain and simple bugs.</li><li>Tests from real application (real network).</li></ol>",
+          "page": 3,
+          "polygon": [
+            [
+              90.0,
+              825.0
+            ],
+            [
+              516.0,
+              825.0
+            ],
+            [
+              516.0,
+              889.0
+            ],
+            [
+              90.0,
+              889.0
+            ]
+          ],
+          "bbox": [
+            90.0,
+            825.0,
+            516.0,
+            889.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/11",
+          "block_type": "Text",
+          "html": "<p>Simulation flow is divided into two phases: stimulus recording (trace generation) and stimulus playing (trace playing). There are independent executables for different phases.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              904.0
+            ],
+            [
+              1076.0,
+              904.0
+            ],
+            [
+              1076.0,
+              945.0
+            ],
+            [
+              65.0,
+              945.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            904.0,
+            1076.0,
+            945.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/ListGroup/12",
+          "block_type": "ListGroup",
+          "html": "<ol><li>Trace generation: a trace generator response for generating traces from constrained random tests. It contains with random constraints and random test suite.</li><li>Trace playing: a trace player response for driving trace to DUT, checking DUT correct behavior, and collecting coverages. It contains with agents for interacting with DUT, reference mode for correct behavior checking and coverage model for verification completeness measurement.</li></ol>",
+          "page": 3,
+          "polygon": [
+            [
+              90.0,
+              969.0
+            ],
+            [
+              1076.0,
+              969.0
+            ],
+            [
+              1076.0,
+              1079.0
+            ],
+            [
+              90.0,
+              1079.0
+            ]
+          ],
+          "bbox": [
+            90.0,
+            969.0,
+            1076.0,
+            1079.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/13",
+          "block_type": "SectionHeader",
+          "html": "<h3>Trace generator</h3>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              1091.0
+            ],
+            [
+              229.0,
+              1091.0
+            ],
+            [
+              229.0,
+              1115.0
+            ],
+            [
+              65.0,
+              1115.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1091.0,
+            229.0,
+            1115.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/14",
+          "block_type": "SectionHeader",
+          "html": "<h4>To be done</h4>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              1127.0
+            ],
+            [
+              167.0,
+              1127.0
+            ],
+            [
+              167.0,
+              1144.0
+            ],
+            [
+              65.0,
+              1144.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1127.0,
+            167.0,
+            1144.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/7",
+            "3": "/page/3/SectionHeader/13"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/15",
+          "block_type": "SectionHeader",
+          "html": "<h3>Trace player</h3>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              1168.0
+            ],
+            [
+              195.0,
+              1168.0
+            ],
+            [
+              195.0,
+              1192.0
+            ],
+            [
+              65.0,
+              1192.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1168.0,
+            195.0,
+            1192.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/7",
+            "3": "/page/3/SectionHeader/13",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/16",
+          "block_type": "SectionHeader",
+          "html": "<h4>To be done</h4>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              1202.0
+            ],
+            [
+              167.0,
+              1202.0
+            ],
+            [
+              167.0,
+              1220.0
+            ],
+            [
+              65.0,
+              1220.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1202.0,
+            167.0,
+            1220.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/7",
+            "3": "/page/3/SectionHeader/15"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/17",
+          "block_type": "SectionHeader",
+          "html": "<h2>Test Plan</h2>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              1247.0
+            ],
+            [
+              191.0,
+              1247.0
+            ],
+            [
+              191.0,
+              1275.0
+            ],
+            [
+              65.0,
+              1275.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1247.0,
+            191.0,
+            1275.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/7",
+            "3": "/page/3/SectionHeader/15",
+            "4": "/page/3/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/18",
+          "block_type": "Text",
+          "html": "<p>Test plan record tests and corresponding configurations for regression. There is one test plan for one configuration project. Test plan file location is: T0T/verif/regression/testplans .</p>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              1288.0
+            ],
+            [
+              1069.0,
+              1288.0
+            ],
+            [
+              1069.0,
+              1332.0
+            ],
+            [
+              65.0,
+              1332.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1288.0,
+            1069.0,
+            1332.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/17"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/19",
+          "block_type": "Text",
+          "html": "<p>Currently, this only one valid test plan: NV_SMALL .</p>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              1355.0
+            ],
+            [
+              463.0,
+              1355.0
+            ],
+            [
+              463.0,
+              1376.0
+            ],
+            [
+              65.0,
+              1376.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1355.0,
+            463.0,
+            1376.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/17"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/20",
+          "block_type": "SectionHeader",
+          "html": "<h2>Test Levels</h2>",
+          "page": 3,
+          "polygon": [
+            [
+              65.0,
+              1395.0
+            ],
+            [
+              180.0,
+              1395.0
+            ],
+            [
+              180.0,
+              1419.0
+            ],
+            [
+              65.0,
+              1419.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1395.0,
+            180.0,
+            1419.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/17"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/PageFooter/21",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              41.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1453.0
+            ],
+            [
+              41.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            1435.0,
+            290.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/PageFooter/22",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              1069.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1069.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1069.0,
+            1435.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/1/SectionHeader/5",
+        "3": "/page/2/SectionHeader/2"
+      }
+    },
+    {
+      "html": "<p>One test plan contains several test levels:</p><ul><li>Level 0: Pass through cases which are based read data from memory and write to memory without function operation. Basic function tests. Most of protection tests will be select from this level.</li><li>Level 1: Common function case. Basic features such as major ASIC data path, special memory alignments, tests are single layer tests.</li><li>Level 2: Corner cases, for example, extreme small cube size (1x1x1 in width,height,channel), maximum width cube size (8192x1x1 in width,height,channel).</li><li>Level 3: reserved for multi-layer cases, run multiple layers on the same hardware pipelines.</li><li>Level 4: reserved for multi-scenario, running independent hardware pipelines (convolution, pdp, cdp) in the same time.</li><li>Level 5: reserved for perf tests</li><li>Level 6: reserved for power tests</li><li>Level 7: reserved for time-consumed tests</li><li>Level 8: reserved for real network cases</li><li>Level 9: reserved</li><li>Level 10: random tests for single scenario</li><li>Level 11: random tests for multi scenario</li></ul><p>Level 0 to 8 are considered as direct tests, level 10 to 11 are considered as random tests. There are dedicated test list files for each test level.</p><h3>Associating Tests</h3><p>Test plan provides a method named <code>add_test</code> to associate tests with test plan, in each test, there are 5 fields:</p><ul><li>Name: test source name</li><li>Tags: tags for test selection</li><li>Args: required arguments for test simulation, arguments will be documented in test bench and</li><li>Config: target test bench, currently, there is only one valid test bench setting: <code>nvdla_utb</code> which stands for NVDLA Unit Test bench.</li><li>Module: use to distinguish different types of tests</li><li>Desc: test description</li></ul><p>Example:</p><pre>add_test(name='dc_24x33x55_5x5x55x25_int8_0',<br/>        tags=['L0', 'cc', 'protection'],<br/>        args=[FIXED_SEED_ARG, DISABLE_COMPARE_ALL_UNITS_SB_ARG],<br/>        config=['nvdla_utb'],<br/>        desc='copied from cc_small_full_feature_5, kernel stride 4x3, unpacked, pad L/R/T/B, clip truncate</pre><h2>Test Suite</h2><p>There are two kinds of tests:</p><ol><li>Direct tests: direct tests are in trace format. Test source files are under <code>TOT/verif/tests/trace</code>. Trace tests are organized by configuration project. Trace tests for <code>NV_SMALL</code> configuration is under <code>TOT/verif/tests/trace_tests/nv_small</code>.</li><li>Random tests: random tests are in UVM test format. Random tests are expected to be configuration independent. Random test directory is <code>TOT/verif/tests/trace_tests/uvm_tests</code>.</li></ol><p>*For now, only trace tests are ready.</p><h3>Test naming</h3><p>Test naming is convenience for fast understanding test scenarios. There are several portions in test name:</p><p>&lt;MAJOR_FUNCTIONS&gt;_&lt;DIMENSION_SETTINGS&gt;_&lt;SUPPLEMENTARY_INFO&gt;_&lt;MINOR_FUNCTIONS&gt;_&lt;PRECISION&gt;_&lt;INDEX&gt;</p><p>Portion Explanation</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/4/Page/4",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/4/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 4,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 4,
+          "polygon": [
+            [
+              452.0,
+              26.0
+            ],
+            [
+              860.0,
+              26.0
+            ],
+            [
+              860.0,
+              43.0
+            ],
+            [
+              452.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            452.0,
+            26.0,
+            860.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/2",
+          "block_type": "Text",
+          "html": "<p>One test plan contains several test levels:</p>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              51.0
+            ],
+            [
+              398.0,
+              51.0
+            ],
+            [
+              398.0,
+              71.0
+            ],
+            [
+              65.0,
+              71.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            51.0,
+            398.0,
+            71.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/ListGroup/3",
+          "block_type": "ListGroup",
+          "html": "<ul><li>Level 0: Pass through cases which are based read data from memory and write to memory without function operation. Basic function tests. Most of protection tests will be select from this level.</li><li>Level 1: Common function case. Basic features such as major ASIC data path, special memory alignments, tests are single layer tests.</li><li>Level 2: Corner cases, for example, extreme small cube size (1x1x1 in width,height,channel), maximum width cube size (8192x1x1 in width,height,channel).</li><li>Level 3: reserved for multi-layer cases, run multiple layers on the same hardware pipelines.</li><li>Level 4: reserved for multi-scenario, running independent hardware pipelines (convolution, pdp, cdp) in the same time.</li><li>Level 5: reserved for perf tests</li><li>Level 6: reserved for power tests</li><li>Level 7: reserved for time-consumed tests</li><li>Level 8: reserved for real network cases</li><li>Level 9: reserved</li><li>Level 10: random tests for single scenario</li><li>Level 11: random tests for multi scenario</li></ul>",
+          "page": 4,
+          "polygon": [
+            [
+              91.0,
+              93.0
+            ],
+            [
+              1079.0,
+              93.0
+            ],
+            [
+              1079.0,
+              429.0
+            ],
+            [
+              91.0,
+              429.0
+            ]
+          ],
+          "bbox": [
+            91.0,
+            93.0,
+            1079.0,
+            429.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/4",
+          "block_type": "Text",
+          "html": "<p>Level 0 to 8 are considered as direct tests, level 10 to 11 are considered as random tests. There are dedicated test list files for each test level.</p>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              444.0
+            ],
+            [
+              1060.0,
+              444.0
+            ],
+            [
+              1060.0,
+              484.0
+            ],
+            [
+              65.0,
+              484.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            444.0,
+            1060.0,
+            484.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h3>Associating Tests</h3>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              495.0
+            ],
+            [
+              242.0,
+              495.0
+            ],
+            [
+              242.0,
+              521.0
+            ],
+            [
+              65.0,
+              521.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            495.0,
+            242.0,
+            521.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/6",
+          "block_type": "Text",
+          "html": "<p>Test plan provides a method named <code>add_test</code> to associate tests with test plan, in each test, there are 5 fields:</p>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              533.0
+            ],
+            [
+              928.0,
+              533.0
+            ],
+            [
+              928.0,
+              553.0
+            ],
+            [
+              65.0,
+              553.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            533.0,
+            928.0,
+            553.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20",
+            "3": "/page/4/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/ListGroup/7",
+          "block_type": "ListGroup",
+          "html": "<ul><li>Name: test source name</li><li>Tags: tags for test selection</li><li>Args: required arguments for test simulation, arguments will be documented in test bench and</li><li>Config: target test bench, currently, there is only one valid test bench setting: <code>nvdla_utb</code> which stands for NVDLA Unit Test bench.</li><li>Module: use to distinguish different types of tests</li><li>Desc: test description</li></ul>",
+          "page": 4,
+          "polygon": [
+            [
+              91.0,
+              577.0
+            ],
+            [
+              1076.0,
+              577.0
+            ],
+            [
+              1076.0,
+              730.0
+            ],
+            [
+              91.0,
+              730.0
+            ]
+          ],
+          "bbox": [
+            91.0,
+            577.0,
+            1076.0,
+            730.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20",
+            "3": "/page/4/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/8",
+          "block_type": "Text",
+          "html": "<p>Example:</p>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              746.0
+            ],
+            [
+              144.0,
+              746.0
+            ],
+            [
+              144.0,
+              766.0
+            ],
+            [
+              65.0,
+              766.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            746.0,
+            144.0,
+            766.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20",
+            "3": "/page/4/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/9",
+          "block_type": "Text",
+          "html": "<pre>add_test(name='dc_24x33x55_5x5x55x25_int8_0',<br/>        tags=['L0', 'cc', 'protection'],<br/>        args=[FIXED_SEED_ARG, DISABLE_COMPARE_ALL_UNITS_SB_ARG],<br/>        config=['nvdla_utb'],<br/>        desc='copied from cc_small_full_feature_5, kernel stride 4x3, unpacked, pad L/R/T/B, clip truncate</pre>",
+          "page": 4,
+          "polygon": [
+            [
+              75.0,
+              800.0
+            ],
+            [
+              1072.0,
+              800.0
+            ],
+            [
+              1072.0,
+              901.0
+            ],
+            [
+              75.0,
+              901.0
+            ]
+          ],
+          "bbox": [
+            75.0,
+            800.0,
+            1072.0,
+            901.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20",
+            "3": "/page/4/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/SectionHeader/10",
+          "block_type": "SectionHeader",
+          "html": "<h2>Test Suite</h2>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              938.0
+            ],
+            [
+              204.0,
+              938.0
+            ],
+            [
+              204.0,
+              966.0
+            ],
+            [
+              65.0,
+              966.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            938.0,
+            204.0,
+            966.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/3/SectionHeader/20",
+            "3": "/page/4/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/11",
+          "block_type": "Text",
+          "html": "<p>There are two kinds of tests:</p>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              981.0
+            ],
+            [
+              295.0,
+              981.0
+            ],
+            [
+              295.0,
+              1000.0
+            ],
+            [
+              65.0,
+              1000.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            981.0,
+            295.0,
+            1000.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/ListGroup/12",
+          "block_type": "ListGroup",
+          "html": "<ol><li>Direct tests: direct tests are in trace format. Test source files are under <code>TOT/verif/tests/trace</code>. Trace tests are organized by configuration project. Trace tests for <code>NV_SMALL</code> configuration is under <code>TOT/verif/tests/trace_tests/nv_small</code>.</li><li>Random tests: random tests are in UVM test format. Random tests are expected to be configuration independent. Random test directory is <code>TOT/verif/tests/trace_tests/uvm_tests</code>.</li></ol>",
+          "page": 4,
+          "polygon": [
+            [
+              90.0,
+              1023.0
+            ],
+            [
+              1076.0,
+              1023.0
+            ],
+            [
+              1076.0,
+              1113.0
+            ],
+            [
+              90.0,
+              1113.0
+            ]
+          ],
+          "bbox": [
+            90.0,
+            1023.0,
+            1076.0,
+            1113.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/13",
+          "block_type": "Text",
+          "html": "<p>*For now, only trace tests are ready.</p>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              1127.0
+            ],
+            [
+              358.0,
+              1127.0
+            ],
+            [
+              358.0,
+              1146.0
+            ],
+            [
+              65.0,
+              1146.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1127.0,
+            358.0,
+            1146.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/SectionHeader/14",
+          "block_type": "SectionHeader",
+          "html": "<h3>Test naming</h3>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              1165.0
+            ],
+            [
+              194.0,
+              1165.0
+            ],
+            [
+              194.0,
+              1190.0
+            ],
+            [
+              65.0,
+              1190.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1165.0,
+            194.0,
+            1190.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/15",
+          "block_type": "Text",
+          "html": "<p>Test naming is convenience for fast understanding test scenarios. There are several portions in test name:</p>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              1202.0
+            ],
+            [
+              902.0,
+              1202.0
+            ],
+            [
+              902.0,
+              1222.0
+            ],
+            [
+              65.0,
+              1222.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1202.0,
+            902.0,
+            1222.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10",
+            "3": "/page/4/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/16",
+          "block_type": "Text",
+          "html": "<p>&lt;MAJOR_FUNCTIONS&gt;_&lt;DIMENSION_SETTINGS&gt;_&lt;SUPPLEMENTARY_INFO&gt;_&lt;MINOR_FUNCTIONS&gt;_&lt;PRECISION&gt;_&lt;INDEX&gt;</p>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              1245.0
+            ],
+            [
+              1095.0,
+              1245.0
+            ],
+            [
+              1095.0,
+              1266.0
+            ],
+            [
+              65.0,
+              1266.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1245.0,
+            1095.0,
+            1266.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10",
+            "3": "/page/4/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/17",
+          "block_type": "Text",
+          "html": "<p>Portion Explanation</p>",
+          "page": 4,
+          "polygon": [
+            [
+              65.0,
+              1286.0
+            ],
+            [
+              221.0,
+              1286.0
+            ],
+            [
+              221.0,
+              1306.0
+            ],
+            [
+              65.0,
+              1306.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1286.0,
+            221.0,
+            1306.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10",
+            "3": "/page/4/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/PageFooter/18",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 4,
+          "polygon": [
+            [
+              39.0,
+              1434.0
+            ],
+            [
+              290.0,
+              1434.0
+            ],
+            [
+              290.0,
+              1453.0
+            ],
+            [
+              39.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            39.0,
+            1434.0,
+            290.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10",
+            "3": "/page/4/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/PageFooter/19",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 4,
+          "polygon": [
+            [
+              1069.0,
+              1434.0
+            ],
+            [
+              1103.0,
+              1434.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1069.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1069.0,
+            1434.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10",
+            "3": "/page/4/SectionHeader/14"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/3/SectionHeader/20"
+      }
+    },
+    {
+      "html": "<table><thead><tr><th>Portion</th><th>Description</th><th>Necessity</th></tr></thead><tbody><tr><td>MAJOR_FUNCTIONS</td><td>Major hardware pipelines. Possible values:<ul><li>DC: direct convolution, input is feature cube format</li><li>IMG: direct convolution, input is image format</li><li>WINO: Winograd convolution, input is feature cube format</li></ul></td><td>Must have</td></tr><tr><td>DIMENSION_SETTINGS</td><td>Cube dimensions, for convolution tests, there are two cubes, one is for data, one is for weight. Dimension orders.<ul><li>For data: width, height, channel</li><li>For weight: width, height, channel, kernel</li></ul></td><td>Must have</td></tr><tr><td>SUPPLEMENTARY_INFO</td><td>Supplementary information, for examples:<ul><li>In image convolution, image format</li><li>In SDP, there are multiple operation units like BS/BN.</li><li>In PDP, pooling stride settings</li></ul></td><td>Optional</td></tr><tr><td>MINOR_FUNCTIONS</td><td>Minor functions within major hardware pipeline. For example, in convolution pipeline, there are weight compression, dilation etc.</td><td>Optional</td></tr><tr><td>PRECISION</td><td>Specify working precision.</td><td>Must have</td></tr><tr><td>INDEX</td><td>Some tests share the same configuration but different memory surface, use index to distinguish those tests</td><td>Optional</td></tr></tbody></table><h3>Examples</h3><table><thead><tr><th>Test name</th><th>Scenario description</th></tr></thead><tbody><tr><td>dc_24x33x55_5x5x55x25_int8_0</td><td>direct convolution, input feature cube dimension is 24x33x55 (width, height, channel), weight cube dimension is 5x5x55x25 (width, height, channel, kernel), precision is INT8</td></tr><tr><td>sdp_3x3x33_bs_int8_reg_0</td><td>Single data processing, input feature cube dimension is 3x3x33 (width, height, channel), using BS operation unit, operand from register, precision is INT8</td></tr><tr><td>pdp_8x8x64_2x2_int8</td><td>Pooling, input feature cube dimension is 8x8x64 (width, height, channel), precision is INT8</td></tr></tbody></table><h2>Test Format</h2><h3>Trace Test format</h3><p>In unit test bench, trace player only receives tests in trace format. Trace test is the source format of direct tests and the intermedia outputs of random tests.</p><p>Trace test is not only used in unit RTL verification environment, but also could be reused in other environments like system verification, CMOD verification, FPGA validation, and silicon bringup.</p><p>Trace format supports following cases:</p><ol><li>Single layer case: only one hardware pipeline and only one configuration group will be exercised during simulation.</li><li>Multi-layer case: configuration group will be alternative used during simulation within the same hardware pipeline.</li><li>Multi-resource cases: one hardware pipeline which consists of multiple hardware resource. For example, a fused convolution-batch_normalization-relu-pooling layer could be executed in single hardware layer, this hardware layer requires several computational resources convolution, SDP and PDP.</li></ol>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/5/Page/5",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/5/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 5,
+          "polygon": [
+            [
+              42.0,
+              28.0
+            ],
+            [
+              159.0,
+              28.0
+            ],
+            [
+              159.0,
+              44.0
+            ],
+            [
+              42.0,
+              44.0
+            ]
+          ],
+          "bbox": [
+            42.0,
+            28.0,
+            159.0,
+            44.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10",
+            "3": "/page/4/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 5,
+          "polygon": [
+            [
+              454.0,
+              28.0
+            ],
+            [
+              854.0,
+              28.0
+            ],
+            [
+              854.0,
+              44.0
+            ],
+            [
+              454.0,
+              44.0
+            ]
+          ],
+          "bbox": [
+            454.0,
+            28.0,
+            854.0,
+            44.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10",
+            "3": "/page/4/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Table/2",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Portion</th><th>Description</th><th>Necessity</th></tr></thead><tbody><tr><td>MAJOR_FUNCTIONS</td><td>Major hardware pipelines. Possible values:<ul><li>DC: direct convolution, input is feature cube format</li><li>IMG: direct convolution, input is image format</li><li>WINO: Winograd convolution, input is feature cube format</li></ul></td><td>Must have</td></tr><tr><td>DIMENSION_SETTINGS</td><td>Cube dimensions, for convolution tests, there are two cubes, one is for data, one is for weight. Dimension orders.<ul><li>For data: width, height, channel</li><li>For weight: width, height, channel, kernel</li></ul></td><td>Must have</td></tr><tr><td>SUPPLEMENTARY_INFO</td><td>Supplementary information, for examples:<ul><li>In image convolution, image format</li><li>In SDP, there are multiple operation units like BS/BN.</li><li>In PDP, pooling stride settings</li></ul></td><td>Optional</td></tr><tr><td>MINOR_FUNCTIONS</td><td>Minor functions within major hardware pipeline. For example, in convolution pipeline, there are weight compression, dilation etc.</td><td>Optional</td></tr><tr><td>PRECISION</td><td>Specify working precision.</td><td>Must have</td></tr><tr><td>INDEX</td><td>Some tests share the same configuration but different memory surface, use index to distinguish those tests</td><td>Optional</td></tr></tbody></table>",
+          "page": 5,
+          "polygon": [
+            [
+              66.0,
+              50.0
+            ],
+            [
+              1072.0,
+              50.0
+            ],
+            [
+              1072.0,
+              812.0
+            ],
+            [
+              66.0,
+              812.0
+            ]
+          ],
+          "bbox": [
+            66.0,
+            50.0,
+            1072.0,
+            812.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10",
+            "3": "/page/4/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h3>Examples</h3>",
+          "page": 5,
+          "polygon": [
+            [
+              66.0,
+              824.0
+            ],
+            [
+              145.0,
+              824.0
+            ],
+            [
+              145.0,
+              841.0
+            ],
+            [
+              66.0,
+              841.0
+            ]
+          ],
+          "bbox": [
+            66.0,
+            824.0,
+            145.0,
+            841.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10",
+            "3": "/page/4/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Table/4",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Test name</th><th>Scenario description</th></tr></thead><tbody><tr><td>dc_24x33x55_5x5x55x25_int8_0</td><td>direct convolution, input feature cube dimension is 24x33x55 (width, height, channel), weight cube dimension is 5x5x55x25 (width, height, channel, kernel), precision is INT8</td></tr><tr><td>sdp_3x3x33_bs_int8_reg_0</td><td>Single data processing, input feature cube dimension is 3x3x33 (width, height, channel), using BS operation unit, operand from register, precision is INT8</td></tr><tr><td>pdp_8x8x64_2x2_int8</td><td>Pooling, input feature cube dimension is 8x8x64 (width, height, channel), precision is INT8</td></tr></tbody></table>",
+          "page": 5,
+          "polygon": [
+            [
+              66.0,
+              852.0
+            ],
+            [
+              1072.0,
+              852.0
+            ],
+            [
+              1072.0,
+              1069.0
+            ],
+            [
+              66.0,
+              1069.0
+            ]
+          ],
+          "bbox": [
+            66.0,
+            852.0,
+            1072.0,
+            1069.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10",
+            "3": "/page/5/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h2>Test Format</h2>",
+          "page": 5,
+          "polygon": [
+            [
+              66.0,
+              1081.0
+            ],
+            [
+              190.0,
+              1081.0
+            ],
+            [
+              190.0,
+              1103.0
+            ],
+            [
+              66.0,
+              1103.0
+            ]
+          ],
+          "bbox": [
+            66.0,
+            1081.0,
+            190.0,
+            1103.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/4/SectionHeader/10",
+            "3": "/page/5/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/SectionHeader/6",
+          "block_type": "SectionHeader",
+          "html": "<h3>Trace Test format</h3>",
+          "page": 5,
+          "polygon": [
+            [
+              66.0,
+              1113.0
+            ],
+            [
+              206.0,
+              1113.0
+            ],
+            [
+              206.0,
+              1133.0
+            ],
+            [
+              66.0,
+              1133.0
+            ]
+          ],
+          "bbox": [
+            66.0,
+            1113.0,
+            206.0,
+            1133.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Text/7",
+          "block_type": "Text",
+          "html": "<p>In unit test bench, trace player only receives tests in trace format. Trace test is the source format of direct tests and the intermedia outputs of random tests.</p>",
+          "page": 5,
+          "polygon": [
+            [
+              66.0,
+              1144.0
+            ],
+            [
+              1051.0,
+              1144.0
+            ],
+            [
+              1051.0,
+              1186.0
+            ],
+            [
+              66.0,
+              1186.0
+            ]
+          ],
+          "bbox": [
+            66.0,
+            1144.0,
+            1051.0,
+            1186.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Text/8",
+          "block_type": "Text",
+          "html": "<p>Trace test is not only used in unit RTL verification environment, but also could be reused in other environments like system verification, CMOD verification, FPGA validation, and silicon bringup.</p>",
+          "page": 5,
+          "polygon": [
+            [
+              66.0,
+              1208.0
+            ],
+            [
+              1028.0,
+              1208.0
+            ],
+            [
+              1028.0,
+              1253.0
+            ],
+            [
+              66.0,
+              1253.0
+            ]
+          ],
+          "bbox": [
+            66.0,
+            1208.0,
+            1028.0,
+            1253.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Text/9",
+          "block_type": "Text",
+          "html": "<p>Trace format supports following cases:</p>",
+          "page": 5,
+          "polygon": [
+            [
+              66.0,
+              1275.0
+            ],
+            [
+              370.0,
+              1275.0
+            ],
+            [
+              370.0,
+              1296.0
+            ],
+            [
+              66.0,
+              1296.0
+            ]
+          ],
+          "bbox": [
+            66.0,
+            1275.0,
+            370.0,
+            1296.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/ListGroup/10",
+          "block_type": "ListGroup",
+          "html": "<ol><li>Single layer case: only one hardware pipeline and only one configuration group will be exercised during simulation.</li><li>Multi-layer case: configuration group will be alternative used during simulation within the same hardware pipeline.</li><li>Multi-resource cases: one hardware pipeline which consists of multiple hardware resource. For example, a fused convolution-batch_normalization-relu-pooling layer could be executed in single hardware layer, this hardware layer requires several computational resources convolution, SDP and PDP.</li></ol>",
+          "page": 5,
+          "polygon": [
+            [
+              91.0,
+              1320.0
+            ],
+            [
+              1068.0,
+              1320.0
+            ],
+            [
+              1068.0,
+              1428.0
+            ],
+            [
+              91.0,
+              1428.0
+            ]
+          ],
+          "bbox": [
+            91.0,
+            1320.0,
+            1068.0,
+            1428.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/PageFooter/11",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 5,
+          "polygon": [
+            [
+              42.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1453.0
+            ],
+            [
+              42.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            42.0,
+            1435.0,
+            290.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/PageFooter/12",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 5,
+          "polygon": [
+            [
+              1069.0,
+              1435.0
+            ],
+            [
+              1098.0,
+              1435.0
+            ],
+            [
+              1098.0,
+              1453.0
+            ],
+            [
+              1069.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1069.0,
+            1435.0,
+            1098.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/4/SectionHeader/10",
+        "3": "/page/4/SectionHeader/14"
+      }
+    },
+    {
+      "html": "<p>4. Multi-scenario case: multiple independent hardware layer configuration could be presented in the same test.</p><p>Trace stores the stimulus of simulation. There are two types of stimulus, and there is dedicated format to support each type of stimulus:</p><ol><li>Register configuration, stored in config file (file name is *.cfg). One test only has one configuration file.</li><li>Memory data, stored in data files (file name is *.dat). One test has at least one memory data file for input data. One test could have more than one data file, for example, in convolution tests, there is one file for input image/feature cube and one file for weight.</li></ol><p>Trace file also provide result checking methods:</p><ol><li>Golden CRC, which is represented in one configuration command.</li><li>Golden output memory surface, which is represented in one configuration command and an associated data file.</li></ol><p>Configuration File Format</p><p>There are 9 types of configuration commands:</p><table><thead><tr><th>Name</th><th>Description</th><th>Syntax</th><th>Use case</th></tr></thead><tbody><tr><td>reg_write</td><td>Write data to specific DUT register</td><td>reg_write(reg_name, reg_value);</td><td>Fundamental operation for register configuration</td></tr><tr><td>reg_read_expect ed</td><td>Read data from specific DUT register, compare with expected value</td><td>reg_read_expect ed(addr, expected_data);</td><td>For some special cases like register accessing tests</td></tr><tr><td>reg_read</td><td>Read data from specific DUT register</td><td>reg_read(reg_name, return_value);</td><td>For specific cases which may need to do post-processing on read return value.</td></tr><tr><td>sync_notify</td><td>Specified player sequencer will send out synchronization event</td><td>sync_notify(target_resource, sync_id);</td><td>CC pipeline, OP_EN configuration order, CACC-&gt;CMAC-&gt;CSC.</td></tr><tr><td>sync_wait</td><td>Specified player sequencer will wait on synchronization event</td><td>sync_wait(target_resource, sync_id);</td><td>CC pipeline, OP_EN configuration order, CACC-&gt;CMAC-&gt;CSC.</td></tr><tr><td>intr_notify</td><td>Monitor DUT interrupt, catch and clear interrupt and send synchronization event.<br/>There could be multiple intr_notify, all those intr_notify are processed sequentially. The processing order is the same as commands' line order in configuration file.</td><td>intr_notify(int_r_id, sync_id);<br/>// notify when specific interrupt fired</td><td>Hardware layer complete notification, informing test bench that test is ended.<br/>Multi-layer test which is presumed containing layer 0 ~ N, for n &gt; 1 layers, they shall wait for interrupts.</td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/6/Page/6",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/6/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 6,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 6,
+          "polygon": [
+            [
+              452.0,
+              26.0
+            ],
+            [
+              860.0,
+              26.0
+            ],
+            [
+              860.0,
+              43.0
+            ],
+            [
+              452.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            452.0,
+            26.0,
+            860.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/Text/2",
+          "block_type": "Text",
+          "html": "<p>4. Multi-scenario case: multiple independent hardware layer configuration could be presented in the same test.</p>",
+          "page": 6,
+          "polygon": [
+            [
+              90.0,
+              50.0
+            ],
+            [
+              963.0,
+              50.0
+            ],
+            [
+              963.0,
+              71.0
+            ],
+            [
+              90.0,
+              71.0
+            ]
+          ],
+          "bbox": [
+            90.0,
+            50.0,
+            963.0,
+            71.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/Text/3",
+          "block_type": "Text",
+          "html": "<p>Trace stores the stimulus of simulation. There are two types of stimulus, and there is dedicated format to support each type of stimulus:</p>",
+          "page": 6,
+          "polygon": [
+            [
+              65.0,
+              86.0
+            ],
+            [
+              1061.0,
+              86.0
+            ],
+            [
+              1061.0,
+              126.0
+            ],
+            [
+              65.0,
+              126.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            86.0,
+            1061.0,
+            126.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/ListGroup/4",
+          "block_type": "ListGroup",
+          "html": "<ol><li>Register configuration, stored in config file (file name is *.cfg). One test only has one configuration file.</li><li>Memory data, stored in data files (file name is *.dat). One test has at least one memory data file for input data. One test could have more than one data file, for example, in convolution tests, there is one file for input image/feature cube and one file for weight.</li></ol>",
+          "page": 6,
+          "polygon": [
+            [
+              90.0,
+              151.0
+            ],
+            [
+              1066.0,
+              151.0
+            ],
+            [
+              1066.0,
+              237.0
+            ],
+            [
+              90.0,
+              237.0
+            ]
+          ],
+          "bbox": [
+            90.0,
+            151.0,
+            1066.0,
+            237.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/Text/5",
+          "block_type": "Text",
+          "html": "<p>Trace file also provide result checking methods:</p>",
+          "page": 6,
+          "polygon": [
+            [
+              65.0,
+              252.0
+            ],
+            [
+              443.0,
+              252.0
+            ],
+            [
+              443.0,
+              273.0
+            ],
+            [
+              65.0,
+              273.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            252.0,
+            443.0,
+            273.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/ListGroup/6",
+          "block_type": "ListGroup",
+          "html": "<ol><li>Golden CRC, which is represented in one configuration command.</li><li>Golden output memory surface, which is represented in one configuration command and an associated data file.</li></ol>",
+          "page": 6,
+          "polygon": [
+            [
+              90.0,
+              295.0
+            ],
+            [
+              994.0,
+              295.0
+            ],
+            [
+              994.0,
+              337.0
+            ],
+            [
+              90.0,
+              337.0
+            ]
+          ],
+          "bbox": [
+            90.0,
+            295.0,
+            994.0,
+            337.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/Text/7",
+          "block_type": "Text",
+          "html": "<p>Configuration File Format</p>",
+          "page": 6,
+          "polygon": [
+            [
+              65.0,
+              347.0
+            ],
+            [
+              238.0,
+              347.0
+            ],
+            [
+              238.0,
+              366.0
+            ],
+            [
+              65.0,
+              366.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            347.0,
+            238.0,
+            366.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/Text/8",
+          "block_type": "Text",
+          "html": "<p>There are 9 types of configuration commands:</p>",
+          "page": 6,
+          "polygon": [
+            [
+              65.0,
+              377.0
+            ],
+            [
+              432.0,
+              377.0
+            ],
+            [
+              432.0,
+              399.0
+            ],
+            [
+              65.0,
+              399.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            377.0,
+            432.0,
+            399.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/Table/9",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Name</th><th>Description</th><th>Syntax</th><th>Use case</th></tr></thead><tbody><tr><td>reg_write</td><td>Write data to specific DUT register</td><td>reg_write(reg_name, reg_value);</td><td>Fundamental operation for register configuration</td></tr><tr><td>reg_read_expect ed</td><td>Read data from specific DUT register, compare with expected value</td><td>reg_read_expect ed(addr, expected_data);</td><td>For some special cases like register accessing tests</td></tr><tr><td>reg_read</td><td>Read data from specific DUT register</td><td>reg_read(reg_name, return_value);</td><td>For specific cases which may need to do post-processing on read return value.</td></tr><tr><td>sync_notify</td><td>Specified player sequencer will send out synchronization event</td><td>sync_notify(target_resource, sync_id);</td><td>CC pipeline, OP_EN configuration order, CACC-&gt;CMAC-&gt;CSC.</td></tr><tr><td>sync_wait</td><td>Specified player sequencer will wait on synchronization event</td><td>sync_wait(target_resource, sync_id);</td><td>CC pipeline, OP_EN configuration order, CACC-&gt;CMAC-&gt;CSC.</td></tr><tr><td>intr_notify</td><td>Monitor DUT interrupt, catch and clear interrupt and send synchronization event.<br/>There could be multiple intr_notify, all those intr_notify are processed sequentially. The processing order is the same as commands' line order in configuration file.</td><td>intr_notify(int_r_id, sync_id);<br/>// notify when specific interrupt fired</td><td>Hardware layer complete notification, informing test bench that test is ended.<br/>Multi-layer test which is presumed containing layer 0 ~ N, for n &gt; 1 layers, they shall wait for interrupts.</td></tr></tbody></table>",
+          "page": 6,
+          "polygon": [
+            [
+              65.0,
+              417.0
+            ],
+            [
+              1072.0,
+              417.0
+            ],
+            [
+              1072.0,
+              1027.0
+            ],
+            [
+              65.0,
+              1027.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            417.0,
+            1072.0,
+            1027.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/PageFooter/10",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 6,
+          "polygon": [
+            [
+              41.0,
+              1434.0
+            ],
+            [
+              290.0,
+              1434.0
+            ],
+            [
+              290.0,
+              1453.0
+            ],
+            [
+              41.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            1434.0,
+            290.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/6/PageFooter/11",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 6,
+          "polygon": [
+            [
+              1069.0,
+              1434.0
+            ],
+            [
+              1103.0,
+              1434.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1069.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1069.0,
+            1434.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/5/SectionHeader/5",
+        "3": "/page/5/SectionHeader/6"
+      }
+    },
+    {
+      "html": "<table><thead><tr><th>Name</th><th>Description</th><th>Syntax</th><th>Use case</th></tr></thead><tbody><tr><td rowspan=\"6\">poll</td><td rowspan=\"6\">Continues poll register/field value from DUT, until one of the following conditions are met:<ol><li>Equal, polled value is equal to expected value</li><li>Greater, polled value is greater than expected value</li><li>Less, polled value is less than expected value</li><li>Not equal, polled value is not equal to expected value</li><li>Not greater, polled value is not greater than expected value</li><li>Not less, polled value is not less than expected value</li></ol></td><td>poll_field_eqa<br/>l(target_resource,<br/>register_name, field_name,<br/>expected_value);</td><td rowspan=\"6\">Convolution case, wait until<br/>CBUF flush has done</td></tr><tr><td>poll_reg_equal(<br/>target_resource,<br/>register_name,<br/>expected_value);</td></tr><tr><td>poll_field_greater(target_resource,<br/>register_name, field_name,<br/>expected_value);</td></tr><tr><td>poll_reg_less(target_resource,<br/>register_name,<br/>expected_value);</td></tr><tr><td>poll_field_not_greater(target_resource, register_name,<br/>field_name, expected_value);</td></tr><tr><td>poll_reg_not_less(target_resource,<br/>register_name,<br/>expected_value);</td></tr><tr><td rowspan=\"3\">check</td><td>Invoke player result checking method.<br/>When test bench works in RTL/CMOD cross checking mode, neither golden CRC nor golden files are necessary in this case. Method check_nothing() shall be added to trace file to indicated test end event.</td><td>check_crc(sync_id,<br/>memory_type, base_address,<br/>size, golden_crc_value);</td><td>CRC check for no CMOD simulation (usually generated by arch/inherit from previous project/eyeball gilded)</td></tr><tr><td></td><td>check_file(sync_id,<br/>memory_type, base_address,<br/>size, \"golden_file_name\");</td><td rowspan=\"2\">Golden memory result check for no CMOD simulation (usually generated by arch/inherit from previous project/eyeball gilded)</td></tr><tr><td></td><td>check_nothing(sync_id);</td></tr><tr><td rowspan=\"2\">mem</td><td>Load memory from file.<br/>Initialize memory by pattern.</td><td>mem_load(ram_ty pe,<br/>base_addr, file_path); //<br/>file_path shall be enclosed by<br/>\"</td><td></td></tr><tr><td></td><td>mem_init(ram_ty pe,<br/>base_addr, size, pattern);</td><td></td></tr></tbody></table><h4><b>*Some functions are not supported yet.</b></h4><h3>Memory Surface File Format</h3><p>When mem_load command is shown in configuration file, test bench will load corresponding file into memory model.</p><p>Memory surface format is in memory mapped form. The basic data group is call packet, each packet item contains one address offset field, one size field and one payload field. It's used to store data in payload field to memory space starting from address (base + offset).</p><p>The string describing one packet item must be kept in one single line.</p><p>Payload byte must be separated by space, and payload size shall not be no larger than 32 for readability consideration.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/7/Page/7",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/7/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 7,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/7/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 7,
+          "polygon": [
+            [
+              453.0,
+              26.0
+            ],
+            [
+              860.0,
+              26.0
+            ],
+            [
+              860.0,
+              43.0
+            ],
+            [
+              453.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            453.0,
+            26.0,
+            860.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/7/Table/2",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Name</th><th>Description</th><th>Syntax</th><th>Use case</th></tr></thead><tbody><tr><td rowspan=\"6\">poll</td><td rowspan=\"6\">Continues poll register/field value from DUT, until one of the following conditions are met:<ol><li>Equal, polled value is equal to expected value</li><li>Greater, polled value is greater than expected value</li><li>Less, polled value is less than expected value</li><li>Not equal, polled value is not equal to expected value</li><li>Not greater, polled value is not greater than expected value</li><li>Not less, polled value is not less than expected value</li></ol></td><td>poll_field_eqa<br/>l(target_resource,<br/>register_name, field_name,<br/>expected_value);</td><td rowspan=\"6\">Convolution case, wait until<br/>CBUF flush has done</td></tr><tr><td>poll_reg_equal(<br/>target_resource,<br/>register_name,<br/>expected_value);</td></tr><tr><td>poll_field_greater(target_resource,<br/>register_name, field_name,<br/>expected_value);</td></tr><tr><td>poll_reg_less(target_resource,<br/>register_name,<br/>expected_value);</td></tr><tr><td>poll_field_not_greater(target_resource, register_name,<br/>field_name, expected_value);</td></tr><tr><td>poll_reg_not_less(target_resource,<br/>register_name,<br/>expected_value);</td></tr><tr><td rowspan=\"3\">check</td><td>Invoke player result checking method.<br/>When test bench works in RTL/CMOD cross checking mode, neither golden CRC nor golden files are necessary in this case. Method check_nothing() shall be added to trace file to indicated test end event.</td><td>check_crc(sync_id,<br/>memory_type, base_address,<br/>size, golden_crc_value);</td><td>CRC check for no CMOD simulation (usually generated by arch/inherit from previous project/eyeball gilded)</td></tr><tr><td></td><td>check_file(sync_id,<br/>memory_type, base_address,<br/>size, \"golden_file_name\");</td><td rowspan=\"2\">Golden memory result check for no CMOD simulation (usually generated by arch/inherit from previous project/eyeball gilded)</td></tr><tr><td></td><td>check_nothing(sync_id);</td></tr><tr><td rowspan=\"2\">mem</td><td>Load memory from file.<br/>Initialize memory by pattern.</td><td>mem_load(ram_ty pe,<br/>base_addr, file_path); //<br/>file_path shall be enclosed by<br/>\"</td><td></td></tr><tr><td></td><td>mem_init(ram_ty pe,<br/>base_addr, size, pattern);</td><td></td></tr></tbody></table>",
+          "page": 7,
+          "polygon": [
+            [
+              65.0,
+              49.0
+            ],
+            [
+              1069.0,
+              49.0
+            ],
+            [
+              1069.0,
+              1131.0
+            ],
+            [
+              65.0,
+              1131.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            49.0,
+            1069.0,
+            1131.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/7/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h4><b>*Some functions are not supported yet.</b></h4>",
+          "page": 7,
+          "polygon": [
+            [
+              65.0,
+              1144.0
+            ],
+            [
+              416.0,
+              1144.0
+            ],
+            [
+              416.0,
+              1165.0
+            ],
+            [
+              65.0,
+              1165.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1144.0,
+            416.0,
+            1165.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/7/SectionHeader/4",
+          "block_type": "SectionHeader",
+          "html": "<h3>Memory Surface File Format</h3>",
+          "page": 7,
+          "polygon": [
+            [
+              65.0,
+              1174.0
+            ],
+            [
+              260.0,
+              1174.0
+            ],
+            [
+              260.0,
+              1192.0
+            ],
+            [
+              65.0,
+              1192.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1174.0,
+            260.0,
+            1192.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/6",
+            "4": "/page/7/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/7/Text/5",
+          "block_type": "Text",
+          "html": "<p>When mem_load command is shown in configuration file, test bench will load corresponding file into memory model.</p>",
+          "page": 7,
+          "polygon": [
+            [
+              65.0,
+              1205.0
+            ],
+            [
+              982.0,
+              1205.0
+            ],
+            [
+              982.0,
+              1225.0
+            ],
+            [
+              65.0,
+              1225.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1205.0,
+            982.0,
+            1225.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/7/Text/6",
+          "block_type": "Text",
+          "html": "<p>Memory surface format is in memory mapped form. The basic data group is call packet, each packet item contains one address offset field, one size field and one payload field. It's used to store data in payload field to memory space starting from address (base + offset).</p>",
+          "page": 7,
+          "polygon": [
+            [
+              65.0,
+              1247.0
+            ],
+            [
+              1068.0,
+              1247.0
+            ],
+            [
+              1068.0,
+              1314.0
+            ],
+            [
+              65.0,
+              1314.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1247.0,
+            1068.0,
+            1314.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/7/Text/7",
+          "block_type": "Text",
+          "html": "<p>The string describing one packet item must be kept in one single line.</p>",
+          "page": 7,
+          "polygon": [
+            [
+              65.0,
+              1335.0
+            ],
+            [
+              615.0,
+              1335.0
+            ],
+            [
+              615.0,
+              1355.0
+            ],
+            [
+              65.0,
+              1355.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1335.0,
+            615.0,
+            1355.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/7/Text/8",
+          "block_type": "Text",
+          "html": "<p>Payload byte must be separated by space, and payload size shall not be no larger than 32 for readability consideration.</p>",
+          "page": 7,
+          "polygon": [
+            [
+              65.0,
+              1378.0
+            ],
+            [
+              1003.0,
+              1378.0
+            ],
+            [
+              1003.0,
+              1397.0
+            ],
+            [
+              65.0,
+              1397.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1378.0,
+            1003.0,
+            1397.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/7/PageFooter/9",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 7,
+          "polygon": [
+            [
+              39.0,
+              1434.0
+            ],
+            [
+              290.0,
+              1434.0
+            ],
+            [
+              290.0,
+              1453.0
+            ],
+            [
+              39.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            39.0,
+            1434.0,
+            290.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/7/PageFooter/10",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 7,
+          "polygon": [
+            [
+              1067.0,
+              1434.0
+            ],
+            [
+              1104.0,
+              1434.0
+            ],
+            [
+              1104.0,
+              1453.0
+            ],
+            [
+              1067.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1067.0,
+            1434.0,
+            1104.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/5/SectionHeader/5",
+        "3": "/page/5/SectionHeader/6"
+      }
+    },
+    {
+      "html": "<p>Different packets shall be joined by comma \",\".</p><p>Example:</p><pre>{<br/>    {offset:0x20, size:4, payload:0x00 0x10 0x20 0x30},<br/>    {offset:0x60, size:4, payload:0x00 0x10 0x20 0x30}<br/>}</pre><p>For packet {offset:0x20, size:4, payload:0x00 0x10 0x20 0x30}, data in memory layout is</p><table><thead><tr><th>Address</th><th>0x20</th><th>0x21</th><th>0x22</th><th>0x23</th></tr></thead><tbody><tr><td>Value</td><td>0x00</td><td>0x10</td><td>0x20</td><td>0x30</td></tr></tbody></table><p>Random Test Format</p><p><b>To be done</b></p><h2>Regression Tool Set</h2><p>There is a tool set for:</p><ol><li>Running single test simulation.</li><li>Running a test plan, tests associated with specific test plan will be running. It could be considered as one round of regression.</li><li>Examining single round regression result and generate metrics for whole project lasting time.</li></ol><h3>Running a Single Test</h3><p>There is a script TOT/verif/tools/run_test.py for running single test, the most common usages are:</p><pre>&gt;TOT/verif/tools/run_test.py -P &lt;project_name&gt; -mod &lt;test_module&gt; &lt;trace_test_name&gt; -outdir &lt;output_directory&gt; -v<br/>nvdla_uttb</pre><p>Argument Explanations:</p><table><thead><tr><th>Argument</th><th>Description</th></tr></thead><tbody><tr><td>-P &lt;project_name&gt;</td><td>Project name which is specified in tree.make</td></tr><tr><td>-mod &lt;test_module&gt;</td><td>Specifying test kind, if it is not specified, will select trace test by default</td></tr><tr><td>&lt;trace_test_name&gt;</td><td>Test name which could be found under project related trace directory</td></tr><tr><td>-outdir &lt;output_directory&gt;</td><td>Specifying working directory, temporal files and log will be generated in output_directory, if outdir has not been specified, current directory will be used as working directory.</td></tr><tr><td>-v nvdla_uttb</td><td>Specifying test bench, for now, only unit test bench is available, so nvdla_uttb is the only valid argument</td></tr></tbody></table><p>Please run run_test.py with -help argument for more arguments and their usages.</p><h4>Examining Result</h4><p>There are several files were generated during simulation, three files need to be paid more attention:</p><ol><li>run_trace_player.sh: a script for rerunning test</li><li>run_verdi.sh: a script for kicking off Verdi to view waveforms</li><li>testout, log file</li><li>STATUS, file records test running status, there are several status:<ol><li>RUNNING, test is still in running.</li><li>FAIL, test result is failure.</li></ol></li></ol>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/8/Page/8",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/8/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 8,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 8,
+          "polygon": [
+            [
+              452.0,
+              26.0
+            ],
+            [
+              860.0,
+              26.0
+            ],
+            [
+              860.0,
+              43.0
+            ],
+            [
+              452.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            452.0,
+            26.0,
+            860.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/2",
+          "block_type": "Text",
+          "html": "<p>Different packets shall be joined by comma \",\".</p>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              50.0
+            ],
+            [
+              436.0,
+              50.0
+            ],
+            [
+              436.0,
+              72.0
+            ],
+            [
+              65.0,
+              72.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            50.0,
+            436.0,
+            72.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/3",
+          "block_type": "Text",
+          "html": "<p>Example:</p>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              93.0
+            ],
+            [
+              144.0,
+              93.0
+            ],
+            [
+              144.0,
+              114.0
+            ],
+            [
+              65.0,
+              114.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            93.0,
+            144.0,
+            114.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/4",
+          "block_type": "Text",
+          "html": "<pre>{<br/>    {offset:0x20, size:4, payload:0x00 0x10 0x20 0x30},<br/>    {offset:0x60, size:4, payload:0x00 0x10 0x20 0x30}<br/>}</pre>",
+          "page": 8,
+          "polygon": [
+            [
+              75.0,
+              148.0
+            ],
+            [
+              551.0,
+              148.0
+            ],
+            [
+              551.0,
+              291.0
+            ],
+            [
+              75.0,
+              291.0
+            ]
+          ],
+          "bbox": [
+            75.0,
+            148.0,
+            551.0,
+            291.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/5",
+          "block_type": "Text",
+          "html": "<p>For packet {offset:0x20, size:4, payload:0x00 0x10 0x20 0x30}, data in memory layout is</p>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              325.0
+            ],
+            [
+              808.0,
+              325.0
+            ],
+            [
+              808.0,
+              343.0
+            ],
+            [
+              65.0,
+              343.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            325.0,
+            808.0,
+            343.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Table/6",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Address</th><th>0x20</th><th>0x21</th><th>0x22</th><th>0x23</th></tr></thead><tbody><tr><td>Value</td><td>0x00</td><td>0x10</td><td>0x20</td><td>0x30</td></tr></tbody></table>",
+          "page": 8,
+          "polygon": [
+            [
+              421.0,
+              366.0
+            ],
+            [
+              719.0,
+              366.0
+            ],
+            [
+              719.0,
+              415.0
+            ],
+            [
+              421.0,
+              415.0
+            ]
+          ],
+          "bbox": [
+            421.0,
+            366.0,
+            719.0,
+            415.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/7",
+          "block_type": "Text",
+          "html": "<p>Random Test Format</p>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              427.0
+            ],
+            [
+              233.0,
+              427.0
+            ],
+            [
+              233.0,
+              446.0
+            ],
+            [
+              65.0,
+              446.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            427.0,
+            233.0,
+            446.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/8",
+          "block_type": "Text",
+          "html": "<p><b>To be done</b></p>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              457.0
+            ],
+            [
+              167.0,
+              457.0
+            ],
+            [
+              167.0,
+              476.0
+            ],
+            [
+              65.0,
+              476.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            457.0,
+            167.0,
+            476.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/SectionHeader/9",
+          "block_type": "SectionHeader",
+          "html": "<h2>Regression Tool Set</h2>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              503.0
+            ],
+            [
+              402.0,
+              503.0
+            ],
+            [
+              402.0,
+              540.0
+            ],
+            [
+              65.0,
+              540.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            503.0,
+            402.0,
+            540.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/7/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/10",
+          "block_type": "Text",
+          "html": "<p>There is a tool set for:</p>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              552.0
+            ],
+            [
+              244.0,
+              552.0
+            ],
+            [
+              244.0,
+              571.0
+            ],
+            [
+              65.0,
+              571.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            552.0,
+            244.0,
+            571.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/ListGroup/11",
+          "block_type": "ListGroup",
+          "html": "<ol><li>Running single test simulation.</li><li>Running a test plan, tests associated with specific test plan will be running. It could be considered as one round of regression.</li><li>Examining single round regression result and generate metrics for whole project lasting time.</li></ol>",
+          "page": 8,
+          "polygon": [
+            [
+              90.0,
+              595.0
+            ],
+            [
+              1010.0,
+              595.0
+            ],
+            [
+              1010.0,
+              683.0
+            ],
+            [
+              90.0,
+              683.0
+            ]
+          ],
+          "bbox": [
+            90.0,
+            595.0,
+            1010.0,
+            683.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/SectionHeader/12",
+          "block_type": "SectionHeader",
+          "html": "<h3>Running a Single Test</h3>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              706.0
+            ],
+            [
+              362.0,
+              706.0
+            ],
+            [
+              362.0,
+              738.0
+            ],
+            [
+              65.0,
+              738.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            706.0,
+            362.0,
+            738.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/13",
+          "block_type": "Text",
+          "html": "<p>There is a script TOT/verif/tools/run_test.py for running single test, the most common usages are:</p>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              748.0
+            ],
+            [
+              841.0,
+              748.0
+            ],
+            [
+              841.0,
+              769.0
+            ],
+            [
+              65.0,
+              769.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            748.0,
+            841.0,
+            769.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/14",
+          "block_type": "Text",
+          "html": "<pre>&gt;TOT/verif/tools/run_test.py -P &lt;project_name&gt; -mod &lt;test_module&gt; &lt;trace_test_name&gt; -outdir &lt;output_directory&gt; -v<br/>nvdla_uttb</pre>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              792.0
+            ],
+            [
+              1059.0,
+              792.0
+            ],
+            [
+              1059.0,
+              834.0
+            ],
+            [
+              65.0,
+              834.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            792.0,
+            1059.0,
+            834.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/15",
+          "block_type": "Text",
+          "html": "<p>Argument Explanations:</p>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              855.0
+            ],
+            [
+              313.0,
+              855.0
+            ],
+            [
+              313.0,
+              880.0
+            ],
+            [
+              65.0,
+              880.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            855.0,
+            313.0,
+            880.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Table/16",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Argument</th><th>Description</th></tr></thead><tbody><tr><td>-P &lt;project_name&gt;</td><td>Project name which is specified in tree.make</td></tr><tr><td>-mod &lt;test_module&gt;</td><td>Specifying test kind, if it is not specified, will select trace test by default</td></tr><tr><td>&lt;trace_test_name&gt;</td><td>Test name which could be found under project related trace directory</td></tr><tr><td>-outdir &lt;output_directory&gt;</td><td>Specifying working directory, temporal files and log will be generated in output_directory, if outdir has not been specified, current directory will be used as working directory.</td></tr><tr><td>-v nvdla_uttb</td><td>Specifying test bench, for now, only unit test bench is available, so nvdla_uttb is the only valid argument</td></tr></tbody></table>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              891.0
+            ],
+            [
+              1073.0,
+              891.0
+            ],
+            [
+              1073.0,
+              1159.0
+            ],
+            [
+              65.0,
+              1159.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            891.0,
+            1073.0,
+            1159.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/17",
+          "block_type": "Text",
+          "html": "<p>Please run run_test.py with -help argument for more arguments and their usages.</p>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              1171.0
+            ],
+            [
+              741.0,
+              1171.0
+            ],
+            [
+              741.0,
+              1192.0
+            ],
+            [
+              65.0,
+              1192.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1171.0,
+            741.0,
+            1192.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/SectionHeader/18",
+          "block_type": "SectionHeader",
+          "html": "<h4>Examining Result</h4>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              1210.0
+            ],
+            [
+              245.0,
+              1210.0
+            ],
+            [
+              245.0,
+              1237.0
+            ],
+            [
+              65.0,
+              1237.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1210.0,
+            245.0,
+            1237.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/Text/19",
+          "block_type": "Text",
+          "html": "<p>There are several files were generated during simulation, three files need to be paid more attention:</p>",
+          "page": 8,
+          "polygon": [
+            [
+              65.0,
+              1248.0
+            ],
+            [
+              854.0,
+              1248.0
+            ],
+            [
+              854.0,
+              1268.0
+            ],
+            [
+              65.0,
+              1268.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1248.0,
+            854.0,
+            1268.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12",
+            "4": "/page/8/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/ListGroup/20",
+          "block_type": "ListGroup",
+          "html": "<ol><li>run_trace_player.sh: a script for rerunning test</li><li>run_verdi.sh: a script for kicking off Verdi to view waveforms</li><li>testout, log file</li><li>STATUS, file records test running status, there are several status:<ol><li>RUNNING, test is still in running.</li><li>FAIL, test result is failure.</li></ol></li></ol>",
+          "page": 8,
+          "polygon": [
+            [
+              90.0,
+              1290.0
+            ],
+            [
+              627.0,
+              1290.0
+            ],
+            [
+              627.0,
+              1422.0
+            ],
+            [
+              90.0,
+              1422.0
+            ]
+          ],
+          "bbox": [
+            90.0,
+            1290.0,
+            627.0,
+            1422.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12",
+            "4": "/page/8/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/PageFooter/21",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 8,
+          "polygon": [
+            [
+              39.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1453.0
+            ],
+            [
+              39.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            39.0,
+            1435.0,
+            290.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12",
+            "4": "/page/8/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/8/PageFooter/22",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 8,
+          "polygon": [
+            [
+              1069.0,
+              1435.0
+            ],
+            [
+              1102.0,
+              1435.0
+            ],
+            [
+              1102.0,
+              1453.0
+            ],
+            [
+              1069.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1069.0,
+            1435.0,
+            1102.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12",
+            "4": "/page/8/SectionHeader/18"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/5/SectionHeader/5",
+        "3": "/page/7/SectionHeader/4"
+      }
+    },
+    {
+      "html": "<p>3. PASS, test result is pass.</p><h3>Running a Test Plan</h3><p>There is a script TOT/verif/tools/run_plan.py for running tests within a test plan.</p><pre>&gt;TOT/verif/tools/run_plan.py --test_plan &lt;TEST_PLAN_NAME&gt; -P &lt;PROJECT&gt; -atag &lt;and_tags&gt; -otag &lt;or_tags&gt; -run_dir &lt;RUN_DIR&gt; -no_lsf -monitor</pre><h4>Argument Explanations:</h4><table><thead><tr><th>Argument</th><th>Description</th></tr></thead><tbody><tr><td>-test_plan &lt;TEST_PLAN_NAME&gt;</td><td>Test plan file name, without '.py' suffix.</td></tr><tr><td>-test_plan &lt;TEST_PLAN_NAME&gt;</td><td>Project name which has been specified in tree.make</td></tr><tr><td>-atag &lt;and_tags&gt;</td><td>means AND tags, will select tests which has all tags specified by atag</td></tr><tr><td>-otag &lt;or_tags&gt;</td><td>means OR tags, will select tests which contain at least one of tags specified by otag</td></tr><tr><td>-ntag &lt;not_tags&gt;</td><td>means NOT tags, will select tests which don't contain any tags specified by ntag</td></tr><tr><td>-run_dir &lt;RUN_DIR&gt;</td><td>Specify working directory</td></tr><tr><td>-no_lsf</td><td>will run test on local CPU</td></tr><tr><td>-monitor</td><td>will continuously monitoring test running status, until all simulations are done or reach maximum runtime</td></tr></tbody></table><p>Please run <code>run_plan.py</code> with <code>-help</code> argument for more arguments and their usages.</p><p>Simulation results could be found under <code>run_dir</code>. There are 2 hierarchy levels under <code>run_dir</code></p><pre>RUN_DIR\n|--- &lt;TEST_BENCH_0&gt;\n|   |--- TEST_A\n|   |--- TEST_B\n|   |--- ...\n|   |--- TEST_G\n|--- &lt;TEST_BENCH_1&gt;\n|   |--- TEST_H\n|   |--- ...\n|--- TEST_N</pre><ol><li>The first level is test bench level. If a plan contains multiple test benches, there will be dedicated directory for each test bench</li><li>The second level is test level. Under test bench level, there are several test directories. Each directory contains temporal and result files for one test simulation.</li></ol><h4>Examining result</h4><p>There is a script TOT/verif/tools/run_report.py for monitoring regression status, the most common usages are:</p><pre>&gt;TOT/verif/tools/run_report.py -run_dir &lt;regression_run_directory&gt; -monitor_timeout MONITOR_TIMEOUT -monitor</pre><p>Please run <code>run_test.py</code> with <code>-help</code> argument for more arguments and their usages.</p><h3>Generating Reporting Metrics</h3><h4>To be done</h4><p>Here is the end of <b>NVDLA Verification Suite User Guide</b>.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/9/Page/9",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/9/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 9,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12",
+            "4": "/page/8/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 9,
+          "polygon": [
+            [
+              452.0,
+              26.0
+            ],
+            [
+              860.0,
+              26.0
+            ],
+            [
+              860.0,
+              43.0
+            ],
+            [
+              452.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            452.0,
+            26.0,
+            860.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12",
+            "4": "/page/8/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/Text/2",
+          "block_type": "Text",
+          "html": "<p>3. PASS, test result is pass.</p>",
+          "page": 9,
+          "polygon": [
+            [
+              134.0,
+              50.0
+            ],
+            [
+              355.0,
+              50.0
+            ],
+            [
+              355.0,
+              71.0
+            ],
+            [
+              134.0,
+              71.0
+            ]
+          ],
+          "bbox": [
+            134.0,
+            50.0,
+            355.0,
+            71.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12",
+            "4": "/page/8/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h3>Running a Test Plan</h3>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              93.0
+            ],
+            [
+              337.0,
+              93.0
+            ],
+            [
+              337.0,
+              124.0
+            ],
+            [
+              65.0,
+              124.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            93.0,
+            337.0,
+            124.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/8/SectionHeader/12",
+            "4": "/page/8/SectionHeader/18"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/Text/4",
+          "block_type": "Text",
+          "html": "<p>There is a script TOT/verif/tools/run_plan.py for running tests within a test plan.</p>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              136.0
+            ],
+            [
+              699.0,
+              136.0
+            ],
+            [
+              699.0,
+              155.0
+            ],
+            [
+              65.0,
+              155.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            136.0,
+            699.0,
+            155.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/Text/5",
+          "block_type": "Text",
+          "html": "<pre>&gt;TOT/verif/tools/run_plan.py --test_plan &lt;TEST_PLAN_NAME&gt; -P &lt;PROJECT&gt; -atag &lt;and_tags&gt; -otag &lt;or_tags&gt; -run_dir &lt;RUN_DIR&gt; -no_lsf -monitor</pre>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              181.0
+            ],
+            [
+              1052.0,
+              181.0
+            ],
+            [
+              1052.0,
+              221.0
+            ],
+            [
+              65.0,
+              221.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            181.0,
+            1052.0,
+            221.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/SectionHeader/6",
+          "block_type": "SectionHeader",
+          "html": "<h4>Argument Explanations:</h4>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              242.0
+            ],
+            [
+              313.0,
+              242.0
+            ],
+            [
+              313.0,
+              267.0
+            ],
+            [
+              65.0,
+              267.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            242.0,
+            313.0,
+            267.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/Table/7",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Argument</th><th>Description</th></tr></thead><tbody><tr><td>-test_plan &lt;TEST_PLAN_NAME&gt;</td><td>Test plan file name, without '.py' suffix.</td></tr><tr><td>-test_plan &lt;TEST_PLAN_NAME&gt;</td><td>Project name which has been specified in tree.make</td></tr><tr><td>-atag &lt;and_tags&gt;</td><td>means AND tags, will select tests which has all tags specified by atag</td></tr><tr><td>-otag &lt;or_tags&gt;</td><td>means OR tags, will select tests which contain at least one of tags specified by otag</td></tr><tr><td>-ntag &lt;not_tags&gt;</td><td>means NOT tags, will select tests which don't contain any tags specified by ntag</td></tr><tr><td>-run_dir &lt;RUN_DIR&gt;</td><td>Specify working directory</td></tr><tr><td>-no_lsf</td><td>will run test on local CPU</td></tr><tr><td>-monitor</td><td>will continuously monitoring test running status, until all simulations are done or reach maximum runtime</td></tr></tbody></table>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              279.0
+            ],
+            [
+              1073.0,
+              279.0
+            ],
+            [
+              1073.0,
+              602.0
+            ],
+            [
+              65.0,
+              602.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            279.0,
+            1073.0,
+            602.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3",
+            "4": "/page/9/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/Text/8",
+          "block_type": "Text",
+          "html": "<p>Please run <code>run_plan.py</code> with <code>-help</code> argument for more arguments and their usages.</p>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              614.0
+            ],
+            [
+              741.0,
+              614.0
+            ],
+            [
+              741.0,
+              635.0
+            ],
+            [
+              65.0,
+              635.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            614.0,
+            741.0,
+            635.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3",
+            "4": "/page/9/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/Text/9",
+          "block_type": "Text",
+          "html": "<p>Simulation results could be found under <code>run_dir</code>. There are 2 hierarchy levels under <code>run_dir</code></p>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              657.0
+            ],
+            [
+              803.0,
+              657.0
+            ],
+            [
+              803.0,
+              678.0
+            ],
+            [
+              65.0,
+              678.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            657.0,
+            803.0,
+            678.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3",
+            "4": "/page/9/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/Text/10",
+          "block_type": "Text",
+          "html": "<pre>RUN_DIR\n|--- &lt;TEST_BENCH_0&gt;\n|   |--- TEST_A\n|   |--- TEST_B\n|   |--- ...\n|   |--- TEST_G\n|--- &lt;TEST_BENCH_1&gt;\n|   |--- TEST_H\n|   |--- ...\n|--- TEST_N</pre>",
+          "page": 9,
+          "polygon": [
+            [
+              75.0,
+              711.0
+            ],
+            [
+              245.0,
+              711.0
+            ],
+            [
+              245.0,
+              919.0
+            ],
+            [
+              75.0,
+              919.0
+            ]
+          ],
+          "bbox": [
+            75.0,
+            711.0,
+            245.0,
+            919.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3",
+            "4": "/page/9/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/ListGroup/11",
+          "block_type": "ListGroup",
+          "html": "<ol><li>The first level is test bench level. If a plan contains multiple test benches, there will be dedicated directory for each test bench</li><li>The second level is test level. Under test bench level, there are several test directories. Each directory contains temporal and result files for one test simulation.</li></ol>",
+          "page": 9,
+          "polygon": [
+            [
+              89.0,
+              951.0
+            ],
+            [
+              1060.0,
+              951.0
+            ],
+            [
+              1060.0,
+              1036.0
+            ],
+            [
+              89.0,
+              1036.0
+            ]
+          ],
+          "bbox": [
+            89.0,
+            951.0,
+            1060.0,
+            1036.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3",
+            "4": "/page/9/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/SectionHeader/12",
+          "block_type": "SectionHeader",
+          "html": "<h4>Examining result</h4>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              1048.0
+            ],
+            [
+              241.0,
+              1048.0
+            ],
+            [
+              241.0,
+              1073.0
+            ],
+            [
+              65.0,
+              1073.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1048.0,
+            241.0,
+            1073.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3",
+            "4": "/page/9/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/Text/13",
+          "block_type": "Text",
+          "html": "<p>There is a script TOT/verif/tools/run_report.py for monitoring regression status, the most common usages are:</p>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              1084.0
+            ],
+            [
+              937.0,
+              1084.0
+            ],
+            [
+              937.0,
+              1104.0
+            ],
+            [
+              65.0,
+              1104.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1084.0,
+            937.0,
+            1104.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3",
+            "4": "/page/9/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/Text/14",
+          "block_type": "Text",
+          "html": "<pre>&gt;TOT/verif/tools/run_report.py -run_dir &lt;regression_run_directory&gt; -monitor_timeout MONITOR_TIMEOUT -monitor</pre>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              1128.0
+            ],
+            [
+              993.0,
+              1128.0
+            ],
+            [
+              993.0,
+              1147.0
+            ],
+            [
+              65.0,
+              1147.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1128.0,
+            993.0,
+            1147.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3",
+            "4": "/page/9/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/Text/15",
+          "block_type": "Text",
+          "html": "<p>Please run <code>run_test.py</code> with <code>-help</code> argument for more arguments and their usages.</p>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              1170.0
+            ],
+            [
+              715.0,
+              1170.0
+            ],
+            [
+              715.0,
+              1192.0
+            ],
+            [
+              65.0,
+              1192.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1170.0,
+            715.0,
+            1192.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3",
+            "4": "/page/9/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/SectionHeader/16",
+          "block_type": "SectionHeader",
+          "html": "<h3>Generating Reporting Metrics</h3>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              1214.0
+            ],
+            [
+              463.0,
+              1214.0
+            ],
+            [
+              463.0,
+              1247.0
+            ],
+            [
+              65.0,
+              1247.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1214.0,
+            463.0,
+            1247.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/3",
+            "4": "/page/9/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/SectionHeader/17",
+          "block_type": "SectionHeader",
+          "html": "<h4>To be done</h4>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              1257.0
+            ],
+            [
+              167.0,
+              1257.0
+            ],
+            [
+              167.0,
+              1277.0
+            ],
+            [
+              65.0,
+              1277.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1257.0,
+            167.0,
+            1277.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/Text/18",
+          "block_type": "Text",
+          "html": "<p>Here is the end of <b>NVDLA Verification Suite User Guide</b>.</p>",
+          "page": 9,
+          "polygon": [
+            [
+              65.0,
+              1299.0
+            ],
+            [
+              537.0,
+              1299.0
+            ],
+            [
+              537.0,
+              1320.0
+            ],
+            [
+              65.0,
+              1320.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            1299.0,
+            537.0,
+            1320.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/16",
+            "4": "/page/9/SectionHeader/17"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/PageFooter/19",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 9,
+          "polygon": [
+            [
+              39.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1435.0
+            ],
+            [
+              290.0,
+              1453.0
+            ],
+            [
+              39.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            39.0,
+            1435.0,
+            290.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/16",
+            "4": "/page/9/SectionHeader/17"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/9/PageFooter/20",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 9,
+          "polygon": [
+            [
+              1064.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1064.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1064.0,
+            1435.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/8/SectionHeader/9",
+            "3": "/page/9/SectionHeader/16",
+            "4": "/page/9/SectionHeader/17"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/8/SectionHeader/9",
+        "3": "/page/8/SectionHeader/12",
+        "4": "/page/8/SectionHeader/18"
+      }
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 11
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 22
+      },
+      {
+        "page_id": 2,
+        "num_blocks": 15
+      },
+      {
+        "page_id": 3,
+        "num_blocks": 23
+      },
+      {
+        "page_id": 4,
+        "num_blocks": 20
+      },
+      {
+        "page_id": 5,
+        "num_blocks": 13
+      },
+      {
+        "page_id": 6,
+        "num_blocks": 12
+      },
+      {
+        "page_id": 7,
+        "num_blocks": 11
+      },
+      {
+        "page_id": 8,
+        "num_blocks": 23
+      },
+      {
+        "page_id": 9,
+        "num_blocks": 21
+      }
+    ]
+  }
+}

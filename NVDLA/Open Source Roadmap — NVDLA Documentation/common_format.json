@@ -1,0 +1,1157 @@
+{
+  "children": [
+    {
+      "html": "<h1>Open Source Roadmap</h1><p>The open sourcing of the NVDLA core will occur over the course of the next two calendar quarters. The intent is to deliver a useable core early, with additional configurations and features following.</p><p>The hardware design source consists of Verilog RTL. Two specific configurations are called out in this roadmap: one verified large area/performance configuration for high performance IoT applications, and one verified small area/performance configuration for cost sensitive IoT applications. The design itself will additionally be released as a configurable IP so many configurations will be possible.</p><p>The software packages will be released as source code. However, the compiler will initially be only released in binary form, with a source release coming later.</p><p>In the tables below, the term early access implies that the design source is included for the purposes of integrating into an SoC and validating that integration. However, some bugs may remain.</p><p>Components will be released at various points during the timeframes below. For a detailed listing of the released components, see the Open NVDLA Repository Updates (<a href=\"#\">updates.html#updates</a>) page.</p><h2>2017-Q3</h2><p>The first deliverables allow users to test with their tool flows and libraries. Both front-end simulation and back-end design will be enabled. The initial RTL will be for a large NVDLA configuration with 2048 8-bit MACs, also configurable as 1024 16-bit fixed or floating point MACs.</p><p>Detailed hardware and software documentation and an xls-based performance estimator help to determine whether NVDLA meets a user's needs and what configuration is required.</p><p>All items listed below have been uploaded to the NVDLA GitHub repository.</p><table><thead><tr><th>Documentation</th><th>Hardware</th><th>Software</th></tr></thead><tbody><tr><td>Conceptual Overview</td><td>Full-precision Config Verilog<br/>RTL, early access</td><td>Performance Estimator Tool</td></tr><tr><td>Hardware Architecture</td><td>Reference testbench and traces</td><td></td></tr><tr><td>Software Interface</td><td>Reference synthesis scripts</td><td></td></tr><tr><td>Integration Manual</td><td></td><td></td></tr><tr><td>Roadmap</td><td></td><td></td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              42.0,
+              28.0
+            ],
+            [
+              159.0,
+              28.0
+            ],
+            [
+              159.0,
+              44.0
+            ],
+            [
+              42.0,
+              44.0
+            ]
+          ],
+          "bbox": [
+            42.0,
+            28.0,
+            159.0,
+            44.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              500.0,
+              28.0
+            ],
+            [
+              811.0,
+              28.0
+            ],
+            [
+              811.0,
+              44.0
+            ],
+            [
+              500.0,
+              44.0
+            ]
+          ],
+          "bbox": [
+            500.0,
+            28.0,
+            811.0,
+            44.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h1>Open Source Roadmap</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              92.0
+            ],
+            [
+              653.0,
+              92.0
+            ],
+            [
+              653.0,
+              145.0
+            ],
+            [
+              71.0,
+              145.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            92.0,
+            653.0,
+            145.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/3",
+          "block_type": "Text",
+          "html": "<p>The open sourcing of the NVDLA core will occur over the course of the next two calendar quarters. The intent is to deliver a useable core early, with additional configurations and features following.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              175.0
+            ],
+            [
+              1032.0,
+              175.0
+            ],
+            [
+              1032.0,
+              227.0
+            ],
+            [
+              71.0,
+              227.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            175.0,
+            1032.0,
+            227.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/4",
+          "block_type": "Text",
+          "html": "<p>The hardware design source consists of Verilog RTL. Two specific configurations are called out in this roadmap: one verified large area/performance configuration for high performance IoT applications, and one verified small area/performance configuration for cost sensitive IoT applications. The design itself will additionally be released as a configurable IP so many configurations will be possible.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              258.0
+            ],
+            [
+              1069.0,
+              258.0
+            ],
+            [
+              1069.0,
+              363.0
+            ],
+            [
+              71.0,
+              363.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            258.0,
+            1069.0,
+            363.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/5",
+          "block_type": "Text",
+          "html": "<p>The software packages will be released as source code. However, the compiler will initially be only released in binary form, with a source release coming later.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              396.0
+            ],
+            [
+              1028.0,
+              396.0
+            ],
+            [
+              1028.0,
+              446.0
+            ],
+            [
+              71.0,
+              446.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            396.0,
+            1028.0,
+            446.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/6",
+          "block_type": "Text",
+          "html": "<p>In the tables below, the term early access implies that the design source is included for the purposes of integrating into an SoC and validating that integration. However, some bugs may remain.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              475.0
+            ],
+            [
+              1059.0,
+              475.0
+            ],
+            [
+              1059.0,
+              527.0
+            ],
+            [
+              71.0,
+              527.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            475.0,
+            1059.0,
+            527.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/7",
+          "block_type": "Text",
+          "html": "<p>Components will be released at various points during the timeframes below. For a detailed listing of the released components, see the Open NVDLA Repository Updates (<a href=\"#\">updates.html#updates</a>) page.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              558.0
+            ],
+            [
+              1044.0,
+              558.0
+            ],
+            [
+              1044.0,
+              608.0
+            ],
+            [
+              71.0,
+              608.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            558.0,
+            1044.0,
+            608.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/8",
+          "block_type": "SectionHeader",
+          "html": "<h2>2017-Q3</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              696.0
+            ],
+            [
+              259.0,
+              696.0
+            ],
+            [
+              259.0,
+              742.0
+            ],
+            [
+              71.0,
+              742.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            696.0,
+            259.0,
+            742.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/9",
+          "block_type": "Text",
+          "html": "<p>The first deliverables allow users to test with their tool flows and libraries. Both front-end simulation and back-end design will be enabled. The initial RTL will be for a large NVDLA configuration with 2048 8-bit MACs, also configurable as 1024 16-bit fixed or floating point MACs.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              758.0
+            ],
+            [
+              1065.0,
+              758.0
+            ],
+            [
+              1065.0,
+              836.0
+            ],
+            [
+              71.0,
+              836.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            758.0,
+            1065.0,
+            836.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/10",
+          "block_type": "Text",
+          "html": "<p>Detailed hardware and software documentation and an xls-based performance estimator help to determine whether NVDLA meets a user's needs and what configuration is required.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              867.0
+            ],
+            [
+              1013.0,
+              867.0
+            ],
+            [
+              1013.0,
+              917.0
+            ],
+            [
+              71.0,
+              917.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            867.0,
+            1013.0,
+            917.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/11",
+          "block_type": "Text",
+          "html": "<p>All items listed below have been uploaded to the NVDLA GitHub repository.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              948.0
+            ],
+            [
+              802.0,
+              948.0
+            ],
+            [
+              802.0,
+              971.0
+            ],
+            [
+              71.0,
+              971.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            948.0,
+            802.0,
+            971.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Table/12",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Documentation</th><th>Hardware</th><th>Software</th></tr></thead><tbody><tr><td>Conceptual Overview</td><td>Full-precision Config Verilog<br/>RTL, early access</td><td>Performance Estimator Tool</td></tr><tr><td>Hardware Architecture</td><td>Reference testbench and traces</td><td></td></tr><tr><td>Software Interface</td><td>Reference synthesis scripts</td><td></td></tr><tr><td>Integration Manual</td><td></td><td></td></tr><tr><td>Roadmap</td><td></td><td></td></tr></tbody></table>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1048.0
+            ],
+            [
+              1068.0,
+              1048.0
+            ],
+            [
+              1068.0,
+              1268.0
+            ],
+            [
+              71.0,
+              1268.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1048.0,
+            1068.0,
+            1268.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/13",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              42.0,
+              1435.0
+            ],
+            [
+              231.0,
+              1435.0
+            ],
+            [
+              231.0,
+              1453.0
+            ],
+            [
+              42.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            42.0,
+            1435.0,
+            231.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/14",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              1077.0,
+              1435.0
+            ],
+            [
+              1100.0,
+              1435.0
+            ],
+            [
+              1100.0,
+              1453.0
+            ],
+            [
+              1077.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1077.0,
+            1435.0,
+            1100.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/8"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    },
+    {
+      "html": "<h2>2017-Q4</h2><p>The second set of deliverables will add many of the tools that are needed for full system simulation. A C-model has the performance to run full networks and during this period we will also add drivers, a test application, and compilers to map any network to NVDLA.</p><p>Whereas the full-precision configuration of NVDLA was mostly focussed on performance and features, the second and small configuration will demonstrate low power and small area.</p><table><thead><tr><th>Documentation</th><th>Hardware</th><th>Software</th></tr></thead><tbody><tr><td>Software Porting Guide</td><td>Full-precision config Verilog RTL released</td><td>Linux Kernel Mode Driver source</td></tr><tr><td></td><td>Small config Verilog RTL, early access</td><td>QEMU based C model suitable for software development</td></tr><tr><td></td><td></td><td>Linux User Mode Driver Runtime source</td></tr><tr><td></td><td></td><td>Binary compiler</td></tr><tr><td></td><td></td><td>Application supporting Caffe and TensorFlow models; most CNN related layers</td></tr><tr><td></td><td></td><td>Software sanity tests</td></tr></tbody></table><h2>2018-H1</h2><p>The third set of deliverables will see scalable solutions: the user can set parameters to create the exact configuration that best match his or her needs. A test bench, test suite, and FPGA support are added to allow for rigorous testing needed for high-confidence tape outs.</p><table><thead><tr><th>Documentation</th><th>Hardware</th><th>Software</th></tr></thead><tbody><tr><td>Software architecture document</td><td>Small config Verilog RTL released</td><td>Refer to GitHub (<a href=\"https://github.com/nvdla/sw/blob/master/Roadmap.md\">https://github.com/nvdla/sw/blob/master/Roadmap.md</a>) for software roadmap.</td></tr><tr><td></td><td>RTL support for fine grained configuration control</td><td></td></tr><tr><td></td><td>UVM testbench validation of custom configurations</td><td></td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/1/Page/1",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/1/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              499.0,
+              26.0
+            ],
+            [
+              813.0,
+              26.0
+            ],
+            [
+              813.0,
+              43.0
+            ],
+            [
+              499.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            499.0,
+            26.0,
+            813.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h2>2017-Q4</h2>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              51.0
+            ],
+            [
+              260.0,
+              51.0
+            ],
+            [
+              260.0,
+              96.0
+            ],
+            [
+              71.0,
+              96.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            51.0,
+            260.0,
+            96.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/3",
+          "block_type": "Text",
+          "html": "<p>The second set of deliverables will add many of the tools that are needed for full system simulation. A C-model has the performance to run full networks and during this period we will also add drivers, a test application, and compilers to map any network to NVDLA.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              112.0
+            ],
+            [
+              1069.0,
+              112.0
+            ],
+            [
+              1069.0,
+              193.0
+            ],
+            [
+              70.0,
+              193.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            112.0,
+            1069.0,
+            193.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/4",
+          "block_type": "Text",
+          "html": "<p>Whereas the full-precision configuration of NVDLA was mostly focussed on performance and features, the second and small configuration will demonstrate low power and small area.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              221.0
+            ],
+            [
+              1066.0,
+              221.0
+            ],
+            [
+              1066.0,
+              274.0
+            ],
+            [
+              70.0,
+              274.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            221.0,
+            1066.0,
+            274.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Table/5",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Documentation</th><th>Hardware</th><th>Software</th></tr></thead><tbody><tr><td>Software Porting Guide</td><td>Full-precision config Verilog RTL released</td><td>Linux Kernel Mode Driver source</td></tr><tr><td></td><td>Small config Verilog RTL, early access</td><td>QEMU based C model suitable for software development</td></tr><tr><td></td><td></td><td>Linux User Mode Driver Runtime source</td></tr><tr><td></td><td></td><td>Binary compiler</td></tr><tr><td></td><td></td><td>Application supporting Caffe and TensorFlow models; most CNN related layers</td></tr><tr><td></td><td></td><td>Software sanity tests</td></tr></tbody></table>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              348.0
+            ],
+            [
+              1069.0,
+              348.0
+            ],
+            [
+              1069.0,
+              715.0
+            ],
+            [
+              70.0,
+              715.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            348.0,
+            1069.0,
+            715.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/6",
+          "block_type": "SectionHeader",
+          "html": "<h2>2018-H1</h2>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              794.0
+            ],
+            [
+              256.0,
+              794.0
+            ],
+            [
+              256.0,
+              837.0
+            ],
+            [
+              71.0,
+              837.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            794.0,
+            256.0,
+            837.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/7",
+          "block_type": "Text",
+          "html": "<p>The third set of deliverables will see scalable solutions: the user can set parameters to create the exact configuration that best match his or her needs. A test bench, test suite, and FPGA support are added to allow for rigorous testing needed for high-confidence tape outs.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              853.0
+            ],
+            [
+              1052.0,
+              853.0
+            ],
+            [
+              1052.0,
+              934.0
+            ],
+            [
+              70.0,
+              934.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            853.0,
+            1052.0,
+            934.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Table/8",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th>Documentation</th><th>Hardware</th><th>Software</th></tr></thead><tbody><tr><td>Software architecture document</td><td>Small config Verilog RTL released</td><td>Refer to GitHub (<a href=\"https://github.com/nvdla/sw/blob/master/Roadmap.md\">https://github.com/nvdla/sw/blob/master/Roadmap.md</a>) for software roadmap.</td></tr><tr><td></td><td>RTL support for fine grained configuration control</td><td></td></tr><tr><td></td><td>UVM testbench validation of custom configurations</td><td></td></tr></tbody></table>",
+          "page": 1,
+          "polygon": [
+            [
+              70.0,
+              1012.0
+            ],
+            [
+              1069.0,
+              1012.0
+            ],
+            [
+              1069.0,
+              1366.0
+            ],
+            [
+              70.0,
+              1366.0
+            ]
+          ],
+          "bbox": [
+            70.0,
+            1012.0,
+            1069.0,
+            1366.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/9",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              41.0,
+              1435.0
+            ],
+            [
+              230.0,
+              1435.0
+            ],
+            [
+              230.0,
+              1453.0
+            ],
+            [
+              41.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            1435.0,
+            230.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/10",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              1077.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1077.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1077.0,
+            1435.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/0/SectionHeader/8"
+      }
+    },
+    {
+      "html": "",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/2/Page/2",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/2/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              39.0,
+              23.0
+            ],
+            [
+              161.0,
+              23.0
+            ],
+            [
+              161.0,
+              46.0
+            ],
+            [
+              39.0,
+              46.0
+            ]
+          ],
+          "bbox": [
+            39.0,
+            23.0,
+            161.0,
+            46.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              497.0,
+              23.0
+            ],
+            [
+              817.0,
+              23.0
+            ],
+            [
+              817.0,
+              46.0
+            ],
+            [
+              497.0,
+              46.0
+            ]
+          ],
+          "bbox": [
+            497.0,
+            23.0,
+            817.0,
+            46.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageFooter/2",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              36.0,
+              1433.0
+            ],
+            [
+              234.0,
+              1433.0
+            ],
+            [
+              234.0,
+              1458.0
+            ],
+            [
+              36.0,
+              1458.0
+            ]
+          ],
+          "bbox": [
+            36.0,
+            1433.0,
+            234.0,
+            1458.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageFooter/3",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              1076.0,
+              1433.0
+            ],
+            [
+              1107.0,
+              1433.0
+            ],
+            [
+              1107.0,
+              1456.0
+            ],
+            [
+              1076.0,
+              1456.0
+            ]
+          ],
+          "bbox": [
+            1076.0,
+            1433.0,
+            1107.0,
+            1456.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/1/SectionHeader/6"
+      }
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 15
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 11
+      },
+      {
+        "page_id": 2,
+        "num_blocks": 4
+      }
+    ]
+  }
+}

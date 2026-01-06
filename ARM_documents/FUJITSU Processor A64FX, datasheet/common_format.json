@@ -1,0 +1,851 @@
+{
+  "children": [
+    {
+      "html": "<img alt=\"Fujitsu logo\" src=\"935eed7aa61f7777f62cfc032e11bee9_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><div class=\"img-alt\">Fujitsu logo</div></div><h1>FUJITSU Processor A64FXInnovative Arm-based HPC processor</h1><h2>Designed for the new generation of massive parallel computing</h2><img alt=\"Image of the A64FX processor chip\" src=\"5fb340ad68b0c71df0b56698b137e35b_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><div class=\"img-alt\">Image of the A64FX processor chip</div></div><p>The processor integrates 52 processor cores including assistant cores; a memory controller supporting HBM2; a Tofu interconnect D controller; and a root complex supporting PCI-Express Gen3. The A64FX adopts several characteristic architectures for HPC.</p><p>The A64FX processor (called A64FX, below) is a superscalar processor of the out-of-order execution type. The A64FX is designed for high-performance computing (HPC) and complies with the Armv8-A architecture profile and the Scalable Vector Extension for Armv8-A.</p><p>The A64FX becomes the heart of supercomputers that can perform quick simulations and analyze large data sets. Supercomputers with this processor perform at a high level, are highly reliable and offer a strong performance vs. power ratio.</p><img alt=\"Diagram of the A64FX processor showing Core Memory Group (13 Cores, L2S 8MB, Mem 8GiB, 256GiB/s), Tofu D (28 Gbps, 2 lanes, 10 ports), I/O (PCIe Gen3, 16 lanes), and Network on Chip.\" src=\"88096eec96db1b919e141720a47f97c6_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><div class=\"img-alt\">Diagram of the A64FX processor showing Core Memory Group (13 Cores, L2S 8MB, Mem 8GiB, 256GiB/s), Tofu D (28 Gbps, 2 lanes, 10 ports), I/O (PCIe Gen3, 16 lanes), and Network on Chip.</div></div><h2>A64FX Main Features</h2><table><tbody><tr><td><b>Predicted Operations</b></td><td>Enable selectively operate, load, and store only specific SIMD elements.</td></tr><tr><td><b>Four-operand FMA</b></td><td>In the operation of <math>A \\times B + C \\Rightarrow D</math>, the register of A, B, C, and D can be freely selected. Although Armv8-A SIMD has only <math>A \\times B + C \\Rightarrow D</math> operations, the A64FX realizes Four-operand FMA by packing with MOVPRFX instruction.</td></tr><tr><td><b>Gather/Scatter</b></td><td>Reads discontinuous data in memory and converts to SIMD (vectorization). Writes SIMD (Vector) data to non-contiguous area in memory.</td></tr><tr><td><b>Math. Acceleration</b></td><td>Speeds up when finding trigonometric and exponential functions.</td></tr><tr><td><b>Compress</b></td><td>Aggregates data that is sparse on registers.</td></tr><tr><td><b>First Fault Load</b></td><td>Suppresses and records traps other than the first element in memory access instructions.</td></tr><tr><td><b>Hardware Barrier</b></td><td>Supports synchronization between software processes or threads through hardware for simplification of programs and higher-speed synchronization processing.</td></tr><tr><td><b>Sector Cache</b></td><td>Provides software with a method of controlling the use of the L1 and L2 cache by partitioning each cache.</td></tr><tr><td><b>FP16/ INT16/ INT8 Dot Product</b></td><td>Introduced for AI applications.</td></tr></tbody></table>",
+      "bbox": [
+        0.0,
+        0.0,
+        1013.0,
+        1463.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1013.0,
+          0.0
+        ],
+        [
+          1013.0,
+          1463.0
+        ],
+        [
+          0.0,
+          1463.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              53.0,
+              80.0
+            ],
+            [
+              296.0,
+              80.0
+            ],
+            [
+              296.0,
+              98.0
+            ],
+            [
+              53.0,
+              98.0
+            ]
+          ],
+          "bbox": [
+            53.0,
+            80.0,
+            296.0,
+            98.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/Picture/1",
+          "block_type": "Picture",
+          "html": "<img alt=\"Fujitsu logo\" src=\"935eed7aa61f7777f62cfc032e11bee9_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><div class=\"img-alt\">Fujitsu logo</div></div>",
+          "page": 0,
+          "polygon": [
+            [
+              736.0,
+              51.0
+            ],
+            [
+              956.0,
+              51.0
+            ],
+            [
+              956.0,
+              163.0
+            ],
+            [
+              736.0,
+              163.0
+            ]
+          ],
+          "bbox": [
+            736.0,
+            51.0,
+            956.0,
+            163.0
+          ],
+          "section_hierarchy": {},
+          "images": {
+            "935eed7aa61f7777f62cfc032e11bee9_img.jpg": "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"
+          }
+        },
+        {
+          "id": "/page/0/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h1>FUJITSU Processor A64FXInnovative Arm-based HPC processor</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              53.0,
+              209.0
+            ],
+            [
+              624.0,
+              209.0
+            ],
+            [
+              624.0,
+              301.0
+            ],
+            [
+              53.0,
+              301.0
+            ]
+          ],
+          "bbox": [
+            53.0,
+            209.0,
+            624.0,
+            301.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h2>Designed for the new generation of massive parallel computing</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              55.0,
+              381.0
+            ],
+            [
+              748.0,
+              381.0
+            ],
+            [
+              748.0,
+              414.0
+            ],
+            [
+              55.0,
+              414.0
+            ]
+          ],
+          "bbox": [
+            55.0,
+            381.0,
+            748.0,
+            414.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Picture/4",
+          "block_type": "Picture",
+          "html": "<img alt=\"Image of the A64FX processor chip\" src=\"5fb340ad68b0c71df0b56698b137e35b_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><div class=\"img-alt\">Image of the A64FX processor chip</div></div>",
+          "page": 0,
+          "polygon": [
+            [
+              93.0,
+              427.0
+            ],
+            [
+              305.0,
+              427.0
+            ],
+            [
+              305.0,
+              572.0
+            ],
+            [
+              93.0,
+              572.0
+            ]
+          ],
+          "bbox": [
+            93.0,
+            427.0,
+            305.0,
+            572.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {
+            "5fb340ad68b0c71df0b56698b137e35b_img.jpg": "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"
+          }
+        },
+        {
+          "id": "/page/0/Text/5",
+          "block_type": "Text",
+          "html": "<p>The processor integrates 52 processor cores including assistant cores; a memory controller supporting HBM2; a Tofu interconnect D controller; and a root complex supporting PCI-Express Gen3. The A64FX adopts several characteristic architectures for HPC.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              358.0,
+              425.0
+            ],
+            [
+              650.0,
+              425.0
+            ],
+            [
+              650.0,
+              574.0
+            ],
+            [
+              358.0,
+              574.0
+            ]
+          ],
+          "bbox": [
+            358.0,
+            425.0,
+            650.0,
+            574.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/6",
+          "block_type": "Text",
+          "html": "<p>The A64FX processor (called A64FX, below) is a superscalar processor of the out-of-order execution type. The A64FX is designed for high-performance computing (HPC) and complies with the Armv8-A architecture profile and the Scalable Vector Extension for Armv8-A.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              55.0,
+              595.0
+            ],
+            [
+              346.0,
+              595.0
+            ],
+            [
+              346.0,
+              743.0
+            ],
+            [
+              55.0,
+              743.0
+            ]
+          ],
+          "bbox": [
+            55.0,
+            595.0,
+            346.0,
+            743.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/7",
+          "block_type": "Text",
+          "html": "<p>The A64FX becomes the heart of supercomputers that can perform quick simulations and analyze large data sets. Supercomputers with this processor perform at a high level, are highly reliable and offer a strong performance vs. power ratio.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              358.0,
+              595.0
+            ],
+            [
+              650.0,
+              595.0
+            ],
+            [
+              650.0,
+              724.0
+            ],
+            [
+              358.0,
+              724.0
+            ]
+          ],
+          "bbox": [
+            358.0,
+            595.0,
+            650.0,
+            724.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Figure/8",
+          "block_type": "Figure",
+          "html": "<img alt=\"Diagram of the A64FX processor showing Core Memory Group (13 Cores, L2S 8MB, Mem 8GiB, 256GiB/s), Tofu D (28 Gbps, 2 lanes, 10 ports), I/O (PCIe Gen3, 16 lanes), and Network on Chip.\" src=\"88096eec96db1b919e141720a47f97c6_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><div class=\"img-alt\">Diagram of the A64FX processor showing Core Memory Group (13 Cores, L2S 8MB, Mem 8GiB, 256GiB/s), Tofu D (28 Gbps, 2 lanes, 10 ports), I/O (PCIe Gen3, 16 lanes), and Network on Chip.</div></div>",
+          "page": 0,
+          "polygon": [
+            [
+              658.0,
+              431.0
+            ],
+            [
+              954.0,
+              431.0
+            ],
+            [
+              954.0,
+              728.0
+            ],
+            [
+              658.0,
+              728.0
+            ]
+          ],
+          "bbox": [
+            658.0,
+            431.0,
+            954.0,
+            728.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {
+            "88096eec96db1b919e141720a47f97c6_img.jpg": "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"
+          }
+        },
+        {
+          "id": "/page/0/SectionHeader/9",
+          "block_type": "SectionHeader",
+          "html": "<h2>A64FX Main Features</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              65.0,
+              788.0
+            ],
+            [
+              220.0,
+              788.0
+            ],
+            [
+              220.0,
+              809.0
+            ],
+            [
+              65.0,
+              809.0
+            ]
+          ],
+          "bbox": [
+            65.0,
+            788.0,
+            220.0,
+            809.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Table/10",
+          "block_type": "Table",
+          "html": "<table><tbody><tr><td><b>Predicted Operations</b></td><td>Enable selectively operate, load, and store only specific SIMD elements.</td></tr><tr><td><b>Four-operand FMA</b></td><td>In the operation of <math>A \\times B + C \\Rightarrow D</math>, the register of A, B, C, and D can be freely selected. Although Armv8-A SIMD has only <math>A \\times B + C \\Rightarrow D</math> operations, the A64FX realizes Four-operand FMA by packing with MOVPRFX instruction.</td></tr><tr><td><b>Gather/Scatter</b></td><td>Reads discontinuous data in memory and converts to SIMD (vectorization). Writes SIMD (Vector) data to non-contiguous area in memory.</td></tr><tr><td><b>Math. Acceleration</b></td><td>Speeds up when finding trigonometric and exponential functions.</td></tr><tr><td><b>Compress</b></td><td>Aggregates data that is sparse on registers.</td></tr><tr><td><b>First Fault Load</b></td><td>Suppresses and records traps other than the first element in memory access instructions.</td></tr><tr><td><b>Hardware Barrier</b></td><td>Supports synchronization between software processes or threads through hardware for simplification of programs and higher-speed synchronization processing.</td></tr><tr><td><b>Sector Cache</b></td><td>Provides software with a method of controlling the use of the L1 and L2 cache by partitioning each cache.</td></tr><tr><td><b>FP16/ INT16/ INT8 Dot Product</b></td><td>Introduced for AI applications.</td></tr></tbody></table>",
+          "page": 0,
+          "polygon": [
+            [
+              61.0,
+              822.0
+            ],
+            [
+              939.0,
+              822.0
+            ],
+            [
+              939.0,
+              1287.0
+            ],
+            [
+              61.0,
+              1287.0
+            ]
+          ],
+          "bbox": [
+            61.0,
+            822.0,
+            939.0,
+            1287.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/11",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              53.0,
+              1354.0
+            ],
+            [
+              328.0,
+              1354.0
+            ],
+            [
+              328.0,
+              1383.0
+            ],
+            [
+              53.0,
+              1383.0
+            ]
+          ],
+          "bbox": [
+            53.0,
+            1354.0,
+            328.0,
+            1383.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/12",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              653.0,
+              1354.0
+            ],
+            [
+              954.0,
+              1354.0
+            ],
+            [
+              954.0,
+              1373.0
+            ],
+            [
+              653.0,
+              1373.0
+            ]
+          ],
+          "bbox": [
+            653.0,
+            1354.0,
+            954.0,
+            1373.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    },
+    {
+      "html": "<h2>Fujitsu Processor A64FX Specifications</h2><table><thead><tr><th colspan=\"2\">CPU Specifications</th></tr></thead><tbody><tr><td>ISA</td><td>Armv8.2-A + SVE</td></tr><tr><td>Number of Processor Cores</td><td>48 compute cores, and 2 or 4 assistant cores *</td></tr><tr><td>Threads</td><td>48</td></tr><tr><td>Base Frequency</td><td>1.8GHz, 2.0GHz, 2.2GHz</td></tr><tr><td>Turbo Frequency</td><td>None (same as base frequency)</td></tr><tr><td>SIMD Width</td><td>512bit</td></tr><tr><td>L1I Cache Size</td><td>3MiB (64KiB /core)</td></tr><tr><td>L1D Cache Size</td><td>3MiB (64KiB /core)</td></tr><tr><td>L2 Cache Size</td><td>32MiB (8MiB x 4)</td></tr><tr><td>Cache-Line Size</td><td>256 bytes</td></tr><tr><td>Memory Controller</td><td>4</td></tr><tr><td>SVE-Implemented Vector Length</td><td>128 / 256 / 512bits</td></tr><tr><td rowspan=\"3\">Peak Flops; D / S / H<br/>[FLOPS]</td><td>1.8GHz</td><td>2.7648T / 5.5296T / 11.0592T</td></tr><tr><td>2.0GHz</td><td>3.072T / 6.144T / 12.288T</td></tr><tr><td>2.2GHz</td><td>3.3792T / 6.7584T / 13.5168T</td></tr><tr><td rowspan=\"3\">Peak Int Ops; 8 / 4 / 2 / 1B<br/>[OPS]</td><td>1.8GHz</td><td>2.7648T / 5.5296T / 11.0592T / 22.1184T</td></tr><tr><td>2.0GHz</td><td>3.072T / 6.144T / 12.288T / 24.576T</td></tr><tr><td>2.2GHz</td><td>3.3792T / 6.7584T / 13.5168T / 27.0336T</td></tr><tr><td>Network</td><td>Tofu interconnect D [68GB/s x2 (in/out)] *</td></tr><tr><td>IO / Socket</td><td>PCIe Gen3 16 lanes [15.75GB/s(in/out)]<br/>(Need chipsets for USB/SATA)</td></tr><tr><td>Process Technology</td><td>7 nm CMOS FinFET</td></tr><tr><td>Number of Transistors</td><td>8,786M pcs</td></tr><tr><td>Package Signal Pins</td><td>594 BGA pins</td></tr></tbody></table><p>* Only when the frequency is 2.2 GHz</p><table><thead><tr><th colspan=\"2\">Memory Specifications</th></tr></thead><tbody><tr><td>Memory Bandwidth</td><td>1,024 GB/s</td></tr><tr><td>Memory Capacity</td><td>32 GiB</td></tr><tr><td>Number of HBM2 Stacks Per Package</td><td>4</td></tr><tr><td rowspan=\"4\">HBM2</td><td>Data Signal Transfer Rate</td><td>2.0 Gbps</td></tr><tr><td>Data Width</td><td>1,024 bits</td></tr><tr><td>Memory Bandwidth</td><td>256 GB/s</td></tr><tr><td>Memory Capacity</td><td>8 GiB</td></tr></tbody></table><img alt=\"Fujitsu logo\" src=\"b0d31e6842af4e5cee75a79f4eac72ff_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><div class=\"img-alt\">Fujitsu logo</div></div><p>Website: www.fujitsu.com</p><p>\u00a9 Copyright 2021 Fujitsu and the Fujitsu logo are trademarks or registered trademarks of Fujitsu Limited in Japan and other countries. Other company, product and service names may be trademarks or registered trademarks of their respective owners. Technical data subject to modification and delivery subject to availability. Any liability that the data and illustrations are complete, actual or correct is excluded. Designations may be trademarks and/or copyrights of the respective manufacturer, the use of which by third parties for their own purposes may infringe the rights of such owner.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1013.0,
+        1463.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1013.0,
+          0.0
+        ],
+        [
+          1013.0,
+          1463.0
+        ],
+        [
+          0.0,
+          1463.0
+        ]
+      ],
+      "id": "/page/1/Page/1",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/1/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              52.0,
+              79.0
+            ],
+            [
+              297.0,
+              79.0
+            ],
+            [
+              297.0,
+              96.0
+            ],
+            [
+              52.0,
+              96.0
+            ]
+          ],
+          "bbox": [
+            52.0,
+            79.0,
+            297.0,
+            96.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/1",
+          "block_type": "SectionHeader",
+          "html": "<h2>Fujitsu Processor A64FX Specifications</h2>",
+          "page": 1,
+          "polygon": [
+            [
+              52.0,
+              128.0
+            ],
+            [
+              668.0,
+              128.0
+            ],
+            [
+              668.0,
+              165.0
+            ],
+            [
+              52.0,
+              165.0
+            ]
+          ],
+          "bbox": [
+            52.0,
+            128.0,
+            668.0,
+            165.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Table/2",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th colspan=\"2\">CPU Specifications</th></tr></thead><tbody><tr><td>ISA</td><td>Armv8.2-A + SVE</td></tr><tr><td>Number of Processor Cores</td><td>48 compute cores, and 2 or 4 assistant cores *</td></tr><tr><td>Threads</td><td>48</td></tr><tr><td>Base Frequency</td><td>1.8GHz, 2.0GHz, 2.2GHz</td></tr><tr><td>Turbo Frequency</td><td>None (same as base frequency)</td></tr><tr><td>SIMD Width</td><td>512bit</td></tr><tr><td>L1I Cache Size</td><td>3MiB (64KiB /core)</td></tr><tr><td>L1D Cache Size</td><td>3MiB (64KiB /core)</td></tr><tr><td>L2 Cache Size</td><td>32MiB (8MiB x 4)</td></tr><tr><td>Cache-Line Size</td><td>256 bytes</td></tr><tr><td>Memory Controller</td><td>4</td></tr><tr><td>SVE-Implemented Vector Length</td><td>128 / 256 / 512bits</td></tr><tr><td rowspan=\"3\">Peak Flops; D / S / H<br/>[FLOPS]</td><td>1.8GHz</td><td>2.7648T / 5.5296T / 11.0592T</td></tr><tr><td>2.0GHz</td><td>3.072T / 6.144T / 12.288T</td></tr><tr><td>2.2GHz</td><td>3.3792T / 6.7584T / 13.5168T</td></tr><tr><td rowspan=\"3\">Peak Int Ops; 8 / 4 / 2 / 1B<br/>[OPS]</td><td>1.8GHz</td><td>2.7648T / 5.5296T / 11.0592T / 22.1184T</td></tr><tr><td>2.0GHz</td><td>3.072T / 6.144T / 12.288T / 24.576T</td></tr><tr><td>2.2GHz</td><td>3.3792T / 6.7584T / 13.5168T / 27.0336T</td></tr><tr><td>Network</td><td>Tofu interconnect D [68GB/s x2 (in/out)] *</td></tr><tr><td>IO / Socket</td><td>PCIe Gen3 16 lanes [15.75GB/s(in/out)]<br/>(Need chipsets for USB/SATA)</td></tr><tr><td>Process Technology</td><td>7 nm CMOS FinFET</td></tr><tr><td>Number of Transistors</td><td>8,786M pcs</td></tr><tr><td>Package Signal Pins</td><td>594 BGA pins</td></tr></tbody></table>",
+          "page": 1,
+          "polygon": [
+            [
+              52.0,
+              251.0
+            ],
+            [
+              954.0,
+              251.0
+            ],
+            [
+              954.0,
+              942.0
+            ],
+            [
+              52.0,
+              942.0
+            ]
+          ],
+          "bbox": [
+            52.0,
+            251.0,
+            954.0,
+            942.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/1"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/3",
+          "block_type": "Text",
+          "html": "<p>* Only when the frequency is 2.2 GHz</p>",
+          "page": 1,
+          "polygon": [
+            [
+              753.0,
+              950.0
+            ],
+            [
+              952.0,
+              950.0
+            ],
+            [
+              952.0,
+              967.0
+            ],
+            [
+              753.0,
+              967.0
+            ]
+          ],
+          "bbox": [
+            753.0,
+            950.0,
+            952.0,
+            967.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/1"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Table/4",
+          "block_type": "Table",
+          "html": "<table><thead><tr><th colspan=\"2\">Memory Specifications</th></tr></thead><tbody><tr><td>Memory Bandwidth</td><td>1,024 GB/s</td></tr><tr><td>Memory Capacity</td><td>32 GiB</td></tr><tr><td>Number of HBM2 Stacks Per Package</td><td>4</td></tr><tr><td rowspan=\"4\">HBM2</td><td>Data Signal Transfer Rate</td><td>2.0 Gbps</td></tr><tr><td>Data Width</td><td>1,024 bits</td></tr><tr><td>Memory Bandwidth</td><td>256 GB/s</td></tr><tr><td>Memory Capacity</td><td>8 GiB</td></tr></tbody></table>",
+          "page": 1,
+          "polygon": [
+            [
+              52.0,
+              997.0
+            ],
+            [
+              954.0,
+              997.0
+            ],
+            [
+              954.0,
+              1231.0
+            ],
+            [
+              52.0,
+              1231.0
+            ]
+          ],
+          "bbox": [
+            52.0,
+            997.0,
+            954.0,
+            1231.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/1"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Picture/5",
+          "block_type": "Picture",
+          "html": "<img alt=\"Fujitsu logo\" src=\"b0d31e6842af4e5cee75a79f4eac72ff_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><div class=\"img-alt\">Fujitsu logo</div></div>",
+          "page": 1,
+          "polygon": [
+            [
+              64.0,
+              1274.0
+            ],
+            [
+              173.0,
+              1274.0
+            ],
+            [
+              173.0,
+              1326.0
+            ],
+            [
+              64.0,
+              1326.0
+            ]
+          ],
+          "bbox": [
+            64.0,
+            1274.0,
+            173.0,
+            1326.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/1"
+          },
+          "images": {
+            "b0d31e6842af4e5cee75a79f4eac72ff_img.jpg": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAA0AG0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKaTjNIzbVyTgDqa4hvF2u6kbm60LRY7rTbdynmyS7WmK9di/49f0qZSUdzWlQnVvy9O7t+Zr6v400TRbv7LdXLGcLuaOKMuVHqcdK1dL1ay1m0W7sLhJ4G4DL2PofQ1geDv7JvdPuNRtUXz7ueSS5EgHmIxOdjfTp/wDrrO8NLFB8R9bg0wINO8lGmWP7iTZHAA9s5qFN3T6M6pYenyzik1KKu77P/LyO+ooorU4AooooAKKKKAIp7mK2jaSaRI416s7YA/Gqf9vaT31K0/7/AC/40a4ivol+GUMDbvkHv8pryf4aeEtF8Q6VeTanaGaSOcIhEjLgbQexFYzqSUlGK3O/DYWlUoTrVJNKLS0V9/mesf27pZDMNQtSq9T5y8frU9tqFpehjbXEU2373luGx+Vef+KPBuj6B4V1i6063aIvbhChcsPvgg8knNWfhEo/4Q9zjk3T5P4LSVSXOoNFzwdJ4WWJpybSaVmu6udfd6ppsZe3uL23R8YZHlAPPtmuAtrzWfB8Umi2cen3UDOzWsz3Sp5ascjepOcc9utY/j9Fb4p6WjKCrfZwwIyD+8NTfFeKM+KtH+RcvGA3HUb+lZVK27XR2PRwmASdKDd1VTlZra1zobrwrolysE+o6wbPVJIVNzLaXKxiZsctgjofXFdBpEHh7w3arb2lxbQpIPMLPMN0mf4iSea87+MagarpPA5gb+ddze+A9D1W5e+v7Zp5XRQo8xlCKBwAFI4q4v3pKK1RzV6dsPSnWqPlnfRLazsbn9vaT/0ErT/v8v8AjUqapZSQPOl1A0KHDSCQFR9TXinw78NaVr2r6nb6jbGaOBQUG9lx8xHYil8U6fBp3iPTvC6yvBpQlV3JcgHzH5Y5/urgfhnvUrES5Odo1lk9L6y8NGbuld6dLX77nsFv4m0W7ufs9vqlpJNnbsWUE5zjFTyazp0MhjlvrZJFOCjSqCP1rEh8B+G4fsslvp6Ry20iyRyIx3ZUgjJzz0715/41jX/hbWmDaMPJbbhjr8+K0nUlCN5I5MNg6GKrOnSk0km9UunoeyTXUMEBmlkRIgMl2bAA+tQQ6tYXAJhvLeTHXbIDiqXicf8AFK6txx9jl/8AQDXC/BtFbStUJUH9+nb/AGTVSqWmodzGjg1UwlTEX+FpW9T0TWv+QLf/APXu/wD6Ca8f+HnhebXtMu5otav9PEc20pbSFQ3A5PPWvX9aONGvgFZiYHACgkk49BXD/CS3udP06/tby1nt5WmEiiWMruGAOM/Ss6sVKrFPzOvA15UcDWlB2d49vPuWfEGjy6J8ONYtZdRuL7I3CW4bLAErxnNL8Iv+RNf/AK+n/kK63XdLTWdDvNPdtouIym7+6ex/PFeY+HNU1bwAtzpWqaPd3FuZDJFLbLuBOADj1HT6UprkqqXSxdCbxOBqUk/f5lK211sQ+Pv+SraV/wBu3/ow1N8V/wDka9F/3B/6GKdp+k6p428cQ69eWEllp9uUKLKMMwXkAevPJNM+K/8AyNWiD/ZH/oYrCafJOXRtHrYWcVisPRvrCEk/J2bsM+Mf/IU0j/rg38xXry/8e4/3P6V5L8WLS6v9X00WlrPP5UJ3mOJmAyeOQPavUxdRDTRcEnyxHuPynOMenWuikn7Sfy/I8fHSTwWGS3XN+Z5Z8I/+Rh1r/cH/AKEa7Txh4LtPFVshZvIvYhiKcDPH90juK434WW91ZeINS+1WtxALiPMZkiKg4bpn15rrdf8AFl54d1hYptIuLyxkjDJNbISyt3B7H9OtRSUfY2nsdGZSq/2m54Z+8kmtV0SOBTU/Fnw5vIob4m509mwoZtyMB2U9VPtSeJr2LUfidoV5AcxT/ZHX6F81oeIL/WfiG1vpmnaNcWtmkod57lduDjGT9MngZJqz4r8CXtlHpOo6GgmuNOjjV4wPmcochgO/OcispRk01HWKsehSr0Y1ITr2jVkpJ221WjfRNnf+KP8AkVNW/wCvOX/0A1wvwZ/5BWqf9d0/9Bpmp+OdS1rRJNKtfDt+uoXMZikzGdi5GGx+GeuK6bwF4Yl8NaB5VyQbqd/Nl2/w8YC++P61t/Eqpx2SPKs8Ll9SlV+KUlZXXTd+h1xANIFAoorrPCFxximlAaKKAE2heRXk3jofbfijolnKf3QWIjHXlzn+QoormxXwL1R62Tf7xJ/3ZfkesooK8inbRiiiuk8liBF9KUoM5oopdRgFAo2AnJoopiYmxcdKcFAFFFAH/9k="
+          }
+        },
+        {
+          "id": "/page/1/Text/6",
+          "block_type": "Text",
+          "html": "<p>Website: www.fujitsu.com</p>",
+          "page": 1,
+          "polygon": [
+            [
+              66.0,
+              1332.0
+            ],
+            [
+              190.0,
+              1332.0
+            ],
+            [
+              190.0,
+              1348.0
+            ],
+            [
+              66.0,
+              1348.0
+            ]
+          ],
+          "bbox": [
+            66.0,
+            1332.0,
+            190.0,
+            1348.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/1"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/7",
+          "block_type": "Text",
+          "html": "<p>\u00a9 Copyright 2021 Fujitsu and the Fujitsu logo are trademarks or registered trademarks of Fujitsu Limited in Japan and other countries. Other company, product and service names may be trademarks or registered trademarks of their respective owners. Technical data subject to modification and delivery subject to availability. Any liability that the data and illustrations are complete, actual or correct is excluded. Designations may be trademarks and/or copyrights of the respective manufacturer, the use of which by third parties for their own purposes may infringe the rights of such owner.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              241.0,
+              1281.0
+            ],
+            [
+              921.0,
+              1281.0
+            ],
+            [
+              921.0,
+              1351.0
+            ],
+            [
+              241.0,
+              1351.0
+            ]
+          ],
+          "bbox": [
+            241.0,
+            1281.0,
+            921.0,
+            1351.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/1"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/8",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              654.0,
+              1388.0
+            ],
+            [
+              954.0,
+              1388.0
+            ],
+            [
+              954.0,
+              1407.0
+            ],
+            [
+              654.0,
+              1407.0
+            ]
+          ],
+          "bbox": [
+            654.0,
+            1388.0,
+            954.0,
+            1407.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/1"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/0/SectionHeader/9"
+      }
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 13
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 9
+      }
+    ]
+  }
+}

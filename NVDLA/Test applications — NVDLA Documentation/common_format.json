@@ -1,0 +1,838 @@
+{
+  "children": [
+    {
+      "html": "<h1>Test applications</h1><p>Nvidia provides reference test applications for runtime and compiler verified on Linux.</p><h2>Compiler sample application</h2><p>Compiler test application also called as compiler tool gives option to convert caffe model to NVDLA format. It stores compiled network in loadable which can be loaded by runtime test application for execution.</p><p>Usage:</p><pre>./nvdlacompiler [-options] --prototxt &lt;prototxt_file&gt; --caffemodel &lt;caffemodel_file&gt; -o &lt;outputpath&gt;</pre><p>Options:</p><p>For more options supported</p><pre>./nvdlacompiler -h</pre><h2>Runtime sample application</h2><p>Runtime test application provides options to run neural network loadable generated using NVDLA compiler. Along with network execution it also provides options for pre and post processing. This application can be launched in server mode too which allows sending test commands and files over network.</p><p>It demonstrates usage of IRuntime interface to execute a network on NVDLA.</p><p><b>Usage:</b></p><p>For sanity tests which has input embedded in it.</p><pre>./nvdlaruntime --loadable &lt;loadable_file&gt;</pre><p>For network tests which need image input</p><pre>./nvdlaruntime --loadable &lt;loadable_file&gt; --image &lt;image_file&gt;</pre><p>Run in server mode</p><pre>./nvdlaruntime -s</pre>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              517.0,
+              26.0
+            ],
+            [
+              795.0,
+              26.0
+            ],
+            [
+              795.0,
+              43.0
+            ],
+            [
+              517.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            517.0,
+            26.0,
+            795.0,
+            43.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h1>Test applications</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              68.0,
+              92.0
+            ],
+            [
+              494.0,
+              92.0
+            ],
+            [
+              494.0,
+              144.0
+            ],
+            [
+              68.0,
+              144.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            92.0,
+            494.0,
+            144.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/3",
+          "block_type": "Text",
+          "html": "<p>Nvidia provides reference test applications for runtime and compiler verified on Linux.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              173.0
+            ],
+            [
+              911.0,
+              173.0
+            ],
+            [
+              911.0,
+              198.0
+            ],
+            [
+              71.0,
+              198.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            173.0,
+            911.0,
+            198.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/4",
+          "block_type": "SectionHeader",
+          "html": "<h2>Compiler sample application</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              231.0
+            ],
+            [
+              669.0,
+              231.0
+            ],
+            [
+              669.0,
+              279.0
+            ],
+            [
+              71.0,
+              279.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            231.0,
+            669.0,
+            279.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/5",
+          "block_type": "Text",
+          "html": "<p>Compiler test application also called as compiler tool gives option to convert caffe model to NVDLA format. It stores compiled network in loadable which can be loaded by runtime test application for execution.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              291.0
+            ],
+            [
+              1036.0,
+              291.0
+            ],
+            [
+              1036.0,
+              369.0
+            ],
+            [
+              71.0,
+              369.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            291.0,
+            1036.0,
+            369.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/6",
+          "block_type": "Text",
+          "html": "<p>Usage:</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              402.0
+            ],
+            [
+              143.0,
+              402.0
+            ],
+            [
+              143.0,
+              424.0
+            ],
+            [
+              71.0,
+              424.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            402.0,
+            143.0,
+            424.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/7",
+          "block_type": "Text",
+          "html": "<pre>./nvdlacompiler [-options] --prototxt &lt;prototxt_file&gt; --caffemodel &lt;caffemodel_file&gt; -o &lt;outputpath&gt;</pre>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              455.0
+            ],
+            [
+              1036.0,
+              455.0
+            ],
+            [
+              1036.0,
+              504.0
+            ],
+            [
+              71.0,
+              504.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            455.0,
+            1036.0,
+            504.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/8",
+          "block_type": "Text",
+          "html": "<p>Options:</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              536.0
+            ],
+            [
+              157.0,
+              536.0
+            ],
+            [
+              157.0,
+              558.0
+            ],
+            [
+              71.0,
+              558.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            536.0,
+            157.0,
+            558.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/9",
+          "block_type": "Text",
+          "html": "<p>For more options supported</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              588.0
+            ],
+            [
+              344.0,
+              588.0
+            ],
+            [
+              344.0,
+              611.0
+            ],
+            [
+              71.0,
+              611.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            588.0,
+            344.0,
+            611.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/10",
+          "block_type": "Text",
+          "html": "<pre>./nvdlacompiler -h</pre>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              645.0
+            ],
+            [
+              287.0,
+              645.0
+            ],
+            [
+              287.0,
+              666.0
+            ],
+            [
+              71.0,
+              666.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            645.0,
+            287.0,
+            666.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/11",
+          "block_type": "SectionHeader",
+          "html": "<h2>Runtime sample application</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              702.0
+            ],
+            [
+              656.0,
+              702.0
+            ],
+            [
+              656.0,
+              748.0
+            ],
+            [
+              71.0,
+              748.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            702.0,
+            656.0,
+            748.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/12",
+          "block_type": "Text",
+          "html": "<p>Runtime test application provides options to run neural network loadable generated using NVDLA compiler. Along with network execution it also provides options for pre and post processing. This application can be launched in server mode too which allows sending test commands and files over network.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              761.0
+            ],
+            [
+              1041.0,
+              761.0
+            ],
+            [
+              1041.0,
+              867.0
+            ],
+            [
+              71.0,
+              867.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            761.0,
+            1041.0,
+            867.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/13",
+          "block_type": "Text",
+          "html": "<p>It demonstrates usage of IRuntime interface to execute a network on NVDLA.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              898.0
+            ],
+            [
+              830.0,
+              898.0
+            ],
+            [
+              830.0,
+              922.0
+            ],
+            [
+              71.0,
+              922.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            898.0,
+            830.0,
+            922.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/14",
+          "block_type": "Text",
+          "html": "<p><b>Usage:</b></p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              953.0
+            ],
+            [
+              150.0,
+              953.0
+            ],
+            [
+              150.0,
+              975.0
+            ],
+            [
+              71.0,
+              975.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            953.0,
+            150.0,
+            975.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/15",
+          "block_type": "Text",
+          "html": "<p>For sanity tests which has input embedded in it.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              984.0
+            ],
+            [
+              543.0,
+              984.0
+            ],
+            [
+              543.0,
+              1008.0
+            ],
+            [
+              71.0,
+              1008.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            984.0,
+            543.0,
+            1008.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/16",
+          "block_type": "Text",
+          "html": "<pre>./nvdlaruntime --loadable &lt;loadable_file&gt;</pre>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1039.0
+            ],
+            [
+              537.0,
+              1039.0
+            ],
+            [
+              537.0,
+              1061.0
+            ],
+            [
+              71.0,
+              1061.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1039.0,
+            537.0,
+            1061.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/17",
+          "block_type": "Text",
+          "html": "<p>For network tests which need image input</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1091.0
+            ],
+            [
+              485.0,
+              1091.0
+            ],
+            [
+              485.0,
+              1115.0
+            ],
+            [
+              71.0,
+              1115.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1091.0,
+            485.0,
+            1115.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/18",
+          "block_type": "Text",
+          "html": "<pre>./nvdlaruntime --loadable &lt;loadable_file&gt; --image &lt;image_file&gt;</pre>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1146.0
+            ],
+            [
+              764.0,
+              1146.0
+            ],
+            [
+              764.0,
+              1168.0
+            ],
+            [
+              71.0,
+              1168.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1146.0,
+            764.0,
+            1168.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/19",
+          "block_type": "Text",
+          "html": "<p>Run in server mode</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1201.0
+            ],
+            [
+              266.0,
+              1201.0
+            ],
+            [
+              266.0,
+              1222.0
+            ],
+            [
+              71.0,
+              1222.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1201.0,
+            266.0,
+            1222.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/20",
+          "block_type": "Text",
+          "html": "<pre>./nvdlaruntime -s</pre>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              1254.0
+            ],
+            [
+              275.0,
+              1254.0
+            ],
+            [
+              275.0,
+              1275.0
+            ],
+            [
+              71.0,
+              1275.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1254.0,
+            275.0,
+            1275.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/21",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              41.0,
+              1435.0
+            ],
+            [
+              296.0,
+              1435.0
+            ],
+            [
+              296.0,
+              1453.0
+            ],
+            [
+              41.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            1435.0,
+            296.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/22",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              1077.0,
+              1435.0
+            ],
+            [
+              1102.0,
+              1435.0
+            ],
+            [
+              1102.0,
+              1453.0
+            ],
+            [
+              1077.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1077.0,
+            1435.0,
+            1102.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 23
+      }
+    ]
+  }
+}

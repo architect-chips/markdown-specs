@@ -1,0 +1,2405 @@
+{
+  "children": [
+    {
+      "html": "<h1>NVDLA Environment Setup Guide</h1><h2>Contents</h2><ul><li>NVDLA Environment Setup Guide<ul><li>Tools and Dependency Libraries Setup<ul><li>tree.make setup</li><li>Project name setup</li><li>Designware Components</li></ul></li><li>Build Tree<ul><li>Build RTL</li><li>Build Test Bench</li><li>Build test bench and run protect tests</li><li>Build CMOD</li></ul></li></ul></li></ul><h2>Tools and Dependency Libraries Setup</h2><p>Required tools and libraries and version could be found in TOT/makefile.</p><h3>tree.make setup</h3><pre>TOT&gt; make</pre><p>Please install corresponding tools and point to the actual path in your environment.</p><p>Note that the current source code has only been tested for the nv_small configuration, and while the nv_small configuration passes many tests, additional coverage is necessary to get it to tapeout quality.</p><p>Any project name specified should have a project spec file located at<br/>hw/spec/defs/&lt;project_name&gt;.spec.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              461.0,
+              26.0
+            ],
+            [
+              849.0,
+              26.0
+            ],
+            [
+              849.0,
+              43.0
+            ],
+            [
+              461.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            461.0,
+            26.0,
+            849.0,
+            43.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h1>NVDLA Environment Setup Guide</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              92.0
+            ],
+            [
+              918.0,
+              92.0
+            ],
+            [
+              918.0,
+              142.0
+            ],
+            [
+              71.0,
+              142.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            92.0,
+            918.0,
+            142.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h2>Contents</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              80.0,
+              203.0
+            ],
+            [
+              194.0,
+              203.0
+            ],
+            [
+              194.0,
+              225.0
+            ],
+            [
+              80.0,
+              225.0
+            ]
+          ],
+          "bbox": [
+            80.0,
+            203.0,
+            194.0,
+            225.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/ListGroup/4",
+          "block_type": "ListGroup",
+          "html": "<ul><li>NVDLA Environment Setup Guide<ul><li>Tools and Dependency Libraries Setup<ul><li>tree.make setup</li><li>Project name setup</li><li>Designware Components</li></ul></li><li>Build Tree<ul><li>Build RTL</li><li>Build Test Bench</li><li>Build test bench and run protect tests</li><li>Build CMOD</li></ul></li></ul></li></ul>",
+          "page": 0,
+          "polygon": [
+            [
+              114.0,
+              259.0
+            ],
+            [
+              624.0,
+              259.0
+            ],
+            [
+              624.0,
+              533.0
+            ],
+            [
+              114.0,
+              533.0
+            ]
+          ],
+          "bbox": [
+            114.0,
+            259.0,
+            624.0,
+            533.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h2>Tools and Dependency Libraries Setup</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              68.0,
+              580.0
+            ],
+            [
+              878.0,
+              580.0
+            ],
+            [
+              878.0,
+              626.0
+            ],
+            [
+              68.0,
+              626.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            580.0,
+            878.0,
+            626.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/6",
+          "block_type": "Text",
+          "html": "<p>Required tools and libraries and version could be found in TOT/makefile.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              641.0
+            ],
+            [
+              777.0,
+              641.0
+            ],
+            [
+              777.0,
+              663.0
+            ],
+            [
+              71.0,
+              663.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            641.0,
+            777.0,
+            663.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h3>tree.make setup</h3>",
+          "page": 0,
+          "polygon": [
+            [
+              68.0,
+              696.0
+            ],
+            [
+              351.0,
+              696.0
+            ],
+            [
+              351.0,
+              732.0
+            ],
+            [
+              68.0,
+              732.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            696.0,
+            351.0,
+            732.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/8",
+          "block_type": "Text",
+          "html": "<pre>TOT&gt; make</pre>",
+          "page": 0,
+          "polygon": [
+            [
+              75.0,
+              748.0
+            ],
+            [
+              179.0,
+              748.0
+            ],
+            [
+              179.0,
+              769.0
+            ],
+            [
+              75.0,
+              769.0
+            ]
+          ],
+          "bbox": [
+            75.0,
+            748.0,
+            179.0,
+            769.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/9",
+          "block_type": "Text",
+          "html": "<p>Please install corresponding tools and point to the actual path in your environment.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              800.0
+            ],
+            [
+              886.0,
+              800.0
+            ],
+            [
+              886.0,
+              824.0
+            ],
+            [
+              71.0,
+              824.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            800.0,
+            886.0,
+            824.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/10",
+          "block_type": "Text",
+          "html": "<p>Note that the current source code has only been tested for the nv_small configuration, and while the nv_small configuration passes many tests, additional coverage is necessary to get it to tapeout quality.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              853.0
+            ],
+            [
+              1058.0,
+              853.0
+            ],
+            [
+              1058.0,
+              932.0
+            ],
+            [
+              71.0,
+              932.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            853.0,
+            1058.0,
+            932.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/11",
+          "block_type": "Text",
+          "html": "<p>Any project name specified should have a project spec file located at<br/>hw/spec/defs/&lt;project_name&gt;.spec.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              965.0
+            ],
+            [
+              745.0,
+              965.0
+            ],
+            [
+              745.0,
+              1017.0
+            ],
+            [
+              71.0,
+              1017.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            965.0,
+            745.0,
+            1017.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/12",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              39.0,
+              1435.0
+            ],
+            [
+              376.0,
+              1435.0
+            ],
+            [
+              376.0,
+              1453.0
+            ],
+            [
+              39.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            39.0,
+            1435.0,
+            376.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/13",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              1077.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1077.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1077.0,
+            1435.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    },
+    {
+      "html": "<pre>Creating tree.make to setup your working environment and projects\n\nEnter projects name (Press ENTER if use: nv_small nv_large):\n\nEnter to determine designware_noexist (Press ENTER 0 to use design ware, 1 to not use d\n\nEnter design ware path (Press ENTER if use: /home/tools/synopsys/syn_2011.09/dw/sim_ver\n\nEnter c pre-process path (Press ENTER if use:\n/home/utils/gcc-4.8.2/bin/cpp):\n\nEnter gcc path (Press ENTER if use: /home/utils/gcc-4.8.2/bin/gcc):\n\nEnter g++ path (Press ENTER if use: /home/utils/gcc-4.8.2/bin/g++):\n\nEnter perl path (Press ENTER if use:\n/home/utils/perl-5.10.5.10.0-threads-64/bin/perl):\n\nEnter java path (Press ENTER if use:\n/home/utils/java/jdk1.8.0_131/bin/java):\n\nEnter systemc path (Press ENTER if use:\n/home/ip/shared/inf/SystemC/1.0/20151112/systemc-2.3.0/GCC472_64_DBG):\n\nEnter python path (Press ENTER if use:\n/home/tools/continuum/Anaconda3-5.0.1/bin/python):\n\nEnter vcs_home path (Press ENTER if use:\n/home/tools/vcs/mx-2016.06-SP2-4):\n\nEnter novas_home path (Press ENTER if use:\n/home/tools/debussy/verdi3_2016.06-SP2-9):\n\nEnter verdi_home path (Press ENTER if use:\n/home/tools/debussy/verdi3_2016.06-SP2-9):\n\n==================================================\n\ntree.make is created successfully, and you can edit tree.make\nmanually later\n\n==================================================</pre><p>After this setup, a file named <code>tree.make</code> will be generated under TOT directory.</p><h3>Project name setup</h3><p>During <code>tree.make</code> file setup process, project name has been specified. The project name could be changed after <code>tree.make</code> generation. It's allowed to build multiple projects. To change target project names, open generated <code>TOT/tree.make</code>, and modify line which starts with projects, for example, we can remove other project name, only build <code>nv_small</code>:</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        816.0,
+        1056.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          816.0,
+          0.0
+        ],
+        [
+          816.0,
+          1056.0
+        ],
+        [
+          0.0,
+          1056.0
+        ]
+      ],
+      "id": "/page/1/Page/1",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/1/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              29.0,
+              19.0
+            ],
+            [
+              112.0,
+              19.0
+            ],
+            [
+              112.0,
+              29.0
+            ],
+            [
+              29.0,
+              29.0
+            ]
+          ],
+          "bbox": [
+            29.0,
+            19.0,
+            112.0,
+            29.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              328.0,
+              19.0
+            ],
+            [
+              603.0,
+              19.0
+            ],
+            [
+              603.0,
+              29.0
+            ],
+            [
+              328.0,
+              29.0
+            ]
+          ],
+          "bbox": [
+            328.0,
+            19.0,
+            603.0,
+            29.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/2",
+          "block_type": "Text",
+          "html": "<pre>Creating tree.make to setup your working environment and projects\n\nEnter projects name (Press ENTER if use: nv_small nv_large):\n\nEnter to determine designware_noexist (Press ENTER 0 to use design ware, 1 to not use d\n\nEnter design ware path (Press ENTER if use: /home/tools/synopsys/syn_2011.09/dw/sim_ver\n\nEnter c pre-process path (Press ENTER if use:\n/home/utils/gcc-4.8.2/bin/cpp):\n\nEnter gcc path (Press ENTER if use: /home/utils/gcc-4.8.2/bin/gcc):\n\nEnter g++ path (Press ENTER if use: /home/utils/gcc-4.8.2/bin/g++):\n\nEnter perl path (Press ENTER if use:\n/home/utils/perl-5.10.5.10.0-threads-64/bin/perl):\n\nEnter java path (Press ENTER if use:\n/home/utils/java/jdk1.8.0_131/bin/java):\n\nEnter systemc path (Press ENTER if use:\n/home/ip/shared/inf/SystemC/1.0/20151112/systemc-2.3.0/GCC472_64_DBG):\n\nEnter python path (Press ENTER if use:\n/home/tools/continuum/Anaconda3-5.0.1/bin/python):\n\nEnter vcs_home path (Press ENTER if use:\n/home/tools/vcs/mx-2016.06-SP2-4):\n\nEnter novas_home path (Press ENTER if use:\n/home/tools/debussy/verdi3_2016.06-SP2-9):\n\nEnter verdi_home path (Press ENTER if use:\n/home/tools/debussy/verdi3_2016.06-SP2-9):\n\n==================================================\n\ntree.make is created successfully, and you can edit tree.make\nmanually later\n\n==================================================</pre>",
+          "page": 1,
+          "polygon": [
+            [
+              59.0,
+              47.0
+            ],
+            [
+              762.0,
+              47.0
+            ],
+            [
+              762.0,
+              820.0
+            ],
+            [
+              59.0,
+              820.0
+            ]
+          ],
+          "bbox": [
+            59.0,
+            47.0,
+            762.0,
+            820.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/3",
+          "block_type": "Text",
+          "html": "<p>After this setup, a file named <code>tree.make</code> will be generated under TOT directory.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              50.0,
+              852.0
+            ],
+            [
+              606.0,
+              852.0
+            ],
+            [
+              606.0,
+              868.0
+            ],
+            [
+              50.0,
+              868.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            852.0,
+            606.0,
+            868.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/4",
+          "block_type": "SectionHeader",
+          "html": "<h3>Project name setup</h3>",
+          "page": 1,
+          "polygon": [
+            [
+              50.0,
+              892.0
+            ],
+            [
+              285.0,
+              892.0
+            ],
+            [
+              285.0,
+              917.0
+            ],
+            [
+              50.0,
+              917.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            892.0,
+            285.0,
+            917.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/5",
+          "block_type": "Text",
+          "html": "<p>During <code>tree.make</code> file setup process, project name has been specified. The project name could be changed after <code>tree.make</code> generation. It's allowed to build multiple projects. To change target project names, open generated <code>TOT/tree.make</code>, and modify line which starts with projects, for example, we can remove other project name, only build <code>nv_small</code>:</p>",
+          "page": 1,
+          "polygon": [
+            [
+              50.0,
+              928.0
+            ],
+            [
+              750.0,
+              928.0
+            ],
+            [
+              750.0,
+              1004.0
+            ],
+            [
+              50.0,
+              1004.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            928.0,
+            750.0,
+            1004.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/6",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              29.0,
+              1023.0
+            ],
+            [
+              266.0,
+              1023.0
+            ],
+            [
+              266.0,
+              1033.0
+            ],
+            [
+              29.0,
+              1033.0
+            ]
+          ],
+          "bbox": [
+            29.0,
+            1023.0,
+            266.0,
+            1033.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/7",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              767.0,
+              1023.0
+            ],
+            [
+              782.0,
+              1023.0
+            ],
+            [
+              782.0,
+              1033.0
+            ],
+            [
+              767.0,
+              1033.0
+            ]
+          ],
+          "bbox": [
+            767.0,
+            1023.0,
+            782.0,
+            1033.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/0/SectionHeader/5",
+        "3": "/page/0/SectionHeader/7"
+      }
+    },
+    {
+      "html": "<pre>########\n## Project Name Setup, multiple projects supported\n########\nPROJECTS := nv_small</pre><h2>Designware Components</h2><p>The NVDLA design utilize the following Designware components.</p><ul><li>DW02_mulpt</li><li>DW02_sum</li><li>DW_lsd</li></ul><p>For best QOR, the EDA vendor supplied versions should be used for both synthesis and simulation. They can be obtained directly from the EDA vendors.</p><p>If no designware implementation is available, the NVDLA repository contains an alternate implementation. The design can be compiled to using the alternate implementation by setting the tree.make variable DESIGNWARE_NOEXIST to 1.</p><pre>DESIGNWARE_NOEXIST := 1</pre><p>If designware implementation is available, set the tree.make variable DESIGNWARE_NOEXIST to 0. When using a designware implementation, the designware directory also needs up be added to tree.make with the DESIGNWARE_DIR variable. This variable should point to a directory where the simulation version of the designware component is available. Synthesis will pick up an internal optimized version.</p><pre>DESIGNWARE_NOEXIST := 0\nDESIGNWARE_DIR := \\<path_to_designware_directory\\></path_to_designware_directory\\></pre><h2>Build Tree</h2><h3>Build RTL</h3><p>Once tree.make has been setup, RTL can be build with following command</p><pre>TOT &gt; ./tools/bin/tmake -build vmod</pre><p>In the end of build process, following line will be show in the last line:</p><pre>[TMAKE]: DONE</pre><p>There will be a new directory named outdir under TOT. RTL file can be found under TOT/outdir/&lt;project_name&gt;/vmod.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/2/Page/2",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/2/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              461.0,
+              26.0
+            ],
+            [
+              849.0,
+              26.0
+            ],
+            [
+              849.0,
+              43.0
+            ],
+            [
+              461.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            461.0,
+            26.0,
+            849.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/2",
+          "block_type": "Text",
+          "html": "<pre>########\n## Project Name Setup, multiple projects supported\n########\nPROJECTS := nv_small</pre>",
+          "page": 2,
+          "polygon": [
+            [
+              83.0,
+              69.0
+            ],
+            [
+              654.0,
+              69.0
+            ],
+            [
+              654.0,
+              163.0
+            ],
+            [
+              83.0,
+              163.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            69.0,
+            654.0,
+            163.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h2>Designware Components</h2>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              215.0
+            ],
+            [
+              494.0,
+              215.0
+            ],
+            [
+              494.0,
+              250.0
+            ],
+            [
+              71.0,
+              250.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            215.0,
+            494.0,
+            250.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/5",
+            "3": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/4",
+          "block_type": "Text",
+          "html": "<p>The NVDLA design utilize the following Designware components.</p>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              267.0
+            ],
+            [
+              700.0,
+              267.0
+            ],
+            [
+              700.0,
+              289.0
+            ],
+            [
+              71.0,
+              289.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            267.0,
+            700.0,
+            289.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/ListGroup/5",
+          "block_type": "ListGroup",
+          "html": "<ul><li>DW02_mulpt</li><li>DW02_sum</li><li>DW_lsd</li></ul>",
+          "page": 2,
+          "polygon": [
+            [
+              103.0,
+              320.0
+            ],
+            [
+              258.0,
+              320.0
+            ],
+            [
+              258.0,
+              399.0
+            ],
+            [
+              103.0,
+              399.0
+            ]
+          ],
+          "bbox": [
+            103.0,
+            320.0,
+            258.0,
+            399.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/6",
+          "block_type": "Text",
+          "html": "<p>For best QOR, the EDA vendor supplied versions should be used for both synthesis and simulation. They can be obtained directly from the EDA vendors.</p>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              417.0
+            ],
+            [
+              1036.0,
+              417.0
+            ],
+            [
+              1036.0,
+              469.0
+            ],
+            [
+              71.0,
+              469.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            417.0,
+            1036.0,
+            469.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/7",
+          "block_type": "Text",
+          "html": "<p>If no designware implementation is available, the NVDLA repository contains an alternate implementation. The design can be compiled to using the alternate implementation by setting the tree.make variable DESIGNWARE_NOEXIST to 1.</p>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              498.0
+            ],
+            [
+              1028.0,
+              498.0
+            ],
+            [
+              1028.0,
+              580.0
+            ],
+            [
+              71.0,
+              580.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            498.0,
+            1028.0,
+            580.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/8",
+          "block_type": "Text",
+          "html": "<pre>DESIGNWARE_NOEXIST := 1</pre>",
+          "page": 2,
+          "polygon": [
+            [
+              83.0,
+              623.0
+            ],
+            [
+              348.0,
+              623.0
+            ],
+            [
+              348.0,
+              645.0
+            ],
+            [
+              83.0,
+              645.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            623.0,
+            348.0,
+            645.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/9",
+          "block_type": "Text",
+          "html": "<p>If designware implementation is available, set the tree.make variable DESIGNWARE_NOEXIST to 0. When using a designware implementation, the designware directory also needs up be added to tree.make with the DESIGNWARE_DIR variable. This variable should point to a directory where the simulation version of the designware component is available. Synthesis will pick up an internal optimized version.</p>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              686.0
+            ],
+            [
+              1044.0,
+              686.0
+            ],
+            [
+              1044.0,
+              821.0
+            ],
+            [
+              71.0,
+              821.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            686.0,
+            1044.0,
+            821.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/10",
+          "block_type": "Text",
+          "html": "<pre>DESIGNWARE_NOEXIST := 0\nDESIGNWARE_DIR := \\<path_to_designware_directory\\></path_to_designware_directory\\></pre>",
+          "page": 2,
+          "polygon": [
+            [
+              83.0,
+              862.0
+            ],
+            [
+              665.0,
+              862.0
+            ],
+            [
+              665.0,
+              911.0
+            ],
+            [
+              83.0,
+              911.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            862.0,
+            665.0,
+            911.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/SectionHeader/11",
+          "block_type": "SectionHeader",
+          "html": "<h2>Build Tree</h2>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              960.0
+            ],
+            [
+              284.0,
+              960.0
+            ],
+            [
+              284.0,
+              1003.0
+            ],
+            [
+              71.0,
+              1003.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            960.0,
+            284.0,
+            1003.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/SectionHeader/12",
+          "block_type": "SectionHeader",
+          "html": "<h3>Build RTL</h3>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              1033.0
+            ],
+            [
+              231.0,
+              1033.0
+            ],
+            [
+              231.0,
+              1069.0
+            ],
+            [
+              71.0,
+              1069.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1033.0,
+            231.0,
+            1069.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/13",
+          "block_type": "Text",
+          "html": "<p>Once tree.make has been setup, RTL can be build with following command</p>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              1085.0
+            ],
+            [
+              802.0,
+              1085.0
+            ],
+            [
+              802.0,
+              1110.0
+            ],
+            [
+              71.0,
+              1110.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1085.0,
+            802.0,
+            1110.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/14",
+          "block_type": "Text",
+          "html": "<pre>TOT &gt; ./tools/bin/tmake -build vmod</pre>",
+          "page": 2,
+          "polygon": [
+            [
+              75.0,
+              1143.0
+            ],
+            [
+              459.0,
+              1143.0
+            ],
+            [
+              459.0,
+              1164.0
+            ],
+            [
+              75.0,
+              1164.0
+            ]
+          ],
+          "bbox": [
+            75.0,
+            1143.0,
+            459.0,
+            1164.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/15",
+          "block_type": "Text",
+          "html": "<p>In the end of build process, following line will be show in the last line:</p>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              1193.0
+            ],
+            [
+              754.0,
+              1193.0
+            ],
+            [
+              754.0,
+              1217.0
+            ],
+            [
+              71.0,
+              1217.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1193.0,
+            754.0,
+            1217.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/16",
+          "block_type": "Text",
+          "html": "<pre>[TMAKE]: DONE</pre>",
+          "page": 2,
+          "polygon": [
+            [
+              87.0,
+              1262.0
+            ],
+            [
+              237.0,
+              1262.0
+            ],
+            [
+              237.0,
+              1281.0
+            ],
+            [
+              87.0,
+              1281.0
+            ]
+          ],
+          "bbox": [
+            87.0,
+            1262.0,
+            237.0,
+            1281.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/17",
+          "block_type": "Text",
+          "html": "<p>There will be a new directory named outdir under TOT. RTL file can be found under TOT/outdir/&lt;project_name&gt;/vmod.</p>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              1323.0
+            ],
+            [
+              881.0,
+              1323.0
+            ],
+            [
+              881.0,
+              1375.0
+            ],
+            [
+              71.0,
+              1375.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1323.0,
+            881.0,
+            1375.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageFooter/18",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              41.0,
+              1435.0
+            ],
+            [
+              376.0,
+              1435.0
+            ],
+            [
+              376.0,
+              1453.0
+            ],
+            [
+              41.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            1435.0,
+            376.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageFooter/19",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              1076.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1076.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1076.0,
+            1435.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/0/SectionHeader/5",
+        "3": "/page/1/SectionHeader/4"
+      }
+    },
+    {
+      "html": "<h3>Build Test Bench</h3><pre>TOT &gt; ./tools/bin/tmake -build_ready_for_test</pre><p>Several messages begin with [TMAKE] will be show on terminal output during build process, and in the end of the process, following line will be show in the last line:</p><pre>[TMAKE]: DONE</pre><p>There will be a new directory named outdir under TOT, it's generated by build flow and contains generated RTL and verification environment.</p><h3>Build test bench and run protect tests</h3><p>To validate tree healthiness after download from git server, or to make sure changes are not break base line functions, use following command to build tree and then run protection tests</p><pre>TOT &gt; ./tools/bin/tmake -build_verif_protection</pre><p>In the end of build process, following line will be show in the last line:</p><pre>[TMAKE]: DONE</pre><h3>Build CMOD</h3><p>There is a tmake target for the Cmodel of NVDLA, which lives in the <code>cmod/</code> directory. If building the Virtual Platform, or another application that uses the NVDLA Cmodel, please use following command</p><pre>TOT &gt; ./tools/bin/tmake -build_cmod_top</pre><p>In the end of build process, following line will be show in the last line:</p><pre>[TMAKE]: DONE</pre><p>CMOD headers and dynamically linked shared object library could be found under <code>outdir/&lt;project_name&gt;/cmod/release</code></p><p>Here is the end of <b>NVDLA Environment Setup Guide</b>.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        816.0,
+        1056.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          816.0,
+          0.0
+        ],
+        [
+          816.0,
+          1056.0
+        ],
+        [
+          0.0,
+          1056.0
+        ]
+      ],
+      "id": "/page/3/Page/3",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/3/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              30.0,
+              19.0
+            ],
+            [
+              113.0,
+              19.0
+            ],
+            [
+              113.0,
+              29.0
+            ],
+            [
+              30.0,
+              29.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            19.0,
+            113.0,
+            29.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              328.0,
+              19.0
+            ],
+            [
+              603.0,
+              19.0
+            ],
+            [
+              603.0,
+              29.0
+            ],
+            [
+              328.0,
+              29.0
+            ]
+          ],
+          "bbox": [
+            328.0,
+            19.0,
+            603.0,
+            29.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h3>Build Test Bench</h3>",
+          "page": 3,
+          "polygon": [
+            [
+              50.0,
+              35.0
+            ],
+            [
+              249.0,
+              35.0
+            ],
+            [
+              249.0,
+              62.0
+            ],
+            [
+              50.0,
+              62.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            35.0,
+            249.0,
+            62.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/3",
+          "block_type": "Text",
+          "html": "<pre>TOT &gt; ./tools/bin/tmake -build_ready_for_test</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              53.0,
+              73.0
+            ],
+            [
+              404.0,
+              73.0
+            ],
+            [
+              404.0,
+              88.0
+            ],
+            [
+              53.0,
+              88.0
+            ]
+          ],
+          "bbox": [
+            53.0,
+            73.0,
+            404.0,
+            88.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/4",
+          "block_type": "Text",
+          "html": "<p>Several messages begin with [TMAKE] will be show on terminal output during build process, and in the end of the process, following line will be show in the last line:</p>",
+          "page": 3,
+          "polygon": [
+            [
+              50.0,
+              111.0
+            ],
+            [
+              739.0,
+              111.0
+            ],
+            [
+              739.0,
+              148.0
+            ],
+            [
+              50.0,
+              148.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            111.0,
+            739.0,
+            148.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/5",
+          "block_type": "Text",
+          "html": "<pre>[TMAKE]: DONE</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              63.0,
+              179.0
+            ],
+            [
+              167.0,
+              179.0
+            ],
+            [
+              167.0,
+              194.0
+            ],
+            [
+              63.0,
+              194.0
+            ]
+          ],
+          "bbox": [
+            63.0,
+            179.0,
+            167.0,
+            194.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/6",
+          "block_type": "Text",
+          "html": "<p>There will be a new directory named outdir under TOT, it's generated by build flow and contains generated RTL and verification environment.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              50.0,
+              222.0
+            ],
+            [
+              715.0,
+              222.0
+            ],
+            [
+              715.0,
+              259.0
+            ],
+            [
+              50.0,
+              259.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            222.0,
+            715.0,
+            259.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h3>Build test bench and run protect tests</h3>",
+          "page": 3,
+          "polygon": [
+            [
+              50.0,
+              281.0
+            ],
+            [
+              505.0,
+              281.0
+            ],
+            [
+              505.0,
+              308.0
+            ],
+            [
+              50.0,
+              308.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            281.0,
+            505.0,
+            308.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/8",
+          "block_type": "Text",
+          "html": "<p>To validate tree healthiness after download from git server, or to make sure changes are not break base line functions, use following command to build tree and then run protection tests</p>",
+          "page": 3,
+          "polygon": [
+            [
+              50.0,
+              321.0
+            ],
+            [
+              731.0,
+              321.0
+            ],
+            [
+              731.0,
+              356.0
+            ],
+            [
+              50.0,
+              356.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            321.0,
+            731.0,
+            356.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/9",
+          "block_type": "Text",
+          "html": "<pre>TOT &gt; ./tools/bin/tmake -build_verif_protection</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              53.0,
+              379.0
+            ],
+            [
+              420.0,
+              379.0
+            ],
+            [
+              420.0,
+              393.0
+            ],
+            [
+              53.0,
+              393.0
+            ]
+          ],
+          "bbox": [
+            53.0,
+            379.0,
+            420.0,
+            393.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/10",
+          "block_type": "Text",
+          "html": "<p>In the end of build process, following line will be show in the last line:</p>",
+          "page": 3,
+          "polygon": [
+            [
+              50.0,
+              417.0
+            ],
+            [
+              536.0,
+              417.0
+            ],
+            [
+              536.0,
+              431.0
+            ],
+            [
+              50.0,
+              431.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            417.0,
+            536.0,
+            431.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/11",
+          "block_type": "Text",
+          "html": "<pre>[TMAKE]: DONE</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              63.0,
+              463.0
+            ],
+            [
+              167.0,
+              463.0
+            ],
+            [
+              167.0,
+              478.0
+            ],
+            [
+              63.0,
+              478.0
+            ]
+          ],
+          "bbox": [
+            63.0,
+            463.0,
+            167.0,
+            478.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/12",
+          "block_type": "SectionHeader",
+          "html": "<h3>Build CMOD</h3>",
+          "page": 3,
+          "polygon": [
+            [
+              50.0,
+              513.0
+            ],
+            [
+              193.0,
+              513.0
+            ],
+            [
+              193.0,
+              538.0
+            ],
+            [
+              50.0,
+              538.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            513.0,
+            193.0,
+            538.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/13",
+          "block_type": "Text",
+          "html": "<p>There is a tmake target for the Cmodel of NVDLA, which lives in the <code>cmod/</code> directory. If building the Virtual Platform, or another application that uses the NVDLA Cmodel, please use following command</p>",
+          "page": 3,
+          "polygon": [
+            [
+              50.0,
+              550.0
+            ],
+            [
+              749.0,
+              550.0
+            ],
+            [
+              749.0,
+              587.0
+            ],
+            [
+              50.0,
+              587.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            550.0,
+            749.0,
+            587.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/14",
+          "block_type": "Text",
+          "html": "<pre>TOT &gt; ./tools/bin/tmake -build_cmod_top</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              53.0,
+              610.0
+            ],
+            [
+              357.0,
+              610.0
+            ],
+            [
+              357.0,
+              625.0
+            ],
+            [
+              53.0,
+              625.0
+            ]
+          ],
+          "bbox": [
+            53.0,
+            610.0,
+            357.0,
+            625.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/15",
+          "block_type": "Text",
+          "html": "<p>In the end of build process, following line will be show in the last line:</p>",
+          "page": 3,
+          "polygon": [
+            [
+              50.0,
+              647.0
+            ],
+            [
+              536.0,
+              647.0
+            ],
+            [
+              536.0,
+              663.0
+            ],
+            [
+              50.0,
+              663.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            647.0,
+            536.0,
+            663.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/16",
+          "block_type": "Text",
+          "html": "<pre>[TMAKE]: DONE</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              63.0,
+              693.0
+            ],
+            [
+              167.0,
+              693.0
+            ],
+            [
+              167.0,
+              708.0
+            ],
+            [
+              63.0,
+              708.0
+            ]
+          ],
+          "bbox": [
+            63.0,
+            693.0,
+            167.0,
+            708.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/17",
+          "block_type": "Text",
+          "html": "<p>CMOD headers and dynamically linked shared object library could be found under <code>outdir/&lt;project_name&gt;/cmod/release</code></p>",
+          "page": 3,
+          "polygon": [
+            [
+              50.0,
+              738.0
+            ],
+            [
+              618.0,
+              738.0
+            ],
+            [
+              618.0,
+              774.0
+            ],
+            [
+              50.0,
+              774.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            738.0,
+            618.0,
+            774.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/18",
+          "block_type": "Text",
+          "html": "<p>Here is the end of <b>NVDLA Environment Setup Guide</b>.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              50.0,
+              797.0
+            ],
+            [
+              440.0,
+              797.0
+            ],
+            [
+              440.0,
+              813.0
+            ],
+            [
+              50.0,
+              813.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            797.0,
+            440.0,
+            813.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/PageFooter/19",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              30.0,
+              1023.0
+            ],
+            [
+              266.0,
+              1023.0
+            ],
+            [
+              266.0,
+              1033.0
+            ],
+            [
+              30.0,
+              1033.0
+            ]
+          ],
+          "bbox": [
+            30.0,
+            1023.0,
+            266.0,
+            1033.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/PageFooter/20",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              767.0,
+              1023.0
+            ],
+            [
+              782.0,
+              1023.0
+            ],
+            [
+              782.0,
+              1033.0
+            ],
+            [
+              767.0,
+              1033.0
+            ]
+          ],
+          "bbox": [
+            767.0,
+            1023.0,
+            782.0,
+            1033.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/2/SectionHeader/11",
+            "3": "/page/3/SectionHeader/12"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/2/SectionHeader/11",
+        "3": "/page/2/SectionHeader/12"
+      }
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 14
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 8
+      },
+      {
+        "page_id": 2,
+        "num_blocks": 20
+      },
+      {
+        "page_id": 3,
+        "num_blocks": 21
+      }
+    ]
+  }
+}

@@ -1,0 +1,4031 @@
+{
+  "children": [
+    {
+      "html": "<h1>Virtual Platform</h1><h2>1. Overview</h2><p>The NVDLA virtual platform provides a register-accurate system on which software can be quickly developed and debugged. The virtual platform is based on GreenSocs QBOX (https://git.greensocs.com/qemu/qbox), a solution for co-simulation with QEMU and SystemC. Fig. 81 below shows the top level diagram of the NVDLA virtual simulator. A QEMU emulator of ARMv8 'virt' SoC board is included to provide high performance CPU emulation and generic devices. The emulator is wrapped inside a standard SystemC module with a set of TLM-2.0 interfaces to interact with other SystemC modules.</p><img alt=\"\" src=\"2cb4ae7af8981b4179851b065f41dab8_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><p>Diagram illustrating the NVDLA Virtual Platform architecture.</p><p>The platform is structured hierarchically:</p><ul><li>Guest Kernel</li><li>QBOX(QEMU)</li><li>TLM2C</li><li>cpu</li><li>router</li><li>csb_adaptor, dbb_adaptor, sram_adaptor</li><li>nvdlc_core</li><li>irq_adaptor</li><li>memory</li></ul><p>Legend:</p><ul><li>QBOX(QEMU)</li><li>SystemC Model</li><li>TLM2C</li><li>MMIO</li><li>Memory</li><li>IRQ</li></ul></div><p>Fig. 81 - NVDLA Virtual Platform.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              520.0,
+              26.0
+            ],
+            [
+              792.0,
+              26.0
+            ],
+            [
+              792.0,
+              43.0
+            ],
+            [
+              520.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            520.0,
+            26.0,
+            792.0,
+            43.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h1>Virtual Platform</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              68.0,
+              89.0
+            ],
+            [
+              470.0,
+              89.0
+            ],
+            [
+              470.0,
+              139.0
+            ],
+            [
+              68.0,
+              139.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            89.0,
+            470.0,
+            139.0
+          ],
+          "section_hierarchy": {},
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h2>1. Overview</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              71.0,
+              190.0
+            ],
+            [
+              327.0,
+              190.0
+            ],
+            [
+              327.0,
+              231.0
+            ],
+            [
+              71.0,
+              231.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            190.0,
+            327.0,
+            231.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/4",
+          "block_type": "Text",
+          "html": "<p>The NVDLA virtual platform provides a register-accurate system on which software can be quickly developed and debugged. The virtual platform is based on GreenSocs QBOX (https://git.greensocs.com/qemu/qbox), a solution for co-simulation with QEMU and SystemC. Fig. 81 below shows the top level diagram of the NVDLA virtual simulator. A QEMU emulator of ARMv8 'virt' SoC board is included to provide high performance CPU emulation and generic devices. The emulator is wrapped inside a standard SystemC module with a set of TLM-2.0 interfaces to interact with other SystemC modules.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              68.0,
+              247.0
+            ],
+            [
+              1074.0,
+              247.0
+            ],
+            [
+              1074.0,
+              441.0
+            ],
+            [
+              68.0,
+              441.0
+            ]
+          ],
+          "bbox": [
+            68.0,
+            247.0,
+            1074.0,
+            441.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Figure/5",
+          "block_type": "Figure",
+          "html": "<img alt=\"\" src=\"2cb4ae7af8981b4179851b065f41dab8_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><p>Diagram illustrating the NVDLA Virtual Platform architecture.</p><p>The platform is structured hierarchically:</p><ul><li>Guest Kernel</li><li>QBOX(QEMU)</li><li>TLM2C</li><li>cpu</li><li>router</li><li>csb_adaptor, dbb_adaptor, sram_adaptor</li><li>nvdlc_core</li><li>irq_adaptor</li><li>memory</li></ul><p>Legend:</p><ul><li>QBOX(QEMU)</li><li>SystemC Model</li><li>TLM2C</li><li>MMIO</li><li>Memory</li><li>IRQ</li></ul></div>",
+          "page": 0,
+          "polygon": [
+            [
+              78.0,
+              473.0
+            ],
+            [
+              1060.0,
+              473.0
+            ],
+            [
+              1060.0,
+              1185.0
+            ],
+            [
+              78.0,
+              1185.0
+            ]
+          ],
+          "bbox": [
+            78.0,
+            473.0,
+            1060.0,
+            1185.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {
+            "2cb4ae7af8981b4179851b065f41dab8_img.jpg": "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k5OTQmkafHqBv0s4lu2yTMF+Y5GDzQBrZGcZGaMjOMjNZJ0jTzqP9oGzi+2dfO2/N0x1+nFEmkafNfrfSWcTXS4KzFfmGOnNAGtkA4yM0EgdSKybjSNPur2O8ns4pLmPGyVlyy4ORg/Wi70jT7+4jnu7OKaWPhHdclec8UAaxIHUgUEgdSBWTfaRp+psjXtnFOY8hTIucZpb7SrDUwgvrSK4EednmLnGev8AKgDVJA6kUZAGcjFZd5pdjqEMcN3axTRx8orrkLxjii50uxvLOO0uLWKW3ixsjZchcDAx+FAGpkYzkYoyMZyMVly6XYz2CWMtrE9qmAsRX5RjpxQ2l2LacNPNrEbMceTt+Xrnp9eaANXrRVHR1sl0e1XTsfYxGPKwSfl/Hmr1ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAUdY08appNxZGTy/NXG/bnGCD0/CpKi1qwbU9HubNJBG0q4DkZxyD/SpaACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCPR4rSDSLWKwcPaqgETBt2R9avVS0e2trPSLW3s5fNt40AjfcG3D6jg1doAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigChrVnNf6Pc2tvKIpZFAVySMcg9qlqLWre6utHuYLKUxXLr8jhyuOR3HI4qWgAooooAKKKKACiiigAooooAKKKKACiioLlbpk/0WWGN/8AprGXH6MKAJ6K5a5ufGlscrZ6Vcpn/ljv3AfRmFQp4i1NWCXlxYWDntd2c0Y/763bf1rRUm9mZ+0S3R19FYsB165jElvfaLKh6NGkjD8w1S+R4l/5+NJ/78yf/FUuTzHz+Rq0VleR4l/5+NJ/78yf/FUeR4l/5+NJ/wC/Mn/xVHJ5j5vI1aKyvI8S/wDP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0Vmf23F/z53n/fr/AOvR/bcX/Pnef9+v/r0e0j3DniadFZn9txf8+d5/36/+vR/bcX/Pnef9+v8A69HtI9w54mnRWZ/bcX/Pnef9+v8A69H9txf8+d5/36/+vR7SPcOeJp0Vmf23F/z53n/fr/69H9txf8+d5/36/wDr0e0j3DniadFZn9txf8+d5/36/wDr0f23F/z53n/fr/69HtI9w54mnRWZ/bcX/Pnef9+v/r0f23F/z53n/fr/AOvR7SPcOeJp0Vmf23F/z53n/fr/AOvR/bcX/Pnef9+v/r0e0j3DniadFZn9txf8+d5/36/+vR/bcX/Pnef9+v8A69HtI9w54mnRWZ/bcX/Pnef9+v8A69H9txf8+d5/36/+vR7SPcOeJp0Vmf23F/z53n/fr/69H9txf8+d5/36/wDr0e0j3DniadFZn9txf8+d5/36/wDr0f23F/z53n/fr/69HtI9w54mnRWZ/bcX/Pnef9+v/r0f23F/z53n/fr/AOvR7SPcOeJp0Vmf23F/z53n/fr/AOvR/bcX/Pnef9+v/r0e0j3DniadFZn9txf8+d5/36/+vTX16CNC72t4qqMkmLp+tHtI9w549zVopFIZQR0IzS1ZQUUUUAFFFFAEejy2c2kWslggS0ZAYlC4wPpV6qOjmyOkWp07H2PYPKwD938efzq9QAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAFHWLFdT0m4s3kMayrguBnHIP9KkqLWdP/tTSLmyEvleauN+3OMEHp+FS0AFFFFABWD4V/wCPK6/6+G/kK3qwfCv/AB5XX/Xw38hW0P4cvkZy+OPzN6iiisTQzdc/48E/67xf+himU/XP+PBP+u8X/oYplYy+JmU/iCiiigkKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACqupf8gy6/65N/KrVVdS/wCQZdf9cm/lUy2YnsbsX+qT/dFOpsX+qT/dFOroOgKKKKACiiig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"
+          }
+        },
+        {
+          "id": "/page/0/Caption/6",
+          "block_type": "Caption",
+          "html": "<p>Fig. 81 - NVDLA Virtual Platform.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              391.0,
+              1192.0
+            ],
+            [
+              717.0,
+              1192.0
+            ],
+            [
+              717.0,
+              1214.0
+            ],
+            [
+              391.0,
+              1214.0
+            ]
+          ],
+          "bbox": [
+            391.0,
+            1192.0,
+            717.0,
+            1214.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/7",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              39.0,
+              1435.0
+            ],
+            [
+              195.0,
+              1435.0
+            ],
+            [
+              195.0,
+              1455.0
+            ],
+            [
+              39.0,
+              1455.0
+            ]
+          ],
+          "bbox": [
+            39.0,
+            1435.0,
+            195.0,
+            1455.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/PageFooter/8",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 0,
+          "polygon": [
+            [
+              1077.0,
+              1435.0
+            ],
+            [
+              1104.0,
+              1435.0
+            ],
+            [
+              1104.0,
+              1453.0
+            ],
+            [
+              1077.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1077.0,
+            1435.0,
+            1104.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {}
+    },
+    {
+      "html": "<h2>2. Using the Virtual Simulator</h2><p>It is recommended that you use the pre-built virtual simulator binary included in the docker (https://hub.docker.com/r/nvdl) image. The 2.6 Running the Virtual Simulator From Docker section describes the detail. You are also welcome to build the virtual simulator from source code and use that.</p><h3>2.1 System Requirements</h3><p>It is recommended to build the virtual simulator in a system that meets the following requirements:</p><ul><li>OS: Ubuntu 14.04</li><li>g++ 4.8.4</li><li>git &gt; 1.8.2</li><li>systemc 2.3.0</li><li>cmake &gt; 2.8</li><li>libboost &gt; 1.34</li><li>python dev</li><li>glib2 dev</li><li>pixman dev</li><li>lua 5.2 dev</li><li>swig</li><li>libcap dev</li><li>libattr1 dev</li></ul><h4><b>Note</b></h4><p>virtual simulator also can run with CentOS 7, details refer to Virtual Platform On AWS FPGA (<a href=\"#\">vp_fpga.html</a>)</p><p>Several tools like Java and Perl are also required to build the NVDLA hardware tree. Please refer to Environment Setup (<a href=\"#\">hw/v1/integration_guide.html#env-setup</a>) for details.</p><h3>2.2 Download the Virtual Simulator</h3><p>The NVDLA virtual simulator source code can be downloaded from github (https://github.com/nvdl/vp).</p><pre>$ git clone https://github.com/nvdl/vp.git\n$ cd vp\n$ git submodule update --init --recursive</pre><h3>2.3 Install Dependencies</h3><h4>2.3.1 Install required tools and libraries</h4><pre>$ sudo apt-get update\n$ sudo apt-get install g++ cmake libboost-dev python-dev libglib2.0-dev libpixman-1-dev</pre><h4>2.3.2 Download and install SystemC 2.3.0</h4>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/1/Page/1",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/1/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              520.0,
+              26.0
+            ],
+            [
+              792.0,
+              26.0
+            ],
+            [
+              792.0,
+              43.0
+            ],
+            [
+              520.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            520.0,
+            26.0,
+            792.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h2>2. Using the Virtual Simulator</h2>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              51.0
+            ],
+            [
+              703.0,
+              51.0
+            ],
+            [
+              703.0,
+              96.0
+            ],
+            [
+              71.0,
+              96.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            51.0,
+            703.0,
+            96.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/3",
+          "block_type": "Text",
+          "html": "<p>It is recommended that you use the pre-built virtual simulator binary included in the docker (https://hub.docker.com/r/nvdl) image. The 2.6 Running the Virtual Simulator From Docker section describes the detail. You are also welcome to build the virtual simulator from source code and use that.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              112.0
+            ],
+            [
+              1056.0,
+              112.0
+            ],
+            [
+              1056.0,
+              219.0
+            ],
+            [
+              71.0,
+              219.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            112.0,
+            1056.0,
+            219.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/4",
+          "block_type": "SectionHeader",
+          "html": "<h3>2.1 System Requirements</h3>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              250.0
+            ],
+            [
+              510.0,
+              250.0
+            ],
+            [
+              510.0,
+              289.0
+            ],
+            [
+              71.0,
+              289.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            250.0,
+            510.0,
+            289.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/5",
+          "block_type": "Text",
+          "html": "<p>It is recommended to build the virtual simulator in a system that meets the following requirements:</p>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              302.0
+            ],
+            [
+              1048.0,
+              302.0
+            ],
+            [
+              1048.0,
+              328.0
+            ],
+            [
+              71.0,
+              328.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            302.0,
+            1048.0,
+            328.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/ListGroup/6",
+          "block_type": "ListGroup",
+          "html": "<ul><li>OS: Ubuntu 14.04</li><li>g++ 4.8.4</li><li>git &gt; 1.8.2</li><li>systemc 2.3.0</li><li>cmake &gt; 2.8</li><li>libboost &gt; 1.34</li><li>python dev</li><li>glib2 dev</li><li>pixman dev</li><li>lua 5.2 dev</li><li>swig</li><li>libcap dev</li><li>libattr1 dev</li></ul>",
+          "page": 1,
+          "polygon": [
+            [
+              103.0,
+              357.0
+            ],
+            [
+              311.0,
+              357.0
+            ],
+            [
+              311.0,
+              717.0
+            ],
+            [
+              103.0,
+              717.0
+            ]
+          ],
+          "bbox": [
+            103.0,
+            357.0,
+            311.0,
+            717.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h4><b>Note</b></h4>",
+          "page": 1,
+          "polygon": [
+            [
+              80.0,
+              743.0
+            ],
+            [
+              132.0,
+              743.0
+            ],
+            [
+              132.0,
+              763.0
+            ],
+            [
+              80.0,
+              763.0
+            ]
+          ],
+          "bbox": [
+            80.0,
+            743.0,
+            132.0,
+            763.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/8",
+          "block_type": "Text",
+          "html": "<p>virtual simulator also can run with CentOS 7, details refer to Virtual Platform On AWS FPGA (<a href=\"#\">vp_fpga.html</a>)</p>",
+          "page": 1,
+          "polygon": [
+            [
+              89.0,
+              779.0
+            ],
+            [
+              1032.0,
+              779.0
+            ],
+            [
+              1032.0,
+              801.0
+            ],
+            [
+              89.0,
+              801.0
+            ]
+          ],
+          "bbox": [
+            89.0,
+            779.0,
+            1032.0,
+            801.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/4",
+            "4": "/page/1/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/9",
+          "block_type": "Text",
+          "html": "<p>Several tools like Java and Perl are also required to build the NVDLA hardware tree. Please refer to Environment Setup (<a href=\"#\">hw/v1/integration_guide.html#env-setup</a>) for details.</p>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              827.0
+            ],
+            [
+              1036.0,
+              827.0
+            ],
+            [
+              1036.0,
+              879.0
+            ],
+            [
+              71.0,
+              879.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            827.0,
+            1036.0,
+            879.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/4",
+            "4": "/page/1/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/10",
+          "block_type": "SectionHeader",
+          "html": "<h3>2.2 Download the Virtual Simulator</h3>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              907.0
+            ],
+            [
+              669.0,
+              907.0
+            ],
+            [
+              669.0,
+              945.0
+            ],
+            [
+              71.0,
+              945.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            907.0,
+            669.0,
+            945.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/4",
+            "4": "/page/1/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/11",
+          "block_type": "Text",
+          "html": "<p>The NVDLA virtual simulator source code can be downloaded from github (https://github.com/nvdl/vp).</p>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              960.0
+            ],
+            [
+              789.0,
+              960.0
+            ],
+            [
+              789.0,
+              1014.0
+            ],
+            [
+              71.0,
+              1014.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            960.0,
+            789.0,
+            1014.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/12",
+          "block_type": "Text",
+          "html": "<pre>$ git clone https://github.com/nvdl/vp.git\n$ cd vp\n$ git submodule update --init --recursive</pre>",
+          "page": 1,
+          "polygon": [
+            [
+              83.0,
+              1057.0
+            ],
+            [
+              576.0,
+              1057.0
+            ],
+            [
+              576.0,
+              1131.0
+            ],
+            [
+              83.0,
+              1131.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            1057.0,
+            576.0,
+            1131.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/13",
+          "block_type": "SectionHeader",
+          "html": "<h3>2.3 Install Dependencies</h3>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              1177.0
+            ],
+            [
+              492.0,
+              1177.0
+            ],
+            [
+              492.0,
+              1214.0
+            ],
+            [
+              71.0,
+              1214.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1177.0,
+            492.0,
+            1214.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/10"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/14",
+          "block_type": "SectionHeader",
+          "html": "<h4>2.3.1 Install required tools and libraries</h4>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              1226.0
+            ],
+            [
+              574.0,
+              1226.0
+            ],
+            [
+              574.0,
+              1256.0
+            ],
+            [
+              71.0,
+              1256.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1226.0,
+            574.0,
+            1256.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/15",
+          "block_type": "Text",
+          "html": "<pre>$ sudo apt-get update\n$ sudo apt-get install g++ cmake libboost-dev python-dev libglib2.0-dev libpixman-1-dev</pre>",
+          "page": 1,
+          "polygon": [
+            [
+              83.0,
+              1290.0
+            ],
+            [
+              1072.0,
+              1290.0
+            ],
+            [
+              1072.0,
+              1339.0
+            ],
+            [
+              83.0,
+              1339.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            1290.0,
+            1072.0,
+            1339.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/1/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/16",
+          "block_type": "SectionHeader",
+          "html": "<h4>2.3.2 Download and install SystemC 2.3.0</h4>",
+          "page": 1,
+          "polygon": [
+            [
+              71.0,
+              1375.0
+            ],
+            [
+              604.0,
+              1375.0
+            ],
+            [
+              604.0,
+              1404.0
+            ],
+            [
+              71.0,
+              1404.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1375.0,
+            604.0,
+            1404.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/1/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/17",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              41.0,
+              1435.0
+            ],
+            [
+              195.0,
+              1435.0
+            ],
+            [
+              195.0,
+              1453.0
+            ],
+            [
+              41.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            1435.0,
+            195.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/1/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/PageFooter/18",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 1,
+          "polygon": [
+            [
+              1076.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1076.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1076.0,
+            1435.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/1/SectionHeader/16"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/0/SectionHeader/3"
+      }
+    },
+    {
+      "html": "<p>Please be noted that SystemC 2.3.1/2.3.2 is not supported currently.</p><pre>$ wget -O systemc-2.3.0a.tar.gz https://www.accellera.org/images/downloads/standards/systemc-2.3.0a.tar.gz\n$ tar -xzf systemc-2.3.0a.tar.gz\n$ cd systemc-2.3.0a\n$ sudo mkdir -p /usr/local/systemc-2.3.0/\n$ mkdir objdir\n$ cd objdir\n$ ../configure --prefix=/usr/local/systemc-2.3.0\n$ make\n$ sudo make install</pre><h4>2.3.3 Download and install perl package required</h4><p>We need to install perl package YAML.pm and Tee.pm to build NVDLA CMOD.</p><pre>$ wget -O YAML-1.24.tar.gz https://search.cpan.org/CPAN/authors/id/T/TI/TINITA/YAML-1.24.tar.gz\n$ tar -xzf YAML-1.24.tar.gz\n$ cd YAML-1.24\n$ perl Makefile.PL\n$ make\n$ sudo make install\n$ wget -O IO-Tee-0.65.tar.gz https://search.cpan.org/CPAN/authors/id/N/NE/NEILB/IO-Tee-0.65.tar.gz\n$ tar -xzf IO-Tee-0.65.tar.gz\n$ cd IO-Tee-0.65\n$ perl Makefile.PL\n$ make\n$ sudo make install</pre><h4>2.3.4 Download and build NVDLA CMOD</h4><p>Please refer to Tree Build (<a href=\"#\">hw/v1/integration_guide.html#tree-build</a>) for details on building the NVDLA hardware tree, and make sure the required tools listed in Environment Setup (<a href=\"#\">hw/v1/integration_guide.html#env-setup</a>) are installed first.</p><pre>$ git clone https://github.com/nvdla/hw.git\n$ cd hw\n$ make\n$ tools/bin/tmake -build cmod_top</pre><p>The header files and library will be generated in <code>hw/outdir/&lt;project&gt;/cmod/release</code>.</p><h3>2.4 Build and Install the Virtual Simulator</h3><h4>2.4.1 Cmake build under the vp repository directory</h4><pre>$ cmake -DCMAKE_INSTALL_PREFIX=[install dir] -DSYSTEMC_PREFIX=[systemc prefix] -DNVDLA_</pre>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/2/Page/2",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/2/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/1/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              520.0,
+              26.0
+            ],
+            [
+              792.0,
+              26.0
+            ],
+            [
+              792.0,
+              43.0
+            ],
+            [
+              520.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            520.0,
+            26.0,
+            792.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/1/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/2",
+          "block_type": "Text",
+          "html": "<p>Please be noted that SystemC 2.3.1/2.3.2 is not supported currently.</p>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              51.0
+            ],
+            [
+              746.0,
+              51.0
+            ],
+            [
+              746.0,
+              77.0
+            ],
+            [
+              71.0,
+              77.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            51.0,
+            746.0,
+            77.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/1/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/3",
+          "block_type": "Text",
+          "html": "<pre>$ wget -O systemc-2.3.0a.tar.gz https://www.accellera.org/images/downloads/standards/systemc-2.3.0a.tar.gz\n$ tar -xzf systemc-2.3.0a.tar.gz\n$ cd systemc-2.3.0a\n$ sudo mkdir -p /usr/local/systemc-2.3.0/\n$ mkdir objdir\n$ cd objdir\n$ ../configure --prefix=/usr/local/systemc-2.3.0\n$ make\n$ sudo make install</pre>",
+          "page": 2,
+          "polygon": [
+            [
+              83.0,
+              120.0
+            ],
+            [
+              1072.0,
+              120.0
+            ],
+            [
+              1072.0,
+              347.0
+            ],
+            [
+              83.0,
+              347.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            120.0,
+            1072.0,
+            347.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/1/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/SectionHeader/4",
+          "block_type": "SectionHeader",
+          "html": "<h4>2.3.3 Download and install perl package required</h4>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              380.0
+            ],
+            [
+              693.0,
+              380.0
+            ],
+            [
+              693.0,
+              409.0
+            ],
+            [
+              71.0,
+              409.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            380.0,
+            693.0,
+            409.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/1/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/5",
+          "block_type": "Text",
+          "html": "<p>We need to install perl package YAML.pm and Tee.pm to build NVDLA CMOD.</p>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              424.0
+            ],
+            [
+              823.0,
+              424.0
+            ],
+            [
+              823.0,
+              449.0
+            ],
+            [
+              71.0,
+              449.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            424.0,
+            823.0,
+            449.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/2/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/6",
+          "block_type": "Text",
+          "html": "<pre>$ wget -O YAML-1.24.tar.gz https://search.cpan.org/CPAN/authors/id/T/TI/TINITA/YAML-1.24.tar.gz\n$ tar -xzf YAML-1.24.tar.gz\n$ cd YAML-1.24\n$ perl Makefile.PL\n$ make\n$ sudo make install\n$ wget -O IO-Tee-0.65.tar.gz https://search.cpan.org/CPAN/authors/id/N/NE/NEILB/IO-Tee-0.65.tar.gz\n$ tar -xzf IO-Tee-0.65.tar.gz\n$ cd IO-Tee-0.65\n$ perl Makefile.PL\n$ make\n$ sudo make install</pre>",
+          "page": 2,
+          "polygon": [
+            [
+              83.0,
+              493.0
+            ],
+            [
+              1072.0,
+              493.0
+            ],
+            [
+              1072.0,
+              801.0
+            ],
+            [
+              83.0,
+              801.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            493.0,
+            1072.0,
+            801.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/2/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h4>2.3.4 Download and build NVDLA CMOD</h4>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              837.0
+            ],
+            [
+              578.0,
+              837.0
+            ],
+            [
+              578.0,
+              867.0
+            ],
+            [
+              71.0,
+              867.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            837.0,
+            578.0,
+            867.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/2/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/8",
+          "block_type": "Text",
+          "html": "<p>Please refer to Tree Build (<a href=\"#\">hw/v1/integration_guide.html#tree-build</a>) for details on building the NVDLA hardware tree, and make sure the required tools listed in Environment Setup (<a href=\"#\">hw/v1/integration_guide.html#env-setup</a>) are installed first.</p>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              885.0
+            ],
+            [
+              1074.0,
+              885.0
+            ],
+            [
+              1074.0,
+              965.0
+            ],
+            [
+              71.0,
+              965.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            885.0,
+            1074.0,
+            965.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/2/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/9",
+          "block_type": "Text",
+          "html": "<pre>$ git clone https://github.com/nvdla/hw.git\n$ cd hw\n$ make\n$ tools/bin/tmake -build cmod_top</pre>",
+          "page": 2,
+          "polygon": [
+            [
+              83.0,
+              1008.0
+            ],
+            [
+              575.0,
+              1008.0
+            ],
+            [
+              575.0,
+              1107.0
+            ],
+            [
+              83.0,
+              1107.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            1008.0,
+            575.0,
+            1107.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/2/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/10",
+          "block_type": "Text",
+          "html": "<p>The header files and library will be generated in <code>hw/outdir/&lt;project&gt;/cmod/release</code>.</p>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              1146.0
+            ],
+            [
+              895.0,
+              1146.0
+            ],
+            [
+              895.0,
+              1171.0
+            ],
+            [
+              71.0,
+              1171.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1146.0,
+            895.0,
+            1171.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/2/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/SectionHeader/11",
+          "block_type": "SectionHeader",
+          "html": "<h3>2.4 Build and Install the Virtual Simulator</h3>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              1202.0
+            ],
+            [
+              777.0,
+              1202.0
+            ],
+            [
+              777.0,
+              1238.0
+            ],
+            [
+              71.0,
+              1238.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1202.0,
+            777.0,
+            1238.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/1/SectionHeader/13",
+            "4": "/page/2/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/SectionHeader/12",
+          "block_type": "SectionHeader",
+          "html": "<h4>2.4.1 Cmake build under the vp repository directory</h4>",
+          "page": 2,
+          "polygon": [
+            [
+              71.0,
+              1253.0
+            ],
+            [
+              730.0,
+              1253.0
+            ],
+            [
+              730.0,
+              1281.0
+            ],
+            [
+              71.0,
+              1281.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1253.0,
+            730.0,
+            1281.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/Text/13",
+          "block_type": "Text",
+          "html": "<pre>$ cmake -DCMAKE_INSTALL_PREFIX=[install dir] -DSYSTEMC_PREFIX=[systemc prefix] -DNVDLA_</pre>",
+          "page": 2,
+          "polygon": [
+            [
+              83.0,
+              1317.0
+            ],
+            [
+              1072.0,
+              1317.0
+            ],
+            [
+              1072.0,
+              1337.0
+            ],
+            [
+              83.0,
+              1337.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            1317.0,
+            1072.0,
+            1337.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11",
+            "4": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageFooter/14",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              41.0,
+              1435.0
+            ],
+            [
+              195.0,
+              1435.0
+            ],
+            [
+              195.0,
+              1453.0
+            ],
+            [
+              41.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            1435.0,
+            195.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11",
+            "4": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/2/PageFooter/15",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 2,
+          "polygon": [
+            [
+              1077.0,
+              1435.0
+            ],
+            [
+              1104.0,
+              1435.0
+            ],
+            [
+              1104.0,
+              1453.0
+            ],
+            [
+              1077.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1077.0,
+            1435.0,
+            1104.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11",
+            "4": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/1/SectionHeader/2",
+        "3": "/page/1/SectionHeader/13",
+        "4": "/page/1/SectionHeader/16"
+      }
+    },
+    {
+      "html": "<p><i>install dir</i> is where you would like to install the virtual simulator, <i>systemc prefix</i> is the SystemC installation directory, <i>nvdlahw prefix</i> is the local NVDLA HW repository, and <i>nvdlahw project name</i> is the NVDLA HW project name.</p><p>Example:</p><pre>$ cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=/usr/local/systemc-2.3.0/ -DNVDLA</pre><h4>2.4.2 Compile and install</h4><pre>$ make\n$ make install</pre><h3>2.5 Running the Virtual Simulator</h3><h4>2.5.1 Prepare Kernel Image</h4><p>A demo linux kernel image is provided in the github release. You can run this image in the virtual simulator, and run the NVDLA KMD/UMD inside it.</p><p>If you would like to build a linux kernel on your own, please refer to 3. Building Linux Kernel for NVDLA Virtual Simulator.</p><p>After the image is ready, modify the <i>conf/aarch64_nvdlahw.lua</i> for the image and rootfs file location.</p><h4>2.5.2 Standard QEMU Arguments</h4><p>The configuration of the virtual simulator is defined in <i>conf/aarch64_nvdlahw.lua</i>. You can change the standard QEMU arguments in <i>extra_arguments</i> inside the <i>lua</i> file.</p><h4>2.5.3 Running Kernel Image In the Virtual Simulator</h4><p>Start the virtual simulator. Pay attention that the environment variable 'SC_SIGNAL_WRITE_CHECK' should be set to 'DISABLE' before we run the virtual simulator.</p><pre>$ export SC_SIGNAL_WRITE_CHECK=DISABLE\n$ ./build/bin/aarch64_toplevel -c conf/aarch64_nvdlahw.lua\nLogin the kernel. The demo image uses account 'root' and password 'nvdlahw'.</pre><p>Some demo tests are provided in the <i>tests</i> directory, you can run them after login as root.</p><pre># mount -t 9p -o trans=virtio r /mnt\n# cd /mnt/tests/hello\n# ./aarch64_hello</pre><p>You should be able to see 'Hello World!' printed in the screen. You are now ready to try out the NVDLA software in the virtual simulator! Please refer to Software Manual (<a href=\"#\">sw/contents.html</a>) for details.</p><p>If you want to exit the virtual simulator, press 'ctrl+a x'.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/3/Page/3",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/3/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              159.0,
+              26.0
+            ],
+            [
+              159.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            159.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11",
+            "4": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              520.0,
+              26.0
+            ],
+            [
+              792.0,
+              26.0
+            ],
+            [
+              792.0,
+              43.0
+            ],
+            [
+              520.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            520.0,
+            26.0,
+            792.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11",
+            "4": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/2",
+          "block_type": "Text",
+          "html": "<p><i>install dir</i> is where you would like to install the virtual simulator, <i>systemc prefix</i> is the SystemC installation directory, <i>nvdlahw prefix</i> is the local NVDLA HW repository, and <i>nvdlahw project name</i> is the NVDLA HW project name.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              51.0
+            ],
+            [
+              1055.0,
+              51.0
+            ],
+            [
+              1055.0,
+              132.0
+            ],
+            [
+              71.0,
+              132.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            51.0,
+            1055.0,
+            132.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11",
+            "4": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/3",
+          "block_type": "Text",
+          "html": "<p>Example:</p>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              161.0
+            ],
+            [
+              167.0,
+              161.0
+            ],
+            [
+              167.0,
+              185.0
+            ],
+            [
+              71.0,
+              185.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            161.0,
+            167.0,
+            185.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11",
+            "4": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/4",
+          "block_type": "Text",
+          "html": "<pre>$ cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=/usr/local/systemc-2.3.0/ -DNVDLA</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              84.0,
+              231.0
+            ],
+            [
+              1072.0,
+              231.0
+            ],
+            [
+              1072.0,
+              250.0
+            ],
+            [
+              84.0,
+              250.0
+            ]
+          ],
+          "bbox": [
+            84.0,
+            231.0,
+            1072.0,
+            250.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11",
+            "4": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h4>2.4.2 Compile and install</h4>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              282.0
+            ],
+            [
+              389.0,
+              282.0
+            ],
+            [
+              389.0,
+              311.0
+            ],
+            [
+              71.0,
+              311.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            282.0,
+            389.0,
+            311.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11",
+            "4": "/page/2/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/6",
+          "block_type": "Text",
+          "html": "<pre>$ make\n$ make install</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              84.0,
+              347.0
+            ],
+            [
+              247.0,
+              347.0
+            ],
+            [
+              247.0,
+              393.0
+            ],
+            [
+              84.0,
+              393.0
+            ]
+          ],
+          "bbox": [
+            84.0,
+            347.0,
+            247.0,
+            393.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11",
+            "4": "/page/3/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h3>2.5 Running the Virtual Simulator</h3>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              441.0
+            ],
+            [
+              642.0,
+              441.0
+            ],
+            [
+              642.0,
+              478.0
+            ],
+            [
+              71.0,
+              478.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            441.0,
+            642.0,
+            478.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/2/SectionHeader/11",
+            "4": "/page/3/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/8",
+          "block_type": "SectionHeader",
+          "html": "<h4>2.5.1 Prepare Kernel Image</h4>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              488.0
+            ],
+            [
+              424.0,
+              488.0
+            ],
+            [
+              424.0,
+              519.0
+            ],
+            [
+              71.0,
+              519.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            488.0,
+            424.0,
+            519.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/9",
+          "block_type": "Text",
+          "html": "<p>A demo linux kernel image is provided in the github release. You can run this image in the virtual simulator, and run the NVDLA KMD/UMD inside it.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              534.0
+            ],
+            [
+              1024.0,
+              534.0
+            ],
+            [
+              1024.0,
+              588.0
+            ],
+            [
+              71.0,
+              588.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            534.0,
+            1024.0,
+            588.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/10",
+          "block_type": "Text",
+          "html": "<p>If you would like to build a linux kernel on your own, please refer to 3. Building Linux Kernel for NVDLA Virtual Simulator.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              617.0
+            ],
+            [
+              1009.0,
+              617.0
+            ],
+            [
+              1009.0,
+              668.0
+            ],
+            [
+              71.0,
+              668.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            617.0,
+            1009.0,
+            668.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/11",
+          "block_type": "Text",
+          "html": "<p>After the image is ready, modify the <i>conf/aarch64_nvdlahw.lua</i> for the image and rootfs file location.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              697.0
+            ],
+            [
+              1028.0,
+              697.0
+            ],
+            [
+              1028.0,
+              721.0
+            ],
+            [
+              71.0,
+              721.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            697.0,
+            1028.0,
+            721.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/12",
+          "block_type": "SectionHeader",
+          "html": "<h4>2.5.2 Standard QEMU Arguments</h4>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              749.0
+            ],
+            [
+              494.0,
+              749.0
+            ],
+            [
+              494.0,
+              778.0
+            ],
+            [
+              71.0,
+              778.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            749.0,
+            494.0,
+            778.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/13",
+          "block_type": "Text",
+          "html": "<p>The configuration of the virtual simulator is defined in <i>conf/aarch64_nvdlahw.lua</i>. You can change the standard QEMU arguments in <i>extra_arguments</i> inside the <i>lua</i> file.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              794.0
+            ],
+            [
+              1038.0,
+              794.0
+            ],
+            [
+              1038.0,
+              844.0
+            ],
+            [
+              71.0,
+              844.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            794.0,
+            1038.0,
+            844.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/SectionHeader/14",
+          "block_type": "SectionHeader",
+          "html": "<h4>2.5.3 Running Kernel Image In the Virtual Simulator</h4>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              874.0
+            ],
+            [
+              737.0,
+              874.0
+            ],
+            [
+              737.0,
+              902.0
+            ],
+            [
+              71.0,
+              902.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            874.0,
+            737.0,
+            902.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/15",
+          "block_type": "Text",
+          "html": "<p>Start the virtual simulator. Pay attention that the environment variable 'SC_SIGNAL_WRITE_CHECK' should be set to 'DISABLE' before we run the virtual simulator.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              917.0
+            ],
+            [
+              1052.0,
+              917.0
+            ],
+            [
+              1052.0,
+              968.0
+            ],
+            [
+              71.0,
+              968.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            917.0,
+            1052.0,
+            968.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/16",
+          "block_type": "Text",
+          "html": "<pre>$ export SC_SIGNAL_WRITE_CHECK=DISABLE\n$ ./build/bin/aarch64_toplevel -c conf/aarch64_nvdlahw.lua\nLogin the kernel. The demo image uses account 'root' and password 'nvdlahw'.</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              84.0,
+              1015.0
+            ],
+            [
+              922.0,
+              1015.0
+            ],
+            [
+              922.0,
+              1087.0
+            ],
+            [
+              84.0,
+              1087.0
+            ]
+          ],
+          "bbox": [
+            84.0,
+            1015.0,
+            922.0,
+            1087.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/17",
+          "block_type": "Text",
+          "html": "<p>Some demo tests are provided in the <i>tests</i> directory, you can run them after login as root.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              1128.0
+            ],
+            [
+              952.0,
+              1128.0
+            ],
+            [
+              952.0,
+              1150.0
+            ],
+            [
+              71.0,
+              1150.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1128.0,
+            952.0,
+            1150.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/18",
+          "block_type": "Text",
+          "html": "<pre># mount -t 9p -o trans=virtio r /mnt\n# cd /mnt/tests/hello\n# ./aarch64_hello</pre>",
+          "page": 3,
+          "polygon": [
+            [
+              84.0,
+              1196.0
+            ],
+            [
+              497.0,
+              1196.0
+            ],
+            [
+              497.0,
+              1268.0
+            ],
+            [
+              84.0,
+              1268.0
+            ]
+          ],
+          "bbox": [
+            84.0,
+            1196.0,
+            497.0,
+            1268.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/19",
+          "block_type": "Text",
+          "html": "<p>You should be able to see 'Hello World!' printed in the screen. You are now ready to try out the NVDLA software in the virtual simulator! Please refer to Software Manual (<a href=\"#\">sw/contents.html</a>) for details.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              1308.0
+            ],
+            [
+              1072.0,
+              1308.0
+            ],
+            [
+              1072.0,
+              1360.0
+            ],
+            [
+              71.0,
+              1360.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1308.0,
+            1072.0,
+            1360.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/Text/20",
+          "block_type": "Text",
+          "html": "<p>If you want to exit the virtual simulator, press 'ctrl+a x'.</p>",
+          "page": 3,
+          "polygon": [
+            [
+              71.0,
+              1392.0
+            ],
+            [
+              619.0,
+              1392.0
+            ],
+            [
+              619.0,
+              1415.0
+            ],
+            [
+              71.0,
+              1415.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1392.0,
+            619.0,
+            1415.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/PageFooter/21",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              41.0,
+              1435.0
+            ],
+            [
+              195.0,
+              1435.0
+            ],
+            [
+              195.0,
+              1453.0
+            ],
+            [
+              41.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            1435.0,
+            195.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/3/PageFooter/22",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 3,
+          "polygon": [
+            [
+              1077.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1077.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1077.0,
+            1435.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/1/SectionHeader/2",
+        "3": "/page/2/SectionHeader/11",
+        "4": "/page/2/SectionHeader/12"
+      }
+    },
+    {
+      "html": "<h3>2.6 Running the Virtual Simulator From Docker</h3><pre>$ docker pull nvdlapv\n$ docker run -it -v /home:/home nvdlapv\n$ cd /usr/local/nvdla\n$ aarch64_toplevel -c aarch64_nvdlalua\nLogin the kernel with account 'root' and password 'nvdlalua'</pre><p>The NVDLA software is also provided in the docker image, please refer to Software Manual (sw/contents.html) on how to run the NVDLA software.</p><h3>2.7 Debugging the Virtual Simulator</h3><p>Before debugging the virtual simulator, you need to build the debug version of the simulator:</p><pre>$ cmake -DCMAKE_INSTALL_PREFIX=[install dir] -DSYSTEMC_PREFIX=[systemc prefix] -DNVDLA_\n$ make\n$ make install</pre><h4>2.7.1 Log Output Control</h4><p>The log output of SystemC simulator is controlled by a configuration string that can be set in two ways:</p><ul><li>The command line option '-s control_string' or '-sc_log control_string'</li><li>The environment variable 'export SC_LOG=control_string'</li></ul><p>If both control strings are set, the simulator will pick the one set by environment variable SC_LOG.</p><p>The format of the control string is:</p><pre>\"outfile:&lt;log_file&gt;;verbosity_level:&lt;info_level&gt;;&lt;msg_string&gt;;&lt;report_level&gt;\"\n&lt;log_file&gt;: log output file name\n&lt;info_level&gt;: info verbosity -- sc_none/sc_low/sc_medium/sc_high/sc_full/sc_debug\n&lt;msg_string&gt;: message string specified in sc_report.\n&lt;report_level&gt;: sc report level -- info/warning/error/fatal/enable/disable</pre><p>Here are some useful control string examples:</p><pre>$ export SC_LOG=\"outfile:sc.log;verbosity_level:sc_debug;csb_adaptor:enable\" -- print t\n$ export SC_LOG=\"outfile:sc.log;verbosity_level:sc_debug;dbb_adaptor:enable;sram_adapto</pre><p>You should be able to see logs like:</p><pre>Info: nvdlacsb_adaptor: GP: iswrite=0 addr=0x300c len=4 data=0x 00000000 resp=TLM_OK_R\nInfo: nvdladbb_adaptor: GP: iswrite=1 addr=0xc0001e80 len=64 data=0x abcd01b0 abcd01b1</pre>",
+      "bbox": [
+        0.0,
+        0.0,
+        1148.0,
+        1485.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1148.0,
+          0.0
+        ],
+        [
+          1148.0,
+          1485.0
+        ],
+        [
+          0.0,
+          1485.0
+        ]
+      ],
+      "id": "/page/4/Page/4",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/4/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 4,
+          "polygon": [
+            [
+              41.0,
+              26.0
+            ],
+            [
+              158.0,
+              26.0
+            ],
+            [
+              158.0,
+              43.0
+            ],
+            [
+              41.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            26.0,
+            158.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 4,
+          "polygon": [
+            [
+              520.0,
+              26.0
+            ],
+            [
+              792.0,
+              26.0
+            ],
+            [
+              792.0,
+              43.0
+            ],
+            [
+              520.0,
+              43.0
+            ]
+          ],
+          "bbox": [
+            520.0,
+            26.0,
+            792.0,
+            43.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h3>2.6 Running the Virtual Simulator From Docker</h3>",
+          "page": 4,
+          "polygon": [
+            [
+              71.0,
+              78.0
+            ],
+            [
+              870.0,
+              78.0
+            ],
+            [
+              870.0,
+              115.0
+            ],
+            [
+              71.0,
+              115.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            78.0,
+            870.0,
+            115.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/3/SectionHeader/7",
+            "4": "/page/3/SectionHeader/14"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/3",
+          "block_type": "Text",
+          "html": "<pre>$ docker pull nvdlapv\n$ docker run -it -v /home:/home nvdlapv\n$ cd /usr/local/nvdla\n$ aarch64_toplevel -c aarch64_nvdlalua\nLogin the kernel with account 'root' and password 'nvdlalua'</pre>",
+          "page": 4,
+          "polygon": [
+            [
+              83.0,
+              151.0
+            ],
+            [
+              731.0,
+              151.0
+            ],
+            [
+              731.0,
+              276.0
+            ],
+            [
+              83.0,
+              276.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            151.0,
+            731.0,
+            276.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/4",
+          "block_type": "Text",
+          "html": "<p>The NVDLA software is also provided in the docker image, please refer to Software Manual (sw/contents.html) on how to run the NVDLA software.</p>",
+          "page": 4,
+          "polygon": [
+            [
+              71.0,
+              316.0
+            ],
+            [
+              956.0,
+              316.0
+            ],
+            [
+              956.0,
+              366.0
+            ],
+            [
+              71.0,
+              366.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            316.0,
+            956.0,
+            366.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h3>2.7 Debugging the Virtual Simulator</h3>",
+          "page": 4,
+          "polygon": [
+            [
+              71.0,
+              399.0
+            ],
+            [
+              685.0,
+              399.0
+            ],
+            [
+              685.0,
+              436.0
+            ],
+            [
+              71.0,
+              436.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            399.0,
+            685.0,
+            436.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/6",
+          "block_type": "Text",
+          "html": "<p>Before debugging the virtual simulator, you need to build the debug version of the simulator:</p>",
+          "page": 4,
+          "polygon": [
+            [
+              71.0,
+              452.0
+            ],
+            [
+              980.0,
+              452.0
+            ],
+            [
+              980.0,
+              475.0
+            ],
+            [
+              71.0,
+              475.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            452.0,
+            980.0,
+            475.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/7",
+          "block_type": "Text",
+          "html": "<pre>$ cmake -DCMAKE_INSTALL_PREFIX=[install dir] -DSYSTEMC_PREFIX=[systemc prefix] -DNVDLA_\n$ make\n$ make install</pre>",
+          "page": 4,
+          "polygon": [
+            [
+              83.0,
+              519.0
+            ],
+            [
+              1072.0,
+              519.0
+            ],
+            [
+              1072.0,
+              591.0
+            ],
+            [
+              83.0,
+              591.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            519.0,
+            1072.0,
+            591.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/SectionHeader/8",
+          "block_type": "SectionHeader",
+          "html": "<h4>2.7.1 Log Output Control</h4>",
+          "page": 4,
+          "polygon": [
+            [
+              71.0,
+              629.0
+            ],
+            [
+              389.0,
+              629.0
+            ],
+            [
+              389.0,
+              657.0
+            ],
+            [
+              71.0,
+              657.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            629.0,
+            389.0,
+            657.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/9",
+          "block_type": "Text",
+          "html": "<p>The log output of SystemC simulator is controlled by a configuration string that can be set in two ways:</p>",
+          "page": 4,
+          "polygon": [
+            [
+              71.0,
+              674.0
+            ],
+            [
+              1015.0,
+              674.0
+            ],
+            [
+              1015.0,
+              726.0
+            ],
+            [
+              71.0,
+              726.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            674.0,
+            1015.0,
+            726.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/ListGroup/10",
+          "block_type": "ListGroup",
+          "html": "<ul><li>The command line option '-s control_string' or '-sc_log control_string'</li><li>The environment variable 'export SC_LOG=control_string'</li></ul>",
+          "page": 4,
+          "polygon": [
+            [
+              103.0,
+              757.0
+            ],
+            [
+              813.0,
+              757.0
+            ],
+            [
+              813.0,
+              809.0
+            ],
+            [
+              103.0,
+              809.0
+            ]
+          ],
+          "bbox": [
+            103.0,
+            757.0,
+            813.0,
+            809.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/11",
+          "block_type": "Text",
+          "html": "<p>If both control strings are set, the simulator will pick the one set by environment variable SC_LOG.</p>",
+          "page": 4,
+          "polygon": [
+            [
+              71.0,
+              827.0
+            ],
+            [
+              1041.0,
+              827.0
+            ],
+            [
+              1041.0,
+              849.0
+            ],
+            [
+              71.0,
+              849.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            827.0,
+            1041.0,
+            849.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/12",
+          "block_type": "Text",
+          "html": "<p>The format of the control string is:</p>",
+          "page": 4,
+          "polygon": [
+            [
+              71.0,
+              882.0
+            ],
+            [
+              409.0,
+              882.0
+            ],
+            [
+              409.0,
+              904.0
+            ],
+            [
+              71.0,
+              904.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            882.0,
+            409.0,
+            904.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/13",
+          "block_type": "Text",
+          "html": "<pre>\"outfile:&lt;log_file&gt;;verbosity_level:&lt;info_level&gt;;&lt;msg_string&gt;;&lt;report_level&gt;\"\n&lt;log_file&gt;: log output file name\n&lt;info_level&gt;: info verbosity -- sc_none/sc_low/sc_medium/sc_high/sc_full/sc_debug\n&lt;msg_string&gt;: message string specified in sc_report.\n&lt;report_level&gt;: sc report level -- info/warning/error/fatal/enable/disable</pre>",
+          "page": 4,
+          "polygon": [
+            [
+              83.0,
+              947.0
+            ],
+            [
+              1004.0,
+              947.0
+            ],
+            [
+              1004.0,
+              1075.0
+            ],
+            [
+              83.0,
+              1075.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            947.0,
+            1004.0,
+            1075.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/14",
+          "block_type": "Text",
+          "html": "<p>Here are some useful control string examples:</p>",
+          "page": 4,
+          "polygon": [
+            [
+              71.0,
+              1113.0
+            ],
+            [
+              525.0,
+              1113.0
+            ],
+            [
+              525.0,
+              1138.0
+            ],
+            [
+              71.0,
+              1138.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1113.0,
+            525.0,
+            1138.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/15",
+          "block_type": "Text",
+          "html": "<pre>$ export SC_LOG=\"outfile:sc.log;verbosity_level:sc_debug;csb_adaptor:enable\" -- print t\n$ export SC_LOG=\"outfile:sc.log;verbosity_level:sc_debug;dbb_adaptor:enable;sram_adapto</pre>",
+          "page": 4,
+          "polygon": [
+            [
+              83.0,
+              1182.0
+            ],
+            [
+              1072.0,
+              1182.0
+            ],
+            [
+              1072.0,
+              1231.0
+            ],
+            [
+              83.0,
+              1231.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            1182.0,
+            1072.0,
+            1231.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/16",
+          "block_type": "Text",
+          "html": "<p>You should be able to see logs like:</p>",
+          "page": 4,
+          "polygon": [
+            [
+              71.0,
+              1268.0
+            ],
+            [
+              416.0,
+              1268.0
+            ],
+            [
+              416.0,
+              1291.0
+            ],
+            [
+              71.0,
+              1291.0
+            ]
+          ],
+          "bbox": [
+            71.0,
+            1268.0,
+            416.0,
+            1291.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/Text/17",
+          "block_type": "Text",
+          "html": "<pre>Info: nvdlacsb_adaptor: GP: iswrite=0 addr=0x300c len=4 data=0x 00000000 resp=TLM_OK_R\nInfo: nvdladbb_adaptor: GP: iswrite=1 addr=0xc0001e80 len=64 data=0x abcd01b0 abcd01b1</pre>",
+          "page": 4,
+          "polygon": [
+            [
+              83.0,
+              1336.0
+            ],
+            [
+              1072.0,
+              1336.0
+            ],
+            [
+              1072.0,
+              1384.0
+            ],
+            [
+              83.0,
+              1384.0
+            ]
+          ],
+          "bbox": [
+            83.0,
+            1336.0,
+            1072.0,
+            1384.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/PageFooter/18",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 4,
+          "polygon": [
+            [
+              41.0,
+              1435.0
+            ],
+            [
+              195.0,
+              1435.0
+            ],
+            [
+              195.0,
+              1453.0
+            ],
+            [
+              41.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            41.0,
+            1435.0,
+            195.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/4/PageFooter/19",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 4,
+          "polygon": [
+            [
+              1077.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1435.0
+            ],
+            [
+              1103.0,
+              1453.0
+            ],
+            [
+              1077.0,
+              1453.0
+            ]
+          ],
+          "bbox": [
+            1077.0,
+            1435.0,
+            1103.0,
+            1453.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/1/SectionHeader/2",
+        "3": "/page/3/SectionHeader/7",
+        "4": "/page/3/SectionHeader/14"
+      }
+    },
+    {
+      "html": "<h4>2.7.2 GDB</h4><p>You can also use GDB to debug the virtual simulator. First run the simulator, then get the PID of the process and use GDB to attach to it.</p><pre>$ ps -ef | grep aarch64_toplevel\n$ gdb attach &lt;PID&gt;</pre><h2>3. Building Linux Kernel for NVDLA Virtual Simulator</h2><p>The NVDLA virtual platform is based on QEMU aarch64 virt machine, so building a linux kernel is the same as building one for QEMU aarch64 virt machine. Here's an example of using buildroot to build a linux kernel for NVDLA virtual platform.</p><h3>3.1 Download</h3><p>Download the buildroot from <a href=\"https://buildroot.org/download.html\">https://buildroot.org/download.html</a> (<a href=\"https://buildroot.org/download.html\">https://buildroot.org/download.html</a>). This example uses the version buildroot-2017.11-rc1.</p><h3>3.2 Configure</h3><p>Use <code>qemu_aarch64_virt_defconfig</code> as base config, then set the customized configurations:</p><pre>$ make qemu_aarch64_virt_defconfig\n$ make menuconfig\n* Target Options -&gt; Target Architecture -&gt; AArch64 (little endian)\n* Target Options -&gt; Target Architecture Variant -&gt; cortex-A57\n* Toolchain -&gt; Custom kernel headers series -&gt; 4.13.x\n* Toolchain -&gt; Toolchain type -&gt; External toolchain\n* Toolchain -&gt; Toolchain -&gt; Linaro AArch64 2017.08\n* Toolchain -&gt; Toolchain origin -&gt; Toolchain to be downloaded and installed\n* Kernel -&gt; ( ) Kernel version -&gt; 4.13.3\n* Kernel -&gt; Kernel configuration -&gt; Use the architecture default configuration\n* System configuration -&gt; Enable root login with password -&gt; Y\n* System configuration -&gt; Root password -&gt; nvdl\n* Target Packages -&gt; Show packages that are also provided by busybox -&gt; Y\n* Target Packages -&gt; Networking applications -&gt; openssh -&gt; Y</pre><h3>3.3 Build</h3><pre>$ make -j4</pre><p>When it's done, you can find the kernel image and rootfs in <i>output/image</i>.</p>",
+      "bbox": [
+        0.0,
+        0.0,
+        816.0,
+        1056.0
+      ],
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          816.0,
+          0.0
+        ],
+        [
+          816.0,
+          1056.0
+        ],
+        [
+          0.0,
+          1056.0
+        ]
+      ],
+      "id": "/page/5/Page/5",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/5/PageHeader/0",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 5,
+          "polygon": [
+            [
+              28.0,
+              19.0
+            ],
+            [
+              112.0,
+              19.0
+            ],
+            [
+              112.0,
+              29.0
+            ],
+            [
+              28.0,
+              29.0
+            ]
+          ],
+          "bbox": [
+            28.0,
+            19.0,
+            112.0,
+            29.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/PageHeader/1",
+          "block_type": "PageHeader",
+          "html": "",
+          "page": 5,
+          "polygon": [
+            [
+              369.0,
+              19.0
+            ],
+            [
+              563.0,
+              19.0
+            ],
+            [
+              563.0,
+              29.0
+            ],
+            [
+              369.0,
+              29.0
+            ]
+          ],
+          "bbox": [
+            369.0,
+            19.0,
+            563.0,
+            29.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/SectionHeader/2",
+          "block_type": "SectionHeader",
+          "html": "<h4>2.7.2 GDB</h4>",
+          "page": 5,
+          "polygon": [
+            [
+              50.0,
+              34.0
+            ],
+            [
+              146.0,
+              34.0
+            ],
+            [
+              146.0,
+              54.0
+            ],
+            [
+              50.0,
+              54.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            34.0,
+            146.0,
+            54.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/4/SectionHeader/8"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Text/3",
+          "block_type": "Text",
+          "html": "<p>You can also use GDB to debug the virtual simulator. First run the simulator, then get the PID of the process and use GDB to attach to it.</p>",
+          "page": 5,
+          "polygon": [
+            [
+              50.0,
+              66.0
+            ],
+            [
+              744.0,
+              66.0
+            ],
+            [
+              744.0,
+              103.0
+            ],
+            [
+              50.0,
+              103.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            66.0,
+            744.0,
+            103.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/5/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Text/4",
+          "block_type": "Text",
+          "html": "<pre>$ ps -ef | grep aarch64_toplevel\n$ gdb attach &lt;PID&gt;</pre>",
+          "page": 5,
+          "polygon": [
+            [
+              59.0,
+              134.0
+            ],
+            [
+              319.0,
+              134.0
+            ],
+            [
+              319.0,
+              167.0
+            ],
+            [
+              59.0,
+              167.0
+            ]
+          ],
+          "bbox": [
+            59.0,
+            134.0,
+            319.0,
+            167.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/5/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h2>3. Building Linux Kernel for NVDLA Virtual Simulator</h2>",
+          "page": 5,
+          "polygon": [
+            [
+              50.0,
+              202.0
+            ],
+            [
+              681.0,
+              202.0
+            ],
+            [
+              681.0,
+              267.0
+            ],
+            [
+              50.0,
+              267.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            202.0,
+            681.0,
+            267.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/1/SectionHeader/2",
+            "3": "/page/4/SectionHeader/5",
+            "4": "/page/5/SectionHeader/2"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Text/6",
+          "block_type": "Text",
+          "html": "<p>The NVDLA virtual platform is based on QEMU aarch64 virt machine, so building a linux kernel is the same as building one for QEMU aarch64 virt machine. Here's an example of using buildroot to build a linux kernel for NVDLA virtual platform.</p>",
+          "page": 5,
+          "polygon": [
+            [
+              50.0,
+              278.0
+            ],
+            [
+              753.0,
+              278.0
+            ],
+            [
+              753.0,
+              334.0
+            ],
+            [
+              50.0,
+              334.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            278.0,
+            753.0,
+            334.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h3>3.1 Download</h3>",
+          "page": 5,
+          "polygon": [
+            [
+              50.0,
+              357.0
+            ],
+            [
+              217.0,
+              357.0
+            ],
+            [
+              217.0,
+              384.0
+            ],
+            [
+              50.0,
+              384.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            357.0,
+            217.0,
+            384.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Text/8",
+          "block_type": "Text",
+          "html": "<p>Download the buildroot from <a href=\"https://buildroot.org/download.html\">https://buildroot.org/download.html</a> (<a href=\"https://buildroot.org/download.html\">https://buildroot.org/download.html</a>). This example uses the version buildroot-2017.11-rc1.</p>",
+          "page": 5,
+          "polygon": [
+            [
+              50.0,
+              397.0
+            ],
+            [
+              696.0,
+              397.0
+            ],
+            [
+              696.0,
+              432.0
+            ],
+            [
+              50.0,
+              432.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            397.0,
+            696.0,
+            432.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/SectionHeader/9",
+          "block_type": "SectionHeader",
+          "html": "<h3>3.2 Configure</h3>",
+          "page": 5,
+          "polygon": [
+            [
+              50.0,
+              454.0
+            ],
+            [
+              215.0,
+              454.0
+            ],
+            [
+              215.0,
+              481.0
+            ],
+            [
+              50.0,
+              481.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            454.0,
+            215.0,
+            481.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Text/10",
+          "block_type": "Text",
+          "html": "<p>Use <code>qemu_aarch64_virt_defconfig</code> as base config, then set the customized configurations:</p>",
+          "page": 5,
+          "polygon": [
+            [
+              50.0,
+              492.0
+            ],
+            [
+              676.0,
+              492.0
+            ],
+            [
+              676.0,
+              508.0
+            ],
+            [
+              50.0,
+              508.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            492.0,
+            676.0,
+            508.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Text/11",
+          "block_type": "Text",
+          "html": "<pre>$ make qemu_aarch64_virt_defconfig\n$ make menuconfig\n* Target Options -&gt; Target Architecture -&gt; AArch64 (little endian)\n* Target Options -&gt; Target Architecture Variant -&gt; cortex-A57\n* Toolchain -&gt; Custom kernel headers series -&gt; 4.13.x\n* Toolchain -&gt; Toolchain type -&gt; External toolchain\n* Toolchain -&gt; Toolchain -&gt; Linaro AArch64 2017.08\n* Toolchain -&gt; Toolchain origin -&gt; Toolchain to be downloaded and installed\n* Kernel -&gt; ( ) Kernel version -&gt; 4.13.3\n* Kernel -&gt; Kernel configuration -&gt; Use the architecture default configuration\n* System configuration -&gt; Enable root login with password -&gt; Y\n* System configuration -&gt; Root password -&gt; nvdl\n* Target Packages -&gt; Show packages that are also provided by busybox -&gt; Y\n* Target Packages -&gt; Networking applications -&gt; openssh -&gt; Y</pre>",
+          "page": 5,
+          "polygon": [
+            [
+              59.0,
+              541.0
+            ],
+            [
+              690.0,
+              541.0
+            ],
+            [
+              690.0,
+              796.0
+            ],
+            [
+              59.0,
+              796.0
+            ]
+          ],
+          "bbox": [
+            59.0,
+            541.0,
+            690.0,
+            796.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/SectionHeader/12",
+          "block_type": "SectionHeader",
+          "html": "<h3>3.3 Build</h3>",
+          "page": 5,
+          "polygon": [
+            [
+              50.0,
+              828.0
+            ],
+            [
+              158.0,
+              828.0
+            ],
+            [
+              158.0,
+              856.0
+            ],
+            [
+              50.0,
+              856.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            828.0,
+            158.0,
+            856.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/9"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Text/13",
+          "block_type": "Text",
+          "html": "<pre>$ make -j4</pre>",
+          "page": 5,
+          "polygon": [
+            [
+              59.0,
+              881.0
+            ],
+            [
+              143.0,
+              881.0
+            ],
+            [
+              143.0,
+              897.0
+            ],
+            [
+              59.0,
+              897.0
+            ]
+          ],
+          "bbox": [
+            59.0,
+            881.0,
+            143.0,
+            897.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/Text/14",
+          "block_type": "Text",
+          "html": "<p>When it's done, you can find the kernel image and rootfs in <i>output/image</i>.</p>",
+          "page": 5,
+          "polygon": [
+            [
+              50.0,
+              925.0
+            ],
+            [
+              566.0,
+              925.0
+            ],
+            [
+              566.0,
+              941.0
+            ],
+            [
+              50.0,
+              941.0
+            ]
+          ],
+          "bbox": [
+            50.0,
+            925.0,
+            566.0,
+            941.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/PageFooter/15",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 5,
+          "polygon": [
+            [
+              28.0,
+              1022.0
+            ],
+            [
+              137.0,
+              1022.0
+            ],
+            [
+              137.0,
+              1033.0
+            ],
+            [
+              28.0,
+              1033.0
+            ]
+          ],
+          "bbox": [
+            28.0,
+            1022.0,
+            137.0,
+            1033.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/5/PageFooter/16",
+          "block_type": "PageFooter",
+          "html": "",
+          "page": 5,
+          "polygon": [
+            [
+              767.0,
+              1022.0
+            ],
+            [
+              782.0,
+              1022.0
+            ],
+            [
+              782.0,
+              1033.0
+            ],
+            [
+              767.0,
+              1033.0
+            ]
+          ],
+          "bbox": [
+            767.0,
+            1022.0,
+            782.0,
+            1033.0
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/2",
+            "2": "/page/5/SectionHeader/5",
+            "3": "/page/5/SectionHeader/12"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/2",
+        "2": "/page/1/SectionHeader/2",
+        "3": "/page/4/SectionHeader/5",
+        "4": "/page/4/SectionHeader/8"
+      }
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 9
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 19
+      },
+      {
+        "page_id": 2,
+        "num_blocks": 16
+      },
+      {
+        "page_id": 3,
+        "num_blocks": 23
+      },
+      {
+        "page_id": 4,
+        "num_blocks": 20
+      },
+      {
+        "page_id": 5,
+        "num_blocks": 17
+      }
+    ]
+  }
+}
